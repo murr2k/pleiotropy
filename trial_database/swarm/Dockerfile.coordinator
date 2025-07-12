@@ -1,0 +1,46 @@
+# Dockerfile for Swarm Coordinator
+FROM python:3.10-slim
+
+WORKDIR /app
+
+# Install system dependencies
+RUN apt-get update && apt-get install -y \
+    curl \
+    && rm -rf /var/lib/apt/lists/*
+
+# Install Python dependencies
+COPY trial_database/swarm/requirements.txt .
+RUN pip install --no-cache-dir -r requirements.txt
+
+# Copy coordinator code
+COPY trial_database/swarm/coordinator.py .
+COPY trial_database/swarm/base_agent.py .
+
+# Add health check endpoint
+RUN echo '#!/usr/bin/env python3\n\
+import asyncio\n\
+from aiohttp import web\n\
+from coordinator import SwarmCoordinator\n\
+\n\
+async def health_check(request):\n\
+    return web.json_response({"status": "healthy"})\n\
+\n\
+async def start_coordinator():\n\
+    coordinator = SwarmCoordinator(redis_host="redis")\n\
+    await coordinator.start()\n\
+\n\
+async def init_app():\n\
+    app = web.Application()\n\
+    app.router.add_get("/health", health_check)\n\
+    \n\
+    # Start coordinator in background\n\
+    asyncio.create_task(start_coordinator())\n\
+    \n\
+    return app\n\
+\n\
+if __name__ == "__main__":\n\
+    web.run_app(init_app(), host="0.0.0.0", port=8080)\n' > coordinator_server.py
+
+EXPOSE 8080
+
+CMD ["python", "coordinator_server.py"]

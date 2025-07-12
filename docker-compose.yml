@@ -1,0 +1,134 @@
+version: '3.8'
+
+services:
+  # Redis for shared memory and communication
+  redis:
+    image: redis:7-alpine
+    container_name: pleiotropy-redis
+    ports:
+      - "6379:6379"
+    volumes:
+      - redis_data:/data
+    command: redis-server --appendonly yes
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 5s
+      timeout: 3s
+      retries: 5
+
+  # Swarm Coordinator
+  coordinator:
+    build:
+      context: .
+      dockerfile: trial_database/swarm/Dockerfile.coordinator
+    container_name: pleiotropy-coordinator
+    depends_on:
+      redis:
+        condition: service_healthy
+    environment:
+      - REDIS_HOST=redis
+      - REDIS_PORT=6379
+      - PYTHONUNBUFFERED=1
+    ports:
+      - "8080:8080"
+    volumes:
+      - ./trial_database/swarm:/app
+      - ./reports:/app/reports
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8080/health"]
+      interval: 10s
+      timeout: 5s
+      retries: 3
+
+  # Rust Analyzer Agent
+  rust_analyzer:
+    build:
+      context: .
+      dockerfile: trial_database/swarm/Dockerfile.rust_agent
+    container_name: pleiotropy-rust-analyzer
+    depends_on:
+      - coordinator
+    environment:
+      - REDIS_HOST=redis
+      - REDIS_PORT=6379
+      - RUST_LOG=info
+      - PYTHONUNBUFFERED=1
+    volumes:
+      - ./rust_impl:/rust_impl
+      - ./genome_research:/genome_research
+      - ./trial_database/swarm:/app
+    restart: unless-stopped
+
+  # Python Visualizer Agent
+  python_visualizer:
+    build:
+      context: .
+      dockerfile: trial_database/swarm/Dockerfile.python_agent
+    container_name: pleiotropy-python-visualizer
+    depends_on:
+      - coordinator
+    environment:
+      - REDIS_HOST=redis
+      - REDIS_PORT=6379
+      - PYTHONUNBUFFERED=1
+    volumes:
+      - ./python_analysis:/python_analysis
+      - ./trial_database/swarm:/app
+      - ./reports:/app/reports
+    restart: unless-stopped
+
+  # Web UI (if trial_database/ui exists)
+  web_ui:
+    build:
+      context: ./trial_database/ui
+      dockerfile: Dockerfile
+    container_name: pleiotropy-web-ui
+    depends_on:
+      - coordinator
+    ports:
+      - "3000:3000"
+    environment:
+      - API_URL=http://coordinator:8080
+    restart: unless-stopped
+
+  # Monitoring with Prometheus (optional)
+  prometheus:
+    image: prom/prometheus:latest
+    container_name: pleiotropy-prometheus
+    volumes:
+      - ./monitoring/prometheus.yml:/etc/prometheus/prometheus.yml
+      - prometheus_data:/prometheus
+    ports:
+      - "9090:9090"
+    command:
+      - '--config.file=/etc/prometheus/prometheus.yml'
+      - '--storage.tsdb.path=/prometheus'
+    restart: unless-stopped
+
+  # Grafana for visualization (optional)
+  grafana:
+    image: grafana/grafana:latest
+    container_name: pleiotropy-grafana
+    depends_on:
+      - prometheus
+    ports:
+      - "3001:3000"
+    volumes:
+      - grafana_data:/var/lib/grafana
+      - ./monitoring/grafana/dashboards:/etc/grafana/provisioning/dashboards
+      - ./monitoring/grafana/datasources:/etc/grafana/provisioning/datasources
+    environment:
+      - GF_SECURITY_ADMIN_PASSWORD=admin
+      - GF_USERS_ALLOW_SIGN_UP=false
+    restart: unless-stopped
+
+volumes:
+  redis_data:
+  prometheus_data:
+  grafana_data:
+
+networks:
+  default:
+    name: pleiotropy-network

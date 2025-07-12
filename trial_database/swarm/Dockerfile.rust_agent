@@ -1,0 +1,38 @@
+# Dockerfile for Rust Analyzer Agent
+FROM rust:1.70 as rust-builder
+
+# Build Rust components
+WORKDIR /rust_build
+COPY rust_impl/Cargo.toml rust_impl/Cargo.lock ./
+COPY rust_impl/src ./src
+
+RUN cargo build --release
+
+# Python runtime image
+FROM python:3.10-slim
+
+WORKDIR /app
+
+# Install system dependencies
+RUN apt-get update && apt-get install -y \
+    libssl-dev \
+    && rm -rf /var/lib/apt/lists/*
+
+# Copy Rust binaries from builder
+COPY --from=rust-builder /rust_build/target/release/pleiotropy_rust /usr/local/bin/
+COPY --from=rust-builder /rust_build/target/release/sequence_parser /usr/local/bin/
+COPY --from=rust-builder /rust_build/target/release/frequency_analyzer /usr/local/bin/
+COPY --from=rust-builder /rust_build/target/release/trait_extractor /usr/local/bin/
+
+# Install Python dependencies
+COPY trial_database/swarm/requirements.txt .
+RUN pip install --no-cache-dir -r requirements.txt
+
+# Copy agent code
+COPY trial_database/swarm/base_agent.py .
+COPY trial_database/swarm/rust_analyzer_agent.py .
+
+# Set Rust binary path
+ENV RUST_IMPL_PATH=/rust_impl
+
+CMD ["python", "rust_analyzer_agent.py"]

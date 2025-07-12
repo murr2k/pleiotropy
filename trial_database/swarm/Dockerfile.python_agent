@@ -1,0 +1,41 @@
+# Dockerfile for Python Visualizer Agent
+FROM python:3.10-slim
+
+WORKDIR /app
+
+# Install system dependencies for visualization libraries
+RUN apt-get update && apt-get install -y \
+    libglib2.0-0 \
+    libsm6 \
+    libxext6 \
+    libxrender-dev \
+    libgomp1 \
+    wget \
+    && rm -rf /var/lib/apt/lists/*
+
+# Install Chrome for Plotly image export
+RUN wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | apt-key add - \
+    && echo "deb http://dl.google.com/linux/chrome/deb/ stable main" >> /etc/apt/sources.list.d/google.list \
+    && apt-get update \
+    && apt-get install -y google-chrome-stable \
+    && rm -rf /var/lib/apt/lists/*
+
+# Install Python dependencies
+COPY trial_database/swarm/requirements.txt .
+COPY python_analysis/requirements.txt ./python_requirements.txt
+
+# Combine requirements and install
+RUN cat python_requirements.txt >> requirements.txt && \
+    pip install --no-cache-dir -r requirements.txt && \
+    pip install --no-cache-dir kaleido
+
+# Copy agent code
+COPY trial_database/swarm/base_agent.py .
+COPY trial_database/swarm/python_visualizer_agent.py .
+
+# Copy Python analysis modules
+COPY python_analysis/*.py /python_analysis/
+
+ENV PYTHONPATH=/app:/python_analysis
+
+CMD ["python", "python_visualizer_agent.py"]

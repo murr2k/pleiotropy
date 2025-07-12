@@ -1,0 +1,65 @@
+{
+  "timestamp": "2025-07-12T00:35:36.885029",
+  "ui_testing_results": [
+    {
+      "test": "API Health Check",
+      "success": true,
+      "timestamp": "2025-07-12T00:35:36.841448",
+      "details": "Status: 200"
+    },
+    {
+      "test": "UI Health Check",
+      "success": true,
+      "timestamp": "2025-07-12T00:35:36.843728",
+      "details": "Status: 200"
+    },
+    {
+      "test": "UI Main Page Loading",
+      "success": true,
+      "timestamp": "2025-07-12T00:35:36.846018",
+      "details": "Status: 200"
+    },
+    {
+      "test": "API API Root",
+      "success": true,
+      "timestamp": "2025-07-12T00:35:36.848533",
+      "details": "Status: 200"
+    },
+    {
+      "test": "API API Documentation",
+      "success": true,
+      "timestamp": "2025-07-12T00:35:36.851270",
+      "details": "Status: 200"
+    },
+    {
+      "test": "API Trials Endpoint",
+      "success": true,
+      "timestamp": "2025-07-12T00:35:36.859578",
+      "details": "Status: 200"
+    },
+    {
+      "test": "API Proxy Through UI",
+      "success": true,
+      "timestamp": "2025-07-12T00:35:36.862925",
+      "details": "Status: 200"
+    },
+    {
+      "test": "UI Static Assets",
+      "success": true,
+      "timestamp": "2025-07-12T00:35:36.882056",
+      "details": "CSS: True, JS: True"
+    },
+    {
+      "test": "UI Performance",
+      "success": true,
+      "timestamp": "2025-07-12T00:35:36.884812",
+      "details": "Load time: 0.00s"
+    }
+  ],
+  "summary": {
+    "total_tests": 9,
+    "passed": 9,
+    "failed": 0,
+    "success_rate": 100.0
+  }
+}

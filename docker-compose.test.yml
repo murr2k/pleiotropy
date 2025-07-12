@@ -1,0 +1,62 @@
+services:
+  # Redis for shared memory and communication
+  redis:
+    image: redis:7-alpine
+    container_name: pleiotropy-redis-test
+    ports:
+      - "6379:6379"
+    volumes:
+      - redis_test_data:/data
+    command: redis-server --appendonly yes
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 5s
+      timeout: 3s
+      retries: 5
+
+  # FastAPI Backend
+  api:
+    build:
+      context: ./trial_database/api
+      dockerfile: Dockerfile
+    container_name: pleiotropy-api-test
+    depends_on:
+      redis:
+        condition: service_healthy
+    environment:
+      - DATABASE_URL=sqlite+aiosqlite:///./trials.db
+      - REDIS_URL=redis://redis:6379
+      - CORS_ORIGINS=["http://localhost:3000", "http://web_ui:3000"]
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./trial_database/database:/app/database
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8000/health"]
+      interval: 10s
+      timeout: 5s
+      retries: 3
+
+  # Web UI
+  web_ui:
+    build:
+      context: ./trial_database/ui
+      dockerfile: Dockerfile
+    container_name: pleiotropy-web-ui-test
+    depends_on:
+      - api
+    ports:
+      - "3000:3000"
+    environment:
+      - VITE_API_URL=http://localhost:8000/api/v1
+      - VITE_WS_URL=localhost:8000
+    restart: unless-stopped
+
+volumes:
+  redis_test_data:
+
+networks:
+  default:
+    name: pleiotropy-test-network

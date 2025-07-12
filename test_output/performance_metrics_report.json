@@ -1,0 +1,65 @@
+{
+  "timestamp": 1752305727.3442729,
+  "system_metrics": {
+    "timestamp": 1752305724.511811,
+    "cpu_percent": 27.1,
+    "memory_percent": 17.0,
+    "memory_used_gb": 2.4005470275878906,
+    "memory_available_gb": 12.897518157958984,
+    "disk_usage_percent": 3.4,
+    "network_io_bytes_sent": 528547305,
+    "network_io_bytes_recv": 1039658217
+  },
+  "component_performance": {
+    "rust": {
+      "component_name": "rust_core",
+      "execution_time": 0.005508899688720703,
+      "memory_peak_mb": 69.9765625,
+      "cpu_peak_percent": 33.3,
+      "throughput_ops_per_sec": 9076.222626157707,
+      "success_rate": 1.0,
+      "error_count": 0
+    },
+    "python": {
+      "component_name": "python_analysis",
+      "execution_time": 0.05741620063781738,
+      "memory_peak_mb": 150.0,
+      "cpu_peak_percent": 45.9,
+      "throughput_ops_per_sec": 1741.668708293712,
+      "success_rate": 1.0,
+      "error_count": 0
+    },
+    "memory": {
+      "component_name": "memory_system",
+      "execution_time": 1.0226190090179443,
+      "memory_peak_mb": 1.2572021484375,
+      "cpu_peak_percent": 40.2,
+      "throughput_ops_per_sec": 2933.643882564829,
+      "success_rate": 1.0,
+      "error_count": 0
+    }
+  },
+  "integration_metrics": {
+    "rust_python_latency": 0.0016999244689941406,
+    "memory_system_latency": 0.0017969608306884766,
+    "data_transfer_rate_mbps": 1788.0439091974847,
+    "end_to_end_latency": 0.003406524658203125
+  },
+  "stress_test_results": {
+    "total_workers": 10,
+    "successful_workers": 10,
+    "success_rate": 1.0,
+    "total_execution_time": 0.04009556770324707,
+    "average_worker_time": 0.01528182029724121,
+    "max_memory_usage_mb": 153.75,
+    "throughput_workers_per_sec": 249.40412551360802
+  },
+  "summary": {
+    "overall_throughput": 10817.891334451419,
+    "average_latency": 0.0017484426498413086,
+    "system_efficiency": 1.0,
+    "stress_test_success_rate": 1.0,
+    "memory_efficiency_score": 0.83,
+    "overall_score": 0.9656503114700318
+  }
+}

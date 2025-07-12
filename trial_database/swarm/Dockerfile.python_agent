@@ -13,21 +13,24 @@ RUN apt-get update && apt-get install -y \
     wget \
     && rm -rf /var/lib/apt/lists/*
 
-# Install Chrome for Plotly image export
-RUN wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | apt-key add - \
-    && echo "deb http://dl.google.com/linux/chrome/deb/ stable main" >> /etc/apt/sources.list.d/google.list \
-    && apt-get update \
-    && apt-get install -y google-chrome-stable \
-    && rm -rf /var/lib/apt/lists/*
+# Chrome not needed - using kaleido for static image export
 
 # Install Python dependencies
 COPY trial_database/swarm/requirements.txt .
-COPY python_analysis/requirements.txt ./python_requirements.txt
 
-# Combine requirements and install
-RUN cat python_requirements.txt >> requirements.txt && \
-    pip install --no-cache-dir -r requirements.txt && \
-    pip install --no-cache-dir kaleido
+# Install swarm dependencies
+RUN pip install --no-cache-dir -r requirements.txt
+
+# Install essential scientific computing packages
+RUN pip install --no-cache-dir \
+    numpy>=1.24.0 \
+    pandas>=2.0.0 \
+    scipy>=1.10.0 \
+    matplotlib>=3.7.0 \
+    plotly>=5.14.0 \
+    scikit-learn>=1.3.0 \
+    seaborn>=0.12.0 \
+    kaleido
 
 # Copy agent code
 COPY trial_database/swarm/base_agent.py .

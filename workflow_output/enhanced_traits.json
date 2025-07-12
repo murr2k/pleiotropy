@@ -1,0 +1,98 @@
+[
+  {
+    "name": "carbon_metabolism",
+    "description": "Carbon source utilization, catabolite repression, and central metabolism",
+    "associated_genes": [
+      "crp",
+      "cyaA",
+      "ptsI",
+      "ptsH",
+      "fruR"
+    ],
+    "known_sequences": []
+  },
+  {
+    "name": "stress_response",
+    "description": "General stress response, oxidative stress, and stationary phase adaptation",
+    "associated_genes": [
+      "rpoS",
+      "hns",
+      "dps",
+      "katE",
+      "sodA"
+    ],
+    "known_sequences": []
+  },
+  {
+    "name": "regulatory",
+    "description": "Global gene expression regulation and transcriptional control",
+    "associated_genes": [
+      "crp",
+      "fis",
+      "ihfA",
+      "ihfB",
+      "hns",
+      "rpoS"
+    ],
+    "known_sequences": []
+  },
+  {
+    "name": "dna_dynamics",
+    "description": "DNA topology, nucleoid organization, and chromosome structure",
+    "associated_genes": [
+      "fis",
+      "ihfA",
+      "hns",
+      "topA",
+      "gyrA"
+    ],
+    "known_sequences": []
+  },
+  {
+    "name": "motility",
+    "description": "Flagellar synthesis, chemotaxis, and bacterial movement",
+    "associated_genes": [
+      "flhD",
+      "flhC",
+      "fliA",
+      "fliC",
+      "motA",
+      "motB"
+    ],
+    "known_sequences": []
+  },
+  {
+    "name": "biofilm_formation",
+    "description": "Cell adhesion, biofilm development, and surface colonization",
+    "associated_genes": [
+      "csgA",
+      "csgD",
+      "fimA",
+      "rpoS",
+      "csgB"
+    ],
+    "known_sequences": []
+  },
+  {
+    "name": "cell_envelope",
+    "description": "Cell wall synthesis, membrane integrity, and envelope stress",
+    "associated_genes": [
+      "ompR",
+      "envZ",
+      "cpxR",
+      "rpoE"
+    ],
+    "known_sequences": []
+  },
+  {
+    "name": "iron_homeostasis",
+    "description": "Iron acquisition, storage, and regulation",
+    "associated_genes": [
+      "fur",
+      "entA",
+      "fecA",
+      "dps"
+    ],
+    "known_sequences": []
+  }
+]

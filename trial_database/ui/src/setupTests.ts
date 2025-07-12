@@ -1,13 +1,13 @@
 import '@testing-library/jest-dom';
+import React from 'react';
 
 // Mock Chart.js
 jest.mock('react-chartjs-2', () => ({
-  Line: ({ data, options }: any) => (
-    <div data-testid="mock-chart">
-      <div data-testid="chart-data">{JSON.stringify(data)}</div>
-      <div data-testid="chart-options">{JSON.stringify(options)}</div>
-    </div>
-  ),
+  Line: ({ data, options }: any) => 
+    React.createElement('div', { 'data-testid': 'mock-chart' },
+      React.createElement('div', { 'data-testid': 'chart-data' }, JSON.stringify(data)),
+      React.createElement('div', { 'data-testid': 'chart-options' }, JSON.stringify(options))
+    ),
 }));
 
 // Mock WebSocket

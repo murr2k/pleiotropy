@@ -1,0 +1,38 @@
+[
+  {
+    "name": "carbon_metabolism",
+    "description": "Carbon source utilization and metabolism pathways",
+    "associated_genes": ["crp", "cyaA", "ptsI"],
+    "known_sequences": []
+  },
+  {
+    "name": "stress_response",
+    "description": "Response to environmental stress conditions",
+    "associated_genes": ["rpoS", "hns", "dps"],
+    "known_sequences": []
+  },
+  {
+    "name": "regulatory",
+    "description": "Gene expression regulation and transcriptional control",
+    "associated_genes": ["crp", "fis", "ihfA", "hns"],
+    "known_sequences": []
+  },
+  {
+    "name": "dna_processing",
+    "description": "DNA replication, recombination, and repair",
+    "associated_genes": ["fis", "ihfA", "recA"],
+    "known_sequences": []
+  },
+  {
+    "name": "motility",
+    "description": "Flagellar synthesis and chemotaxis",
+    "associated_genes": ["crp", "fliA", "flhDC"],
+    "known_sequences": []
+  },
+  {
+    "name": "biofilm_formation",
+    "description": "Cell adhesion and biofilm development",
+    "associated_genes": ["crp", "rpoS", "csgA"],
+    "known_sequences": []
+  }
+]

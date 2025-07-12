@@ -1,0 +1,65 @@
+{
+  "test_suite": "Memory System Load Testing",
+  "timestamp": 1752305384.9889503,
+  "concurrent_load_tests": [
+    {
+      "test_name": "concurrent_agents_5",
+      "concurrent_agents": 5,
+      "operations_per_agent": 100,
+      "total_operations": 500,
+      "execution_time": 2.922994375228882,
+      "operations_per_second": 171.0574622507948,
+      "success_rate": 1.0,
+      "average_latency": 0.02853516960144043,
+      "max_latency": 0.14014315605163574,
+      "memory_usage_mb": 1.3675308227539062,
+      "errors": []
+    },
+    {
+      "test_name": "concurrent_agents_10",
+      "concurrent_agents": 10,
+      "operations_per_agent": 50,
+      "total_operations": 500,
+      "execution_time": 2.9610846042633057,
+      "operations_per_second": 168.85704625937092,
+      "success_rate": 1.0,
+      "average_latency": 0.05828538990020752,
+      "max_latency": 0.13818049430847168,
+      "memory_usage_mb": 1.505767822265625,
+      "errors": []
+    },
+    {
+      "test_name": "concurrent_agents_20",
+      "concurrent_agents": 20,
+      "operations_per_agent": 25,
+      "total_operations": 500,
+      "execution_time": 2.617441177368164,
+      "operations_per_second": 191.02626042689135,
+      "success_rate": 1.0,
+      "average_latency": 0.09842461156845093,
+      "max_latency": 0.22537827491760254,
+      "memory_usage_mb": 1.6282806396484375,
+      "errors": []
+    }
+  ],
+  "pubsub_test": {
+    "publishers": 5,
+    "subscribers": 3,
+    "messages_per_publisher": 20,
+    "total_sent": 100,
+    "total_received": 300,
+    "delivery_rate": 3.0,
+    "received_by_subscriber": {
+      "subscriber_0": 100,
+      "subscriber_2": 100,
+      "subscriber_1": 100
+    }
+  },
+  "summary": {
+    "average_operations_per_second": 176.98025631235237,
+    "average_success_rate": 1.0,
+    "maximum_memory_usage_mb": 1.6282806396484375,
+    "pubsub_delivery_rate": 3.0,
+    "overall_status": "PASS"
+  }
+}

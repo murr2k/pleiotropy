@@ -1,0 +1,27 @@
+{
+  "test_name": "Rust-Python Integration Test",
+  "timestamp": "2025-07-12T07:27:00Z",
+  "components_tested": {
+    "rust_binary": true,
+    "python_interface": true,
+    "statistical_analyzer": true,
+    "trait_visualizer": true,
+    "memory_system": true
+  },
+  "data_processed": {
+    "sequences": 5,
+    "genes": 3,
+    "traits": 3,
+    "codon_frequencies": 28
+  },
+  "performance_metrics": {
+    "rust_execution_time": "< 1s",
+    "python_processing_time": "< 1s",
+    "memory_usage": "minimal"
+  },
+  "test_results": {
+    "all_components_functional": true,
+    "data_integrity_verified": true,
+    "cross_language_communication": true
+  }
+}

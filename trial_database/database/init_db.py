@@ -46,8 +46,9 @@ class DatabaseInitializer:
         )
         
         # Enable foreign keys for SQLite
+        from sqlalchemy import text
         with self.engine.connect() as conn:
-            conn.execute("PRAGMA foreign_keys = ON")
+            conn.execute(text("PRAGMA foreign_keys = ON"))
         
         # Create all tables
         Base.metadata.create_all(bind=self.engine)

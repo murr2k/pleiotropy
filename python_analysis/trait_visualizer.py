@@ -18,9 +18,12 @@ from plotly.subplots import make_subplots
 class TraitVisualizer:
     """Main class for visualizing genomic trait relationships."""
     
-    def __init__(self, style: str = 'seaborn'):
+    def __init__(self, style: str = 'default'):
         """Initialize the visualizer with a specific style."""
-        plt.style.use(style)
+        try:
+            plt.style.use(style)
+        except OSError:
+            plt.style.use('default')
         self.default_figsize = (12, 8)
         self.colormap = 'coolwarm'
         

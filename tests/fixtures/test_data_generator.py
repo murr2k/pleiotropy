@@ -19,34 +19,37 @@ from faker import Faker
 fake = Faker()
 
 
-class TestDataGenerator:
+class TestDataGeneratorUtility:
     """Generate test data for the genomic pleiotropy project."""
     
-    def __init__(self, seed: int = 42):
+    # Genetic code
+    CODONS = None
+    REGULATORY_MOTIFS = {
+        'promoter': ['TATAAT', 'TTGACA', 'CAAT', 'GCGC'],
+        'enhancer': ['GGAGG', 'CCACC', 'GGGCGG'],
+        'silencer': ['ATAAA', 'TTTTT', 'CCAAT'],
+        'terminator': ['TTTATT', 'AAATAA']
+    }
+    
+    # Common traits in bacteria
+    TRAIT_CATEGORIES = {
+        'metabolism': ['glucose_utilization', 'lactose_metabolism', 'amino_acid_synthesis'],
+        'stress': ['heat_shock', 'oxidative_stress', 'osmotic_stress'],
+        'motility': ['flagellar_assembly', 'chemotaxis', 'pili_formation'],
+        'virulence': ['toxin_production', 'adhesion', 'invasion'],
+        'regulation': ['quorum_sensing', 'two_component_system', 'sigma_factors']
+    }
+    
+    @classmethod
+    def initialize(cls, seed: int = 42):
         """Initialize generator with seed for reproducibility."""
         random.seed(seed)
         np.random.seed(seed)
         Faker.seed(seed)
-        
-        # Genetic code
-        self.codons = self._generate_codon_table()
-        self.regulatory_motifs = {
-            'promoter': ['TATAAT', 'TTGACA', 'CAAT', 'GCGC'],
-            'enhancer': ['GGAGG', 'CCACC', 'GGGCGG'],
-            'silencer': ['ATAAA', 'TTTTT', 'CCAAT'],
-            'terminator': ['TTTATT', 'AAATAA']
-        }
-        
-        # Common traits in bacteria
-        self.trait_categories = {
-            'metabolism': ['glucose_utilization', 'lactose_metabolism', 'amino_acid_synthesis'],
-            'stress': ['heat_shock', 'oxidative_stress', 'osmotic_stress'],
-            'motility': ['flagellar_assembly', 'chemotaxis', 'pili_formation'],
-            'virulence': ['toxin_production', 'adhesion', 'invasion'],
-            'regulation': ['quorum_sensing', 'two_component_system', 'sigma_factors']
-        }
+        cls.CODONS = cls._generate_codon_table()
     
-    def _generate_codon_table(self) -> Dict[str, str]:
+    @staticmethod
+    def _generate_codon_table() -> Dict[str, str]:
         """Generate standard genetic code codon table."""
         bases = ['A', 'T', 'G', 'C']
         codons = {}

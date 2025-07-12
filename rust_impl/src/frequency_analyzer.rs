@@ -79,7 +79,7 @@ impl FrequencyAnalyzer {
     /// Calculate codon usage bias for specific traits
     pub fn calculate_trait_bias(
         &self,
-        sequences: &[Sequence],
+        _sequences: &[Sequence],
         trait_sequences: &[String],
         frequency_table: &mut FrequencyTable,
     ) -> Result<()> {

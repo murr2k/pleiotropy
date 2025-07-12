@@ -13,7 +13,7 @@ thiserror = "1.0"
 
 # Bioinformatics
 bio = "1.4"
-rust-bio-types = "1.0"
+bio-types = "1.0"
 
 # Parallel processing
 rayon = "1.8"
@@ -38,9 +38,10 @@ rand = "0.8"
 criterion = "0.5"
 proptest = "1.4"
 
-[[bench]]
-name = "decryption_bench"
-harness = false
+# Benchmarks disabled until implemented
+# [[bench]]
+# name = "decryption_bench"
+# harness = false
 
 [profile.release]
 lto = true

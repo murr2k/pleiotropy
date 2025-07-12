@@ -22,7 +22,7 @@ sys.path.insert(0, os.path.join(os.path.dirname(__file__), '../../'))
 from python_analysis.statistical_analyzer import StatisticalAnalyzer
 from python_analysis.trait_visualizer import TraitVisualizer
 from python_analysis.rust_interface import RustInterface
-from tests.fixtures.test_data_generator import TestDataGenerator
+from tests.fixtures.test_data_generator import TestDataGeneratorUtility
 
 
 class TestRustPythonIntegration:
@@ -47,7 +47,8 @@ class TestRustPythonIntegration:
     @pytest.fixture
     def test_data(self, tmp_path):
         """Generate test data files."""
-        generator = TestDataGenerator()
+        TestDataGeneratorUtility.initialize()
+        generator = TestDataGeneratorUtility
         
         # Generate test genome
         genome = generator.generate_genome(20)
@@ -187,7 +188,8 @@ class TestDatabaseIntegration:
     @pytest.fixture
     def mock_database(self, tmp_path):
         """Create mock database with test data."""
-        generator = TestDataGenerator()
+        TestDataGeneratorUtility.initialize()
+        generator = TestDataGeneratorUtility
         trials = generator.generate_trial_data(100)
         
         # Save as JSON (simulating database)
@@ -274,7 +276,8 @@ class TestDatabaseIntegration:
     def test_database_performance_with_indices(self, tmp_path):
         """Test database query performance with indices."""
         # Generate large dataset
-        generator = TestDataGenerator()
+        TestDataGeneratorUtility.initialize()
+        generator = TestDataGeneratorUtility
         trials = generator.generate_trial_data(10000)
         
         # Create indices (simulated)
@@ -380,7 +383,8 @@ class TestWorkflowIntegration:
         # This simulates the ecoli_workflow.sh script
         
         # Step 1: Prepare data
-        generator = TestDataGenerator()
+        TestDataGeneratorUtility.initialize()
+        generator = TestDataGeneratorUtility
         
         # Generate E. coli-like genome
         genome = []
@@ -436,7 +440,8 @@ class TestWorkflowIntegration:
     def test_batch_processing_workflow(self, tmp_path):
         """Test batch processing of multiple organisms."""
         organisms = ['E. coli', 'Salmonella', 'Klebsiella']
-        generator = TestDataGenerator()
+        TestDataGeneratorUtility.initialize()
+        generator = TestDataGeneratorUtility
         
         all_results = []
         

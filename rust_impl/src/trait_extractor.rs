@@ -36,7 +36,7 @@ impl TraitExtractor {
         Ok(trait_signatures)
     }
 
-    fn group_by_gene(&self, regions: &[DecryptedRegion]) -> HashMap<String, Vec<&DecryptedRegion>> {
+    fn group_by_gene<'a>(&self, regions: &'a [DecryptedRegion]) -> HashMap<String, Vec<&'a DecryptedRegion>> {
         let mut gene_map = HashMap::new();
         
         for region in regions {

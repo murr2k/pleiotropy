@@ -1,6 +1,6 @@
 use crate::types::{DecryptedRegion, FrequencyTable, RegulatoryContext, Sequence};
 use anyhow::Result;
-use nalgebra::{DMatrix, DVector};
+use nalgebra::DVector;
 use rayon::prelude::*;
 use std::collections::{HashMap, HashSet};
 
@@ -25,10 +25,12 @@ impl CryptoEngine {
         sequences: &[Sequence],
         frequency_table: &FrequencyTable,
     ) -> Result<Vec<DecryptedRegion>> {
-        sequences
+        let results: Vec<Vec<DecryptedRegion>> = sequences
             .par_iter()
-            .flat_map(|seq| self.decrypt_single_sequence(seq, frequency_table))
-            .collect()
+            .map(|seq| self.decrypt_single_sequence(seq, frequency_table))
+            .collect();
+        
+        Ok(results.into_iter().flatten().collect())
     }
 
     fn decrypt_single_sequence(

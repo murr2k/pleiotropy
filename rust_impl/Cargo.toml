@@ -1,0 +1,47 @@
+[package]
+name = "genomic_cryptanalysis"
+version = "0.1.0"
+edition = "2021"
+authors = ["Pleiotropy Research Team"]
+
+[dependencies]
+# Core dependencies
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
+anyhow = "1.0"
+thiserror = "1.0"
+
+# Bioinformatics
+bio = "1.4"
+rust-bio-types = "1.0"
+
+# Parallel processing
+rayon = "1.8"
+crossbeam = "0.8"
+
+# Statistics and math
+statrs = "0.16"
+ndarray = "0.15"
+nalgebra = "0.32"
+
+# Command line
+clap = { version = "4.4", features = ["derive"] }
+
+# Logging
+log = "0.4"
+env_logger = "0.10"
+
+# Testing
+rand = "0.8"
+
+[dev-dependencies]
+criterion = "0.5"
+proptest = "1.4"
+
+[[bench]]
+name = "decryption_bench"
+harness = false
+
+[profile.release]
+lto = true
+opt-level = 3

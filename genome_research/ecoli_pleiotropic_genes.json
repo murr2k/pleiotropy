@@ -1,0 +1,79 @@
+{
+  "model_organism": "Escherichia coli K-12",
+  "genome_size": "4.6 Mbp",
+  "total_genes": 4289,
+  "pleiotropic_genes": [
+    {
+      "gene": "crp",
+      "name": "cAMP receptor protein",
+      "traits": [
+        "carbon metabolism",
+        "flagellar synthesis",
+        "biofilm formation",
+        "virulence",
+        "stress response"
+      ],
+      "sequence_length": 630,
+      "regulation_targets": 200
+    },
+    {
+      "gene": "fis",
+      "name": "Factor for Inversion Stimulation",
+      "traits": [
+        "DNA topology",
+        "rRNA transcription",
+        "virulence gene expression",
+        "recombination",
+        "growth phase transition"
+      ],
+      "sequence_length": 297,
+      "regulation_targets": 100
+    },
+    {
+      "gene": "rpoS",
+      "name": "RNA polymerase sigma S",
+      "traits": [
+        "stationary phase survival",
+        "stress resistance",
+        "biofilm formation",
+        "virulence",
+        "metabolism switching"
+      ],
+      "sequence_length": 990,
+      "regulation_targets": 500
+    },
+    {
+      "gene": "hns",
+      "name": "Histone-like nucleoid structuring protein",
+      "traits": [
+        "chromosome organization",
+        "gene silencing",
+        "stress response",
+        "motility",
+        "virulence"
+      ],
+      "sequence_length": 411,
+      "regulation_targets": 250
+    },
+    {
+      "gene": "ihfA",
+      "name": "Integration host factor alpha",
+      "traits": [
+        "DNA bending",
+        "recombination",
+        "replication",
+        "transcription regulation",
+        "phage integration"
+      ],
+      "sequence_length": 297,
+      "regulation_targets": 150
+    }
+  ],
+  "trait_categories": {
+    "metabolism": ["carbon", "nitrogen", "phosphate", "iron"],
+    "stress_response": ["heat", "cold", "oxidative", "osmotic", "acid"],
+    "motility": ["flagellar", "chemotaxis", "biofilm"],
+    "regulation": ["transcription", "translation", "post-translational"],
+    "structure": ["cell_wall", "membrane", "nucleoid"]
+  }
+}

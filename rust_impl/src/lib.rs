@@ -1,9 +1,13 @@
 pub mod sequence_parser;
 pub mod frequency_analyzer;
 pub mod trait_extractor;
+pub mod trait_extractor_gpu;
 pub mod crypto_engine;
 pub mod types;
 pub mod neurodna_trait_detector;
+pub mod compute_backend;
+#[cfg(feature = "cuda")]
+pub mod cuda;
 
 pub use sequence_parser::SequenceParser;
 pub use frequency_analyzer::FrequencyAnalyzer;
@@ -11,6 +15,7 @@ pub use trait_extractor::TraitExtractor;
 pub use crypto_engine::CryptoEngine;
 pub use types::*;
 pub use neurodna_trait_detector::NeuroDNATraitDetector;
+pub use compute_backend::ComputeBackend;
 
 use anyhow::Result;
 use std::path::Path;
@@ -23,16 +28,33 @@ pub struct GenomicCryptanalysis {
     extractor: TraitExtractor,
     engine: CryptoEngine,
     neurodna: NeuroDNATraitDetector,
+    compute_backend: ComputeBackend,
 }
 
 impl GenomicCryptanalysis {
     pub fn new() -> Self {
+        let compute_backend = match ComputeBackend::new() {
+            Ok(backend) => {
+                if backend.is_cuda_available() {
+                    log::info!("CUDA acceleration enabled");
+                } else {
+                    log::info!("Using CPU backend");
+                }
+                backend
+            }
+            Err(e) => {
+                log::warn!("Failed to create compute backend: {}, using CPU fallback", e);
+                ComputeBackend::new().unwrap() // Should always succeed with CPU
+            }
+        };
+        
         Self {
             parser: SequenceParser::new(),
             analyzer: FrequencyAnalyzer::new(),
             extractor: TraitExtractor::new(),
             engine: CryptoEngine::new(),
             neurodna: NeuroDNATraitDetector::new(0.4),
+            compute_backend,
         }
     }
 
@@ -67,8 +89,8 @@ impl GenomicCryptanalysis {
                 }
             }).collect()
         } else {
-            // Fallback to original cryptanalysis if NeuroDNA doesn't find anything
-            let decrypted = self.engine.decrypt_sequences(&sequences, &freq_table)?;
+            // Use compute backend for GPU-accelerated cryptanalysis
+            let decrypted = self.compute_backend.decrypt_sequences(&sequences, &freq_table)?;
             self.extractor.extract_traits(&decrypted, &known_traits)?
         };
         
@@ -127,5 +149,20 @@ impl GenomicCryptanalysis {
         });
         
         pleiotropic_genes
+    }
+    
+    /// Get performance statistics from the compute backend
+    pub fn get_performance_stats(&self) -> &compute_backend::PerformanceStats {
+        self.compute_backend.get_stats()
+    }
+    
+    /// Check if CUDA is available and being used
+    pub fn is_cuda_enabled(&self) -> bool {
+        self.compute_backend.is_cuda_available()
+    }
+    
+    /// Force CPU usage even if CUDA is available
+    pub fn set_force_cpu(&mut self, force: bool) {
+        self.compute_backend.set_force_cpu(force);
     }
 }

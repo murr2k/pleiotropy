@@ -1,0 +1,31 @@
+[
+  {
+    "gene_id": "synthetic_pleiotropic_gene_2",
+    "traits": [
+      "regulatory",
+      "carbon_metabolism",
+      "motility",
+      "dna_processing"
+    ],
+    "confidence": 0.5480109126984126
+  },
+  {
+    "gene_id": "synthetic_pleiotropic_gene_1",
+    "traits": [
+      "stress_response",
+      "dna_processing",
+      "carbon_metabolism",
+      "regulatory"
+    ],
+    "confidence": 0.5120203488372093
+  },
+  {
+    "gene_id": "synthetic_pleiotropic_gene_3",
+    "traits": [
+      "dna_processing",
+      "stress_response",
+      "regulatory"
+    ],
+    "confidence": 0.8562175324675325
+  }
+]

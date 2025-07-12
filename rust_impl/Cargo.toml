@@ -35,14 +35,32 @@ env_logger = "0.10"
 rand = "0.8"
 neurodna = { version = "0.0.2", default-features = false }
 
+# CUDA support
+cudarc = { version = "0.10", optional = true }
+cuda-runtime-sys = { version = "0.3", optional = true }
+cuda-driver-sys = { version = "0.3", optional = true }
+
+# Additional dependencies for CUDA
+bytemuck = { version = "1.14", optional = true }  # For safe transmutation of data
+half = { version = "2.3", optional = true }       # For FP16 support on newer GPUs
+cust = { version = "0.3", optional = true }       # Alternative CUDA wrapper (backup)
+nvml-wrapper = { version = "0.9", optional = true } # NVIDIA Management Library for GPU monitoring
+
 [dev-dependencies]
 criterion = "0.5"
 proptest = "1.4"
+tempfile = "3.8"
 
 # Benchmarks disabled until implemented
 # [[bench]]
 # name = "decryption_bench"
 # harness = false
+
+[features]
+default = []
+cuda = ["dep:cudarc", "dep:cuda-runtime-sys", "dep:cuda-driver-sys", "dep:bytemuck", "dep:half", "dep:nvml-wrapper"]
+cuda-debug = ["cuda"]  # Enable CUDA with debug info
+cuda-alt = ["dep:cust", "dep:bytemuck", "dep:half"]  # Alternative CUDA implementation
 
 [profile.release]
 lto = true

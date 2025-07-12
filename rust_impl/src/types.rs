@@ -79,6 +79,40 @@ pub struct PleiotropyAnalysis {
     pub frequency_table: FrequencyTable,
 }
 
+// CUDA-specific types for GPU acceleration
+#[cfg(feature = "cuda")]
+#[derive(Debug, Clone)]
+pub struct DnaSequence {
+    pub id: String,
+    pub sequence: String,
+}
+
+#[cfg(feature = "cuda")]
+pub type CodonCounts = HashMap<String, u32>;
+
+#[cfg(feature = "cuda")]
+#[derive(Debug, Clone)]
+pub struct CudaFrequencyTable {
+    pub codon_frequencies: Vec<(String, f32)>,
+    pub trait_frequencies: HashMap<String, Vec<f32>>,
+}
+
+#[cfg(feature = "cuda")]
+#[derive(Debug, Clone)]
+pub struct TraitPattern {
+    pub name: String,
+    pub codon_preferences: Vec<(String, f32)>,
+    pub min_score: f32,
+}
+
+#[cfg(feature = "cuda")]
+#[derive(Debug, Clone)]
+pub struct PatternMatch {
+    pub trait_name: String,
+    pub position: usize,
+    pub score: f32,
+}
+
 #[derive(Debug, Clone, Serialize, Deserialize)]
 pub struct PleiotropicGene {
     pub gene_id: String,
@@ -132,8 +166,42 @@ pub fn genetic_code() -> HashMap<String, char> {
 
 #[derive(Debug, Clone)]
 pub struct TraitPattern {
+    pub trait_name: String,
     pub preferred_codons: Vec<String>,
     pub avoided_codons: Vec<String>,
     pub motifs: Vec<String>,
     pub weight: f64,
+    pub codon_preferences: HashMap<String, f64>,
+    pub regulatory_patterns: Vec<String>,
+}
+
+// Type aliases for clarity
+pub type DnaSequence = Sequence;
+pub type CodonCounts = HashMap<String, usize>;
+
+#[derive(Debug, Clone)]
+pub struct PatternMatch {
+    pub sequence_id: String,
+    pub pattern_id: String,
+    pub score: f64,
+    pub position: usize,
+    pub confidence: f64,
+}
+
+// Updated FrequencyTable for CUDA compatibility
+impl FrequencyTable {
+    pub fn new() -> Self {
+        Self {
+            codon_frequencies: Vec::new(),
+            total_codons: 0,
+            trait_codon_counts: HashMap::new(),
+        }
+    }
+}
+
+// Add global and trait frequencies for CUDA
+#[derive(Debug, Clone, Serialize, Deserialize)]
+pub struct CudaFrequencyTable {
+    pub global_frequencies: HashMap<String, f64>,
+    pub trait_frequencies: HashMap<String, HashMap<String, f64>>,
 }

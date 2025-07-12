@@ -1,0 +1,13 @@
+{
+  "objective": "Create a database of proposed trials and test results, to share synergetically between current and future swarm members, and to provide tracability and progress reports in both tabular and graphical format. Created a corresponding UI to display realtime progress of the swarm. Update the README.md and CLAUDE.md before with your plans before starting.",
+  "strategy": "auto",
+  "mode": "centralized",
+  "maxAgents": 5,
+  "timeout": 60,
+  "parallel": false,
+  "monitor": false,
+  "output": "json",
+  "outputDir": "./reports",
+  "timestamp": "2025-07-12T06:15:27.219Z",
+  "id": "swarm-auto-centralized-1752300927219"
+}

@@ -1,0 +1,36 @@
+{
+  "start_time": 1752309411.7460408,
+  "tests": {
+    "pattern_detection": {
+      "metrics": {
+        "true_positives": 0,
+        "false_positives": 0,
+        "false_negatives": 3,
+        "detected_genes": {}
+      },
+      "precision": 0,
+      "recall": 0.0,
+      "f1_score": 0,
+      "success": false
+    },
+    "confidence_analysis": {
+      "mean_confidence": 0,
+      "std_confidence": 0,
+      "min_confidence": 0,
+      "max_confidence": 0,
+      "scores": []
+    },
+    "performance": {
+      "execution_time": 0.005506038665771484,
+      "sequences_processed": 4,
+      "memory_usage": {
+        "rss_mb": 208.4765625,
+        "vms_mb": 952.4140625,
+        "percent": 1.3101665190468803
+      }
+    }
+  },
+  "end_time": 1752309411.751843,
+  "duration": 0.005802154541015625,
+  "overall_success": false
+}

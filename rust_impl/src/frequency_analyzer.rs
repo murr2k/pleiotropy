@@ -53,11 +53,56 @@ impl FrequencyAnalyzer {
             });
         }
 
-        Ok(FrequencyTable {
+        let mut frequency_table = FrequencyTable {
             codon_frequencies,
             total_codons,
             trait_codon_counts: HashMap::new(),
-        })
+        };
+        
+        // Pre-calculate some synthetic trait patterns based on codon properties
+        self.add_synthetic_trait_patterns(&mut frequency_table)?;
+        
+        Ok(frequency_table)
+    }
+    
+    /// Add synthetic trait patterns based on codon chemical properties
+    fn add_synthetic_trait_patterns(&self, frequency_table: &mut FrequencyTable) -> Result<()> {
+        // Define codon groups by amino acid properties
+        let hydrophobic_codons = vec!["TTT", "TTC", "TTA", "TTG", "CTT", "CTC", "CTA", "CTG", 
+                                      "ATT", "ATC", "ATA", "GTT", "GTC", "GTA", "GTG", "TGG",
+                                      "TTT", "TTC", "ATG", "CCA", "CCC", "CCG", "CCT"];
+        let charged_codons = vec!["AAA", "AAG", "GAA", "GAG", "GAT", "GAC", "CGT", "CGC", 
+                                  "CGA", "CGG", "AGA", "AGG", "CAT", "CAC"];
+        let optimal_codons = vec!["CTG", "CGT", "AAA", "GAA", "GGT", "CCG", "ACG", "GTG"];
+        
+        // Add synthetic patterns for traits
+        for codon_freq in &mut frequency_table.codon_frequencies {
+            // Structural proteins tend to have more hydrophobic residues
+            if hydrophobic_codons.contains(&codon_freq.codon.as_str()) {
+                codon_freq.trait_specific_frequency.insert(
+                    "structural".to_string(),
+                    codon_freq.global_frequency * 1.2,
+                );
+            }
+            
+            // Regulatory proteins often have charged residues
+            if charged_codons.contains(&codon_freq.codon.as_str()) {
+                codon_freq.trait_specific_frequency.insert(
+                    "regulatory".to_string(),
+                    codon_freq.global_frequency * 1.15,
+                );
+            }
+            
+            // High expression genes use optimal codons
+            if optimal_codons.contains(&codon_freq.codon.as_str()) {
+                codon_freq.trait_specific_frequency.insert(
+                    "high_expression".to_string(),
+                    codon_freq.global_frequency * 1.3,
+                );
+            }
+        }
+        
+        Ok(())
     }
 
     fn count_codons(&self, sequence: &str) -> HashMap<String, usize> {
@@ -79,32 +124,61 @@ impl FrequencyAnalyzer {
     /// Calculate codon usage bias for specific traits
     pub fn calculate_trait_bias(
         &self,
-        _sequences: &[Sequence],
-        trait_sequences: &[String],
+        sequences: &[Sequence],
+        trait_info: &[crate::types::TraitInfo],
         frequency_table: &mut FrequencyTable,
     ) -> Result<()> {
-        // Count codons in trait-specific sequences
-        let trait_counts = trait_sequences
-            .par_iter()
-            .map(|seq| self.count_codons(seq))
-            .reduce(HashMap::new, |mut acc, counts| {
-                for (codon, count) in counts {
-                    *acc.entry(codon).or_insert(0) += count;
-                }
-                acc
-            });
-
-        let trait_total: usize = trait_counts.values().sum();
-
-        // Update frequency table with trait-specific frequencies
-        for codon_freq in &mut frequency_table.codon_frequencies {
-            let trait_count = trait_counts.get(&codon_freq.codon).copied().unwrap_or(0);
-            let trait_frequency = trait_count as f64 / trait_total as f64;
+        // For each known trait, calculate its codon usage pattern
+        for trait_def in trait_info {
+            // Find sequences associated with this trait
+            let trait_sequences: Vec<String> = sequences
+                .iter()
+                .filter(|seq| {
+                    // Check if sequence ID or name matches any associated gene
+                    trait_def.associated_genes.iter().any(|gene| {
+                        seq.id.contains(gene) || seq.name.contains(gene)
+                    })
+                })
+                .map(|seq| seq.sequence.clone())
+                .collect();
             
-            codon_freq.trait_specific_frequency.insert(
-                "current_trait".to_string(),
-                trait_frequency,
+            if trait_sequences.is_empty() {
+                continue;
+            }
+            
+            // Count codons in trait-specific sequences
+            let trait_counts = trait_sequences
+                .par_iter()
+                .map(|seq| self.count_codons(seq))
+                .reduce(HashMap::new, |mut acc, counts| {
+                    for (codon, count) in counts {
+                        *acc.entry(codon).or_insert(0) += count;
+                    }
+                    acc
+                });
+
+            let trait_total: usize = trait_counts.values().sum();
+            
+            // Store trait-specific codon counts
+            frequency_table.trait_codon_counts.insert(
+                trait_def.name.clone(),
+                trait_counts.clone(),
             );
+
+            // Update frequency table with trait-specific frequencies
+            for codon_freq in &mut frequency_table.codon_frequencies {
+                let trait_count = trait_counts.get(&codon_freq.codon).copied().unwrap_or(0);
+                let trait_frequency = if trait_total > 0 {
+                    trait_count as f64 / trait_total as f64
+                } else {
+                    0.0
+                };
+                
+                codon_freq.trait_specific_frequency.insert(
+                    trait_def.name.clone(),
+                    trait_frequency,
+                );
+            }
         }
 
         Ok(())

@@ -1,0 +1,258 @@
+{
+  "metadata": {
+    "description": "Validated pleiotropic genes in E. coli K-12 MG1655",
+    "source": "Curated from RegulonDB, EcoCyc, and literature",
+    "version": "2025.01",
+    "genome_reference": "NC_000913.3"
+  },
+  "genes": {
+    "crp": {
+      "gene_id": "b3357",
+      "gene_name": "crp",
+      "synonyms": ["cap", "catabolite gene activator"],
+      "product": "cAMP receptor protein",
+      "location": {
+        "start": 3502125,
+        "end": 3502754,
+        "strand": "-",
+        "length": 630
+      },
+      "traits_affected": [
+        {
+          "trait": "carbon_metabolism",
+          "description": "Regulates genes involved in carbon source utilization",
+          "target_genes_count": 378
+        },
+        {
+          "trait": "motility",
+          "description": "Controls flagellar synthesis and chemotaxis",
+          "target_genes_count": 45
+        },
+        {
+          "trait": "biofilm_formation",
+          "description": "Affects biofilm development and dispersal",
+          "target_genes_count": 23
+        },
+        {
+          "trait": "virulence",
+          "description": "Regulates virulence factors in pathogenic strains",
+          "target_genes_count": 18
+        }
+      ],
+      "regulatory_info": {
+        "binding_sites": 189,
+        "consensus_sequence": "AAATGTGATCTAGATCACATTT",
+        "activates": 147,
+        "represses": 42
+      },
+      "codon_bias_score": 0.72,
+      "gc_content": 0.524,
+      "essential": false,
+      "validated": true,
+      "references": ["PMC3008186", "PMC3133313", "PMC2168950"]
+    },
+    "fis": {
+      "gene_id": "b3261",
+      "gene_name": "fis",
+      "synonyms": ["factor for inversion stimulation"],
+      "product": "DNA-binding protein Fis",
+      "location": {
+        "start": 3399765,
+        "end": 3400049,
+        "strand": "+",
+        "length": 285
+      },
+      "traits_affected": [
+        {
+          "trait": "growth_phase_transition",
+          "description": "Mediates transition from exponential to stationary phase",
+          "target_genes_count": 231
+        },
+        {
+          "trait": "DNA_topology",
+          "description": "Influences DNA supercoiling and nucleoid structure",
+          "target_genes_count": 89
+        },
+        {
+          "trait": "ribosomal_RNA_transcription",
+          "description": "Activates rRNA operons during exponential growth",
+          "target_genes_count": 7
+        },
+        {
+          "trait": "stress_response",
+          "description": "Modulates stress-responsive genes",
+          "target_genes_count": 45
+        }
+      ],
+      "regulatory_info": {
+        "binding_sites": 894,
+        "consensus_sequence": "GNTYAWWWWWTRANC",
+        "activates": 102,
+        "represses": 129
+      },
+      "codon_bias_score": 0.81,
+      "gc_content": 0.505,
+      "essential": false,
+      "validated": true,
+      "references": ["PMC3019808", "PMC2820833", "PMC6547436"]
+    },
+    "rpoS": {
+      "gene_id": "b2741",
+      "gene_name": "rpoS",
+      "synonyms": ["katF", "sigma-38", "sigmaS"],
+      "product": "RNA polymerase sigma factor RpoS",
+      "location": {
+        "start": 2866549,
+        "end": 2867583,
+        "strand": "-",
+        "length": 1035
+      },
+      "traits_affected": [
+        {
+          "trait": "stationary_phase_survival",
+          "description": "Master regulator of stationary phase genes",
+          "target_genes_count": 481
+        },
+        {
+          "trait": "stress_tolerance",
+          "description": "Controls general stress response",
+          "target_genes_count": 256
+        },
+        {
+          "trait": "morphology",
+          "description": "Affects cell shape and size in stationary phase",
+          "target_genes_count": 34
+        },
+        {
+          "trait": "metabolism_shift",
+          "description": "Redirects metabolism for survival",
+          "target_genes_count": 178
+        }
+      ],
+      "regulatory_info": {
+        "binding_sites": "uses core RNA polymerase",
+        "consensus_sequence": "CTATACT (extended -10)",
+        "activates": 337,
+        "represses": 144
+      },
+      "codon_bias_score": 0.48,
+      "gc_content": 0.497,
+      "essential": false,
+      "validated": true,
+      "references": ["PMC3753629", "PMC5498579", "PMC2168924"]
+    },
+    "hns": {
+      "gene_id": "b1237",
+      "gene_name": "hns",
+      "synonyms": ["drdX", "H-NS"],
+      "product": "DNA-binding protein H-NS",
+      "location": {
+        "start": 1292061,
+        "end": 1292480,
+        "strand": "-",
+        "length": 420
+      },
+      "traits_affected": [
+        {
+          "trait": "temperature_response",
+          "description": "Silences genes at low temperature",
+          "target_genes_count": 347
+        },
+        {
+          "trait": "osmotic_regulation",
+          "description": "Controls osmoregulated genes",
+          "target_genes_count": 98
+        },
+        {
+          "trait": "xenogeneic_silencing",
+          "description": "Silences horizontally acquired genes",
+          "target_genes_count": 423
+        },
+        {
+          "trait": "virulence_regulation",
+          "description": "Modulates virulence gene expression",
+          "target_genes_count": 67
+        }
+      ],
+      "regulatory_info": {
+        "binding_sites": 1147,
+        "consensus_sequence": "AT-rich regions",
+        "activates": 45,
+        "represses": 402
+      },
+      "codon_bias_score": 0.77,
+      "gc_content": 0.467,
+      "essential": false,
+      "validated": true,
+      "references": ["PMC4336368", "PMC5737378", "PMC3645875"]
+    },
+    "ihfA": {
+      "gene_id": "b1712",
+      "gene_name": "ihfA",
+      "synonyms": ["himA"],
+      "product": "integration host factor subunit alpha",
+      "location": {
+        "start": 1796226,
+        "end": 1796507,
+        "strand": "-",
+        "length": 282
+      },
+      "traits_affected": [
+        {
+          "trait": "DNA_recombination",
+          "description": "Facilitates site-specific recombination",
+          "target_genes_count": 89
+        },
+        {
+          "trait": "transcription_regulation",
+          "description": "Bends DNA to enable transcription",
+          "target_genes_count": 167
+        },
+        {
+          "trait": "phage_lifecycle",
+          "description": "Required for phage integration and excision",
+          "target_genes_count": 23
+        },
+        {
+          "trait": "nucleoid_structure",
+          "description": "Architectural role in nucleoid organization",
+          "target_genes_count": 234
+        }
+      ],
+      "regulatory_info": {
+        "binding_sites": 678,
+        "consensus_sequence": "WATCAANNNNTTR",
+        "activates": 98,
+        "represses": 69
+      },
+      "codon_bias_score": 0.83,
+      "gc_content": 0.518,
+      "essential": false,
+      "validated": true,
+      "references": ["PMC3957649", "PMC2776418", "PMC5808897"]
+    }
+  },
+  "additional_candidates": {
+    "fnr": {
+      "gene_id": "b1334",
+      "gene_name": "fnr",
+      "product": "fumarate and nitrate reduction regulatory protein",
+      "traits_affected": ["anaerobic_metabolism", "energy_metabolism", "nitrate_respiration"],
+      "validated": true
+    },
+    "arcA": {
+      "gene_id": "b4401",
+      "gene_name": "arcA",
+      "product": "aerobic respiratory control protein A",
+      "traits_affected": ["aerobic_metabolism", "TCA_cycle", "respiratory_chain"],
+      "validated": true
+    },
+    "lrp": {
+      "gene_id": "b0889",
+      "gene_name": "lrp",
+      "product": "leucine-responsive regulatory protein",
+      "traits_affected": ["amino_acid_metabolism", "pili_synthesis", "virulence"],
+      "validated": true
+    }
+  }
+}

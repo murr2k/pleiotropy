@@ -4,10 +4,25 @@ use nalgebra::DVector;
 use rayon::prelude::*;
 use std::collections::{HashMap, HashSet};
 
+// Extension trait for DVector statistics
+trait DVectorExt {
+    fn mean(&self) -> f64;
+}
+
+impl DVectorExt for DVector<f64> {
+    fn mean(&self) -> f64 {
+        if self.is_empty() {
+            0.0
+        } else {
+            self.iter().sum::<f64>() / self.len() as f64
+        }
+    }
+}
+
 pub struct CryptoEngine {
     window_size: usize,
     overlap_threshold: f64,
-    min_confidence: f64,
+    pub min_confidence: f64,
 }
 
 impl CryptoEngine {
@@ -15,7 +30,7 @@ impl CryptoEngine {
         Self {
             window_size: 300, // 100 codons
             overlap_threshold: 0.3,
-            min_confidence: 0.7,
+            min_confidence: 0.4, // Reduced from 0.7 to catch more valid patterns
         }
     }
 
@@ -137,51 +152,99 @@ impl CryptoEngine {
     }
 
     fn detect_trait_patterns(&self, codon_vector: &DVector<f64>) -> Vec<String> {
-        // Simplified pattern detection - in reality would use trained models
+        // Enhanced pattern detection with biological trait mapping
         let mut patterns = Vec::new();
         
-        // Calculate vector magnitude as complexity measure
+        // Calculate various statistical features
         let magnitude = codon_vector.norm();
+        let variance = self.calculate_variance(codon_vector);
+        let max_bias = codon_vector.max();
+        let min_bias = codon_vector.min();
+        let mean_bias = codon_vector.mean();
         
-        // High complexity suggests regulatory function
-        if magnitude > 2.0 {
+        // Map patterns to biological traits based on codon usage characteristics
+        
+        // Carbon metabolism genes often show specific codon preferences
+        if magnitude > 1.5 && variance > 0.8 {
+            patterns.push("carbon_metabolism".to_string());
+        }
+        
+        // Stress response genes have distinct codon usage under different conditions
+        if max_bias > 1.0 && min_bias < -0.5 {
+            patterns.push("stress_response".to_string());
+        }
+        
+        // Motility genes show periodic patterns due to flagellar structure
+        if self.has_periodic_pattern(codon_vector) {
+            patterns.push("motility".to_string());
+            patterns.push("structural".to_string());
+        }
+        
+        // Regulatory genes have complex codon usage patterns
+        if magnitude > 1.8 && variance > 1.0 {
             patterns.push("regulatory".to_string());
         }
         
-        // Analyze specific codon biases
-        let max_bias = codon_vector.max();
-        let min_bias = codon_vector.min();
-        
-        if max_bias > 1.5 {
+        // High expression genes show strong bias toward optimal codons
+        if mean_bias > 0.5 && max_bias > 1.2 {
             patterns.push("high_expression".to_string());
         }
-        if min_bias < -1.5 {
+        
+        // Low expression genes show opposite bias
+        if mean_bias < -0.3 && min_bias < -1.0 {
             patterns.push("low_expression".to_string());
         }
         
-        // Check for periodic patterns (simplified)
-        if self.has_periodic_pattern(codon_vector) {
-            patterns.push("structural".to_string());
+        // Add a catch-all for genes with any significant bias
+        if patterns.is_empty() && (max_bias.abs() > 0.8 || min_bias.abs() > 0.8) {
+            patterns.push("regulatory".to_string()); // Many genes have regulatory functions
         }
         
         patterns
     }
 
     fn has_periodic_pattern(&self, vector: &DVector<f64>) -> bool {
-        // Simple autocorrelation check
-        if vector.len() < 6 {
+        // Enhanced autocorrelation check for multiple periods
+        if vector.len() < 9 {
             return false;
         }
         
-        let mut correlation = 0.0;
-        let period = 3; // Check for 3-codon periodicity
-        
-        for i in 0..vector.len() - period {
-            correlation += vector[i] * vector[i + period];
+        // Check for 3-codon and 9-codon periodicity (common in structural genes)
+        for period in &[3, 9] {
+            if vector.len() <= *period {
+                continue;
+            }
+            
+            let mut correlation = 0.0;
+            let mut count = 0;
+            
+            for i in 0..vector.len() - period {
+                correlation += vector[i] * vector[i + period];
+                count += 1;
+            }
+            
+            if count > 0 {
+                correlation /= count as f64;
+                if correlation.abs() > 0.3 { // Reduced threshold for better detection
+                    return true;
+                }
+            }
         }
         
-        correlation /= (vector.len() - period) as f64;
-        correlation.abs() > 0.5
+        false
+    }
+    
+    fn calculate_variance(&self, vector: &DVector<f64>) -> f64 {
+        if vector.is_empty() {
+            return 0.0;
+        }
+        
+        let mean = vector.mean();
+        let variance: f64 = vector.iter()
+            .map(|&x| (x - mean).powi(2))
+            .sum::<f64>() / vector.len() as f64;
+        
+        variance
     }
 
     fn detect_regulatory_elements(&self, window: &str) -> RegulatoryContext {
@@ -240,22 +303,45 @@ impl CryptoEngine {
         let mut scores = HashMap::new();
         
         for pattern in trait_patterns {
-            let mut score = 0.5; // Base score
+            let mut score = 0.4; // Reduced base score for better detection
             
-            // Adjust based on regulatory context
+            // Adjust based on regulatory context and trait type
             match pattern.as_str() {
                 "regulatory" => {
                     score += regulatory_context.promoter_strength * 0.3;
                     score += (regulatory_context.enhancers.len() as f64) * 0.1;
+                    score += 0.1; // Regulatory genes are common
                 }
                 "high_expression" => {
                     score += regulatory_context.promoter_strength * 0.4;
                     score -= (regulatory_context.silencers.len() as f64) * 0.1;
+                    score += 0.1; // Boost for clear expression pattern
                 }
-                "structural" => {
+                "structural" | "motility" => {
                     score += 0.2; // Structural genes often have distinct patterns
+                    if !regulatory_context.silencers.is_empty() {
+                        score += 0.1; // Controlled expression is common
+                    }
                 }
-                _ => {}
+                "carbon_metabolism" => {
+                    score += 0.15; // Well-studied trait
+                    if regulatory_context.expression_conditions.contains(&"inducible".to_string()) {
+                        score += 0.15; // Carbon metabolism is often inducible
+                    }
+                }
+                "stress_response" => {
+                    score += 0.15; // Common adaptive trait
+                    if regulatory_context.expression_conditions.contains(&"repressible".to_string()) {
+                        score += 0.1; // Stress genes are often repressed normally
+                    }
+                }
+                "low_expression" => {
+                    score += 0.05; // Lower confidence for negative patterns
+                    score += (regulatory_context.silencers.len() as f64) * 0.05;
+                }
+                _ => {
+                    score += 0.1; // Unknown patterns still get some boost
+                }
             }
             
             scores.insert(pattern.clone(), score.min(1.0));

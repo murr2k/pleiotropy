@@ -9,6 +9,18 @@ pub struct Sequence {
     pub annotations: HashMap<String, String>,
 }
 
+// Add compatibility methods
+impl Sequence {
+    pub fn new(id: String, sequence: String) -> Self {
+        Self {
+            id: id.clone(),
+            name: id,
+            sequence,
+            annotations: HashMap::new(),
+        }
+    }
+}
+
 #[derive(Debug, Clone, Serialize, Deserialize)]
 pub struct CodonFrequency {
     pub codon: String,
@@ -116,4 +128,12 @@ pub fn genetic_code() -> HashMap<String, char> {
     code.insert("GGA".to_string(), 'G'); code.insert("GGG".to_string(), 'G');
     
     code
+}
+
+#[derive(Debug, Clone)]
+pub struct TraitPattern {
+    pub preferred_codons: Vec<String>,
+    pub avoided_codons: Vec<String>,
+    pub motifs: Vec<String>,
+    pub weight: f64,
 }

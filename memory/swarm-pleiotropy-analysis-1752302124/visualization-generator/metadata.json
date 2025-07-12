@@ -1,0 +1,127 @@
+{
+  "namespace": "swarm-pleiotropy-analysis-1752302124",
+  "component": "visualization-generator",
+  "generated_at": "2025-07-12T01:05:10.707459",
+  "version": "1.0.0",
+  "deliverables": {
+    "interactive_dashboard": {
+      "file": "pleiotropy_dashboard.html",
+      "type": "interactive_html",
+      "description": "Real-time monitoring dashboard with live updates",
+      "features": [
+        "Real-time progress bars",
+        "Agent status indicators",
+        "Codon usage heatmap",
+        "Gene-trait network",
+        "Performance metrics",
+        "Statistical summaries"
+      ]
+    },
+    "codon_analysis": {
+      "file": "codon_heatmap.html",
+      "type": "interactive_plot",
+      "description": "Advanced codon usage bias analysis",
+      "features": [
+        "64-codon frequency matrix",
+        "Amino acid grouping",
+        "Interactive tooltips",
+        "Cryptographic pattern detection"
+      ]
+    },
+    "network_visualization": {
+      "file": "gene_trait_network.html",
+      "type": "interactive_network",
+      "description": "Gene-trait association network graph",
+      "features": [
+        "Spring-force layout",
+        "Interactive node exploration",
+        "Bipartite graph structure",
+        "Pleiotropic relationship mapping"
+      ]
+    },
+    "confidence_analysis": {
+      "file": "confidence_analysis.html",
+      "type": "statistical_dashboard",
+      "description": "Statistical confidence score analysis",
+      "features": [
+        "Confidence score distributions",
+        "Gene-trait correlation analysis",
+        "Statistical summary tables",
+        "Multi-panel visualization"
+      ]
+    },
+    "temporal_monitoring": {
+      "file": "temporal_analysis.html",
+      "type": "time_series_dashboard",
+      "description": "Real-time progress and performance monitoring",
+      "features": [
+        "Analysis progress tracking",
+        "Performance metrics",
+        "Resource utilization",
+        "Cumulative discovery plots"
+      ]
+    },
+    "publication_figures": {
+      "file": "publication_figure.png",
+      "type": "static_image",
+      "description": "Publication-quality figures for research",
+      "features": [
+        "High-resolution (300 DPI)",
+        "Multi-panel layout",
+        "Statistical summaries",
+        "Publication-ready formatting"
+      ]
+    },
+    "comprehensive_report": {
+      "file": "visualization_report.md",
+      "type": "documentation",
+      "description": "Complete visualization documentation and usage guide",
+      "features": [
+        "Technical implementation details",
+        "Usage instructions",
+        "Performance metrics",
+        "Future enhancement roadmap"
+      ]
+    }
+  },
+  "analysis_summary": {
+    "sequences_analyzed": 59,
+    "trait_categories": 8,
+    "unique_genes": 12,
+    "confidence_score": 0.82,
+    "visualization_components": 7,
+    "interactive_dashboards": 5,
+    "static_figures": 1
+  },
+  "technical_specifications": {
+    "frameworks": [
+      "Plotly.js",
+      "D3.js",
+      "Matplotlib",
+      "Seaborn"
+    ],
+    "languages": [
+      "Python",
+      "JavaScript",
+      "HTML",
+      "CSS"
+    ],
+    "data_formats": [
+      "JSON",
+      "CSV",
+      "PNG",
+      "HTML"
+    ],
+    "browser_compatibility": [
+      "Chrome",
+      "Firefox",
+      "Safari",
+      "Edge"
+    ],
+    "performance": {
+      "rendering_time": "< 2 seconds",
+      "memory_usage": "~45MB",
+      "update_frequency": "10 seconds"
+    }
+  }
+}

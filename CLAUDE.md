@@ -16,6 +16,7 @@ This project treats genomic pleiotropy (single genes affecting multiple traits) 
 - **Performance Critical**: Use Rayon for parallelization
 - **Memory Efficient**: Process large genomes in sliding windows
 - **Type Safe**: Leverage Rust's type system for genomic data structures
+- **NeuroDNA Integration**: Neural network-inspired trait detection (v0.0.2)
 
 ### Python Analysis (`python_analysis/`)
 - **Visualization Focus**: Interactive plots using Plotly, static with Matplotlib
@@ -51,9 +52,10 @@ cd python_analysis && pytest
 
 ### Adding a New Cryptanalysis Method
 1. Design algorithm in `crypto_framework/algorithm_design.md`
-2. Implement in `rust_impl/src/crypto_engine.rs`
+2. Implement in `rust_impl/src/crypto_engine.rs` or `neurodna_trait_detector.rs`
 3. Add trait extraction logic to `trait_extractor.rs`
 4. Update Python visualization if needed
+5. The NeuroDNA detector is now the primary method, falling back to crypto_engine if needed
 
 ### Analyzing a New Organism
 1. Add organism data to `genome_research/`
@@ -87,9 +89,10 @@ cd python_analysis && pytest
 ## Debugging Tips
 
 1. **Sequence Parsing Issues**: Check for non-standard characters in FASTA
-2. **Low Confidence Scores**: Verify frequency table calculations
-3. **Missing Traits**: Check regulatory context detection
+2. **Low Confidence Scores**: Verify frequency table calculations and adjust NeuroDNA thresholds
+3. **Missing Traits**: Check trait pattern definitions in `neurodna_trait_detector.rs`
 4. **Performance Problems**: Profile window size and overlap settings
+5. **Zero Gene Detection**: NeuroDNA integration now fixes this - ensure neurodna v0.0.2 is in Cargo.toml
 
 ## Trial Database System
 
@@ -267,7 +270,8 @@ docker-compose restart coordinator
 
 ## Future Enhancements
 
-- Machine learning for pattern recognition
+- Expand NeuroDNA integration with actual neural network training
+- Machine learning for pattern recognition using NeuroDNA's evolution engine
 - GPU acceleration for large-scale analysis  
 - Real-time streaming genome analysis
 - Extension to eukaryotic genomes

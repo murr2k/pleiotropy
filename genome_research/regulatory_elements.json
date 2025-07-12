@@ -1,0 +1,280 @@
+{
+  "metadata": {
+    "description": "E. coli K-12 regulatory elements database",
+    "source": "RegulonDB v10.9, EcoCyc",
+    "genome_reference": "NC_000913.3",
+    "last_updated": "2025-01"
+  },
+  "promoters": {
+    "sigma70": {
+      "consensus": {
+        "-35_box": "TTGACA",
+        "-10_box": "TATAAT",
+        "spacer_length": "16-19 bp"
+      },
+      "strong_promoters": [
+        {
+          "name": "Ptac",
+          "sequence": "TTGACAATTAATCATCGGCTCGTATAATGTGTGGAATTGTGAGCGGATAACAATTTCACACA",
+          "strength": "very_strong",
+          "regulated_by": ["LacI", "CRP-cAMP"]
+        },
+        {
+          "name": "PrrnB_P1",
+          "sequence": "TTGACAAATAATCTTTTGCTTGTCAGCAAGTTTTTTATACTAAATTGGTGACTCTAGATACCACT",
+          "strength": "very_strong",
+          "regulated_by": ["Fis", "ppGpp"]
+        },
+        {
+          "name": "Plac",
+          "sequence": "TTTACACTTTATGCTTCCGGCTCGTATGTTGTGTGGAATTGTGAGCGGATAACAATTTCACACA",
+          "strength": "strong",
+          "regulated_by": ["LacI", "CRP-cAMP"]
+        }
+      ],
+      "total_count": 2713
+    },
+    "sigma32": {
+      "consensus": {
+        "-35_box": "CTTGAA",
+        "-10_box": "CCCCAT",
+        "spacer_length": "13-15 bp"
+      },
+      "heat_shock_promoters": [
+        {
+          "name": "PgroE",
+          "sequence": "CTTGAAAAAAATCGATCAACCCCATGTGAATATCCCCATGTTTTCACAGT",
+          "regulated_by": ["RpoH", "CRP-cAMP"]
+        },
+        {
+          "name": "PdnaK",
+          "sequence": "CTTGAAAGGGATTAGCCCCATCTGATTTGATGGGATCATATTTTT",
+          "regulated_by": ["RpoH", "DnaA"]
+        }
+      ],
+      "total_count": 89
+    },
+    "sigmaS": {
+      "consensus": {
+        "-10_box": "CTATACT",
+        "extended_-10": true
+      },
+      "stationary_phase_promoters": [
+        {
+          "name": "PbolA",
+          "sequence": "GCTACATTTGTGTATAACTCTGTGCTATACTTACAGCCATCG",
+          "regulated_by": ["RpoS", "ppGpp"]
+        },
+        {
+          "name": "PosmY",
+          "sequence": "CATAAATAAAGATGTATACTCTAGAGTCGGGGATTCAGATAAC",
+          "regulated_by": ["RpoS", "OsmR"]
+        }
+      ],
+      "total_count": 337
+    }
+  },
+  "operators": {
+    "CRP_binding_sites": {
+      "consensus": "AAATGTGATCTAGATCACATTT",
+      "matrix": {
+        "A": [5, 5, 5, 3, 2, 3, 2, 5, 3, 1, 3, 5, 2, 5, 3, 1, 5, 1, 5, 3, 3, 3],
+        "C": [0, 0, 0, 0, 1, 0, 0, 0, 0, 4, 0, 0, 0, 0, 0, 4, 0, 4, 0, 1, 0, 0],
+        "G": [0, 0, 0, 2, 2, 2, 3, 0, 2, 0, 2, 0, 3, 0, 2, 0, 0, 0, 0, 1, 0, 0],
+        "T": [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2, 2]
+      },
+      "validated_sites": [
+        {
+          "gene": "lacZYA",
+          "position": -61,
+          "sequence": "AAATGTGATCTAGATCACATTT",
+          "affinity": "high"
+        },
+        {
+          "gene": "araBAD", 
+          "position": -41,
+          "sequence": "AAATGTGATCTATATCACATTT",
+          "affinity": "high"
+        },
+        {
+          "gene": "malEFG",
+          "position": -38,
+          "sequence": "AAATGTGAGCGAGATCAAATTT",
+          "affinity": "medium"
+        }
+      ]
+    },
+    "LexA_binding_sites": {
+      "consensus": "CTGTATATATATACAG",
+      "sos_boxes": [
+        {
+          "gene": "recA",
+          "position": -69,
+          "sequence": "CTGTATGAGCATACAGTATAATTGC"
+        },
+        {
+          "gene": "uvrA",
+          "position": -32,
+          "sequence": "CTGTATAAAAAAACAGTA"
+        },
+        {
+          "gene": "lexA",
+          "position": -28,
+          "sequence": "CTGTATATACTCACAGCA"
+        }
+      ]
+    },
+    "FNR_binding_sites": {
+      "consensus": "TTGATNNNNATCAA",
+      "anaerobic_genes": [
+        {
+          "gene": "narGHJI",
+          "position": -41.5,
+          "sequence": "TTGATCGGGATCAA"
+        },
+        {
+          "gene": "nirB",
+          "position": -40.5,
+          "sequence": "TTGATCAGGATCAA"
+        }
+      ]
+    }
+  },
+  "riboswitches": {
+    "FMN_riboswitch": {
+      "genes": ["ribB"],
+      "structure": "aptamer_domain",
+      "ligand": "FMN"
+    },
+    "TPP_riboswitch": {
+      "genes": ["thiM", "thiC"],
+      "structure": "aptamer_domain",
+      "ligand": "thiamine_pyrophosphate"
+    },
+    "lysine_riboswitch": {
+      "genes": ["lysC"],
+      "structure": "aptamer_domain",
+      "ligand": "lysine"
+    }
+  },
+  "terminators": {
+    "rho_independent": {
+      "consensus_structure": "GC-rich_stem_loop + U-rich_tail",
+      "examples": [
+        {
+          "name": "trpA_terminator",
+          "sequence": "AAACGCAGCGCGGTAAAGCGCGTTTTTTTT",
+          "efficiency": 0.95
+        },
+        {
+          "name": "hisG_terminator",
+          "sequence": "CCCGCCTAATGAGCGGGCTTTTTTTTT",
+          "efficiency": 0.92
+        }
+      ]
+    },
+    "rho_dependent": {
+      "rut_sites": [
+        {
+          "gene": "trp_operon",
+          "sequence": "GCUUCUGCUUCUCUUUGCUGCUUUGC",
+          "c_richness": 0.42
+        }
+      ]
+    }
+  },
+  "regulatory_proteins": {
+    "global_regulators": {
+      "CRP": {
+        "targets": 378,
+        "activation": 329,
+        "repression": 49,
+        "cofactor": "cAMP"
+      },
+      "FNR": {
+        "targets": 247,
+        "activation": 186,
+        "repression": 61,
+        "cofactor": "[4Fe-4S]2+"
+      },
+      "ArcA": {
+        "targets": 168,
+        "activation": 48,
+        "repression": 120,
+        "signal": "phosphorylation"
+      },
+      "IHF": {
+        "targets": 167,
+        "dna_bending": true,
+        "subunits": ["IhfA", "IhfB"]
+      },
+      "Fis": {
+        "targets": 231,
+        "activation": 102,
+        "repression": 129,
+        "growth_phase": "exponential"
+      }
+    },
+    "two_component_systems": [
+      {
+        "name": "EnvZ/OmpR",
+        "signal": "osmolarity",
+        "targets": ["ompF", "ompC"]
+      },
+      {
+        "name": "CpxA/CpxR",
+        "signal": "envelope_stress",
+        "targets": ["degP", "dsbA", "ppiA"]
+      },
+      {
+        "name": "PhoQ/PhoP",
+        "signal": "Mg2+_limitation",
+        "targets": ["mgtA", "phoP"]
+      }
+    ]
+  },
+  "small_rnas": {
+    "trans_acting": [
+      {
+        "name": "RyhB",
+        "regulator": "Fur",
+        "targets": ["sodB", "sdhC", "acnA"],
+        "mechanism": "base_pairing"
+      },
+      {
+        "name": "DsrA",
+        "regulator": "cold_shock",
+        "targets": ["rpoS", "hns"],
+        "mechanism": "translation_activation"
+      },
+      {
+        "name": "RprA",
+        "regulator": "RcsB",
+        "targets": ["rpoS"],
+        "mechanism": "translation_activation"
+      }
+    ],
+    "cis_acting": [
+      {
+        "name": "gadY",
+        "location": "gadXY_intergenic",
+        "function": "pH_response"
+      }
+    ]
+  },
+  "chromatin_proteins": {
+    "H-NS": {
+      "binding_preference": "AT-rich",
+      "targets": 447,
+      "silencing": true
+    },
+    "StpA": {
+      "binding_preference": "AT-rich",
+      "paralog_of": "H-NS"
+    },
+    "Dps": {
+      "function": "DNA_protection",
+      "condition": "stationary_phase"
+    }
+  }
+}

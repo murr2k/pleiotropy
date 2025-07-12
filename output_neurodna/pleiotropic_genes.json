@@ -1,0 +1,32 @@
+[
+  {
+    "gene_id": "synthetic_gene_1",
+    "traits": [
+      "regulatory",
+      "carbon_metabolism",
+      "stress_response",
+      "motility"
+    ],
+    "confidence": 0.7446720297029703
+  },
+  {
+    "gene_id": "synthetic_gene_2",
+    "traits": [
+      "carbon_metabolism",
+      "regulatory",
+      "motility",
+      "stress_response"
+    ],
+    "confidence": 0.631360294117647
+  },
+  {
+    "gene_id": "control_gene_3",
+    "traits": [
+      "carbon_metabolism",
+      "regulatory",
+      "stress_response",
+      "motility"
+    ],
+    "confidence": 0.5902403846153845
+  }
+]

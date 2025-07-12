@@ -1,0 +1,295 @@
+{
+  "scenario_configurations": {
+    "high_throughput_screening": {
+      "description": "Initial genome-wide screening for potential pleiotropic genes",
+      "phase": "discovery",
+      "parameters": {
+        "base_threshold": 0.30,
+        "min_threshold": 0.20,
+        "max_threshold": 0.40,
+        "learning_rate": 0.15,
+        "ensemble_weights": {
+          "frequency_analysis": 0.35,
+          "pattern_detection": 0.30,
+          "regulatory_context": 0.20,
+          "statistical_significance": 0.15
+        },
+        "optimization_target": "recall",
+        "target_recall": 0.90,
+        "acceptable_precision": 0.40
+      },
+      "adjustments": {
+        "prioritize_sensitivity": true,
+        "allow_false_positives": true,
+        "batch_size": 1000,
+        "parallel_processing": true
+      }
+    },
+    
+    "clinical_research": {
+      "description": "High-precision detection for clinical applications",
+      "phase": "confirmation",
+      "parameters": {
+        "base_threshold": 0.80,
+        "min_threshold": 0.70,
+        "max_threshold": 0.90,
+        "learning_rate": 0.05,
+        "ensemble_weights": {
+          "frequency_analysis": 0.20,
+          "pattern_detection": 0.20,
+          "regulatory_context": 0.30,
+          "statistical_significance": 0.30
+        },
+        "optimization_target": "precision",
+        "target_precision": 0.90,
+        "minimum_recall": 0.40
+      },
+      "adjustments": {
+        "require_multiple_evidence": true,
+        "cross_validation_folds": 10,
+        "confidence_interval": 0.95,
+        "regulatory_compliance": true
+      }
+    },
+    
+    "drug_target_discovery": {
+      "description": "Balanced detection for pharmaceutical research",
+      "phase": "production",
+      "parameters": {
+        "base_threshold": 0.65,
+        "min_threshold": 0.55,
+        "max_threshold": 0.75,
+        "learning_rate": 0.10,
+        "ensemble_weights": {
+          "frequency_analysis": 0.25,
+          "pattern_detection": 0.25,
+          "regulatory_context": 0.30,
+          "statistical_significance": 0.20
+        },
+        "optimization_target": "f1",
+        "target_f1": 0.75,
+        "balance_precision_recall": true
+      },
+      "adjustments": {
+        "pathway_enrichment_required": true,
+        "druggability_filter": true,
+        "expression_validation": true,
+        "tissue_specificity_check": true
+      }
+    },
+    
+    "evolutionary_analysis": {
+      "description": "Detection across multiple species with conservation focus",
+      "phase": "validation",
+      "parameters": {
+        "base_threshold": 0.55,
+        "min_threshold": 0.45,
+        "max_threshold": 0.65,
+        "learning_rate": 0.08,
+        "ensemble_weights": {
+          "frequency_analysis": 0.30,
+          "pattern_detection": 0.25,
+          "regulatory_context": 0.20,
+          "statistical_significance": 0.25
+        },
+        "optimization_target": "mcc",
+        "conservation_weight": 1.5
+      },
+      "adjustments": {
+        "require_ortholog_evidence": true,
+        "synteny_bonus": 0.1,
+        "phylogenetic_correction": true,
+        "multiple_species_validation": 3
+      }
+    },
+    
+    "rare_disease_research": {
+      "description": "Sensitive detection for rare genetic conditions",
+      "phase": "discovery",
+      "parameters": {
+        "base_threshold": 0.25,
+        "min_threshold": 0.15,
+        "max_threshold": 0.35,
+        "learning_rate": 0.20,
+        "ensemble_weights": {
+          "frequency_analysis": 0.20,
+          "pattern_detection": 0.30,
+          "regulatory_context": 0.25,
+          "statistical_significance": 0.25
+        },
+        "optimization_target": "recall",
+        "prior_pleiotropic_probability": 0.15
+      },
+      "adjustments": {
+        "small_sample_correction": true,
+        "bootstrap_confidence": true,
+        "permutation_testing": 1000,
+        "family_based_validation": true
+      }
+    },
+    
+    "synthetic_biology": {
+      "description": "Detection for engineered genetic circuits",
+      "phase": "production",
+      "parameters": {
+        "base_threshold": 0.60,
+        "min_threshold": 0.50,
+        "max_threshold": 0.70,
+        "learning_rate": 0.12,
+        "ensemble_weights": {
+          "frequency_analysis": 0.20,
+          "pattern_detection": 0.20,
+          "regulatory_context": 0.40,
+          "statistical_significance": 0.20
+        },
+        "optimization_target": "precision",
+        "synthetic_sequence_handling": true
+      },
+      "adjustments": {
+        "non_natural_codon_aware": true,
+        "circuit_topology_analysis": true,
+        "promoter_strength_weighting": 2.0,
+        "orthogonality_check": true
+      }
+    },
+    
+    "population_genomics": {
+      "description": "Large-scale population analysis",
+      "phase": "validation",
+      "parameters": {
+        "base_threshold": 0.58,
+        "min_threshold": 0.48,
+        "max_threshold": 0.68,
+        "learning_rate": 0.07,
+        "ensemble_weights": {
+          "frequency_analysis": 0.30,
+          "pattern_detection": 0.20,
+          "regulatory_context": 0.20,
+          "statistical_significance": 0.30
+        },
+        "optimization_target": "auc",
+        "population_stratification": true
+      },
+      "adjustments": {
+        "allele_frequency_filter": 0.01,
+        "hardy_weinberg_check": true,
+        "linkage_disequilibrium_aware": true,
+        "ancestry_correction": true
+      }
+    },
+    
+    "real_time_monitoring": {
+      "description": "Continuous monitoring of gene expression data",
+      "phase": "production",
+      "parameters": {
+        "base_threshold": 0.68,
+        "min_threshold": 0.58,
+        "max_threshold": 0.78,
+        "learning_rate": 0.05,
+        "ensemble_weights": {
+          "frequency_analysis": 0.25,
+          "pattern_detection": 0.25,
+          "regulatory_context": 0.25,
+          "statistical_significance": 0.25
+        },
+        "optimization_target": "balanced",
+        "streaming_mode": true
+      },
+      "adjustments": {
+        "sliding_window_size": 1000,
+        "update_frequency": "hourly",
+        "anomaly_detection": true,
+        "drift_correction": true
+      }
+    }
+  },
+  
+  "quick_start_profiles": {
+    "conservative": {
+      "description": "High confidence, low false positive rate",
+      "base_threshold_modifier": 1.15,
+      "optimization_target": "precision",
+      "min_precision": 0.85
+    },
+    "balanced": {
+      "description": "Balanced precision and recall",
+      "base_threshold_modifier": 1.00,
+      "optimization_target": "f1",
+      "target_f1": 0.75
+    },
+    "aggressive": {
+      "description": "High sensitivity, accepts more false positives",
+      "base_threshold_modifier": 0.85,
+      "optimization_target": "recall",
+      "min_recall": 0.85
+    }
+  },
+  
+  "advanced_settings": {
+    "noise_estimation": {
+      "method": "gaussian_mixture",
+      "n_components": 2,
+      "percentile": 95,
+      "min_samples": 100
+    },
+    "bayesian_updating": {
+      "prior_update_rate": 0.1,
+      "evidence_weight": 0.8,
+      "min_evidence_samples": 20
+    },
+    "ensemble_optimization": {
+      "method": "gradient_descent",
+      "learning_rate": 0.01,
+      "epochs": 50,
+      "validation_split": 0.2
+    },
+    "convergence_criteria": {
+      "threshold_stability": 0.02,
+      "min_iterations": 10,
+      "max_iterations": 100,
+      "early_stopping_patience": 5
+    }
+  },
+  
+  "organism_specific": {
+    "ecoli": {
+      "gc_content_expected": 0.51,
+      "average_gene_length": 950,
+      "codon_usage_table": "ecoli_codon_usage.json",
+      "known_pleiotropic_fraction": 0.07
+    },
+    "human": {
+      "gc_content_expected": 0.41,
+      "average_gene_length": 27000,
+      "codon_usage_table": "human_codon_usage.json",
+      "known_pleiotropic_fraction": 0.12
+    },
+    "yeast": {
+      "gc_content_expected": 0.38,
+      "average_gene_length": 1450,
+      "codon_usage_table": "yeast_codon_usage.json",
+      "known_pleiotropic_fraction": 0.09
+    }
+  },
+  
+  "performance_tuning": {
+    "cpu_optimization": {
+      "parallel_threads": "auto",
+      "chunk_size": 1000,
+      "cache_size": "1GB",
+      "vectorization": true
+    },
+    "memory_optimization": {
+      "max_memory_usage": "8GB",
+      "sliding_window": true,
+      "sparse_matrix_threshold": 0.7,
+      "data_compression": true
+    },
+    "gpu_acceleration": {
+      "enabled": false,
+      "device": "cuda:0",
+      "batch_size": 10000,
+      "mixed_precision": true
+    }
+  }
+}

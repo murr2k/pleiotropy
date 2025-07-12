@@ -1,0 +1,26 @@
+[
+  {
+    "name": "carbon_metabolism",
+    "description": "Carbon source utilization with high CTG codon usage",
+    "associated_genes": ["synthetic_gene_1"],
+    "known_sequences": []
+  },
+  {
+    "name": "stress_response", 
+    "description": "Stress response with high GAA codon usage",
+    "associated_genes": ["synthetic_gene_1"],
+    "known_sequences": []
+  },
+  {
+    "name": "regulatory",
+    "description": "Regulatory functions with high CGT codon usage",
+    "associated_genes": ["synthetic_gene_2"],
+    "known_sequences": []
+  },
+  {
+    "name": "motility",
+    "description": "Motility with high TTC codon usage",
+    "associated_genes": ["synthetic_gene_2"],
+    "known_sequences": []
+  }
+]

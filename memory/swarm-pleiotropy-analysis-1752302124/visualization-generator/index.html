@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pleiotropic Analysis - Visualization Index</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            min-height: 100vh;
+        }
+        
+        .header {
+            text-align: center;
+            margin-bottom: 40px;
+            background: rgba(255, 255, 255, 0.1);
+            padding: 30px;
+            border-radius: 15px;
+            backdrop-filter: blur(10px);
+        }
+        
+        .namespace {
+            font-family: monospace;
+            background: rgba(0, 0, 0, 0.3);
+            padding: 10px 20px;
+            border-radius: 5px;
+            display: inline-block;
+            margin-top: 10px;
+        }
+        
+        .visualization-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 20px;
+            margin-bottom: 40px;
+        }
+        
+        .viz-card {
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 15px;
+            padding: 25px;
+            color: #333;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+        
+        .viz-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .viz-title {
+            font-size: 20px;
+            font-weight: bold;
+            margin-bottom: 10px;
+            color: #2c3e50;
+        }
+        
+        .viz-description {
+            margin-bottom: 15px;
+            color: #7f8c8d;
+        }
+        
+        .viz-features {
+            list-style: none;
+            padding: 0;
+            margin-bottom: 20px;
+        }
+        
+        .viz-features li {
+            padding: 5px 0;
+            border-left: 3px solid #3498db;
+            padding-left: 10px;
+            margin-bottom: 5px;
+        }
+        
+        .viz-link {
+            display: inline-block;
+            background: #3498db;
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: background 0.3s ease;
+        }
+        
+        .viz-link:hover {
+            background: #2980b9;
+        }
+        
+        .stats-section {
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 15px;
+            padding: 30px;
+            backdrop-filter: blur(10px);
+        }
+        
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+        
+        .stat-item {
+            text-align: center;
+            background: rgba(255, 255, 255, 0.2);
+            padding: 20px;
+            border-radius: 10px;
+        }
+        
+        .stat-value {
+            font-size: 28px;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+        
+        .stat-label {
+            font-size: 14px;
+            opacity: 0.8;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>🧬 Genomic Pleiotropy Cryptanalysis</h1>
+        <h2>Comprehensive Visualization Suite</h2>
+        <div class="namespace">Memory Namespace: swarm-pleiotropy-analysis-1752302124</div>
+        <p>Generated: 2025-07-12 01:05:10</p>
+    </div>
+
+    <div class="visualization-grid">
+        <div class="viz-card">
+            <div class="viz-title">🖥️ Interactive Dashboard</div>
+            <div class="viz-description">Real-time monitoring dashboard with live progress updates</div>
+            <ul class="viz-features">
+                <li>Real-time progress indicators</li>
+                <li>Agent status monitoring</li>
+                <li>Interactive codon heatmap</li>
+                <li>Live performance metrics</li>
+            </ul>
+            <a href="pleiotropy_dashboard.html" class="viz-link">Open Dashboard</a>
+        </div>
+
+        <div class="viz-card">
+            <div class="viz-title">🧬 Codon Usage Analysis</div>
+            <div class="viz-description">Advanced bias detection across 64 genetic codons</div>
+            <ul class="viz-features">
+                <li>64-codon frequency matrix</li>
+                <li>Amino acid grouping</li>
+                <li>Interactive tooltips</li>
+                <li>Pattern detection</li>
+            </ul>
+            <a href="codon_heatmap.html" class="viz-link">View Analysis</a>
+        </div>
+
+        <div class="viz-card">
+            <div class="viz-title">🕸️ Gene-Trait Network</div>
+            <div class="viz-description">Interactive network graph of pleiotropic relationships</div>
+            <ul class="viz-features">
+                <li>Spring-force layout</li>
+                <li>Interactive exploration</li>
+                <li>Bipartite structure</li>
+                <li>Association mapping</li>
+            </ul>
+            <a href="gene_trait_network.html" class="viz-link">Explore Network</a>
+        </div>
+
+        <div class="viz-card">
+            <div class="viz-title">🎯 Confidence Analysis</div>
+            <div class="viz-description">Statistical assessment of prediction confidence</div>
+            <ul class="viz-features">
+                <li>Score distributions</li>
+                <li>Correlation analysis</li>
+                <li>Statistical summaries</li>
+                <li>Multi-panel view</li>
+            </ul>
+            <a href="confidence_analysis.html" class="viz-link">View Statistics</a>
+        </div>
+
+        <div class="viz-card">
+            <div class="viz-title">⏱️ Temporal Monitoring</div>
+            <div class="viz-description">Real-time progress and performance tracking</div>
+            <ul class="viz-features">
+                <li>Progress tracking</li>
+                <li>Performance metrics</li>
+                <li>Resource utilization</li>
+                <li>Discovery timeline</li>
+            </ul>
+            <a href="temporal_analysis.html" class="viz-link">Monitor Progress</a>
+        </div>
+
+        <div class="viz-card">
+            <div class="viz-title">📊 Publication Figures</div>
+            <div class="viz-description">High-quality static figures for research publication</div>
+            <ul class="viz-features">
+                <li>300 DPI resolution</li>
+                <li>Multi-panel layout</li>
+                <li>Statistical summaries</li>
+                <li>Publication ready</li>
+            </ul>
+            <a href="publication_figure.png" class="viz-link">View Figures</a>
+        </div>
+    </div>
+
+    <div class="stats-section">
+        <h3>📈 Analysis Summary</h3>
+        <div class="stats-grid">
+            <div class="stat-item">
+                <div class="stat-value">59</div>
+                <div class="stat-label">Sequences Analyzed</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-value">8</div>
+                <div class="stat-label">Trait Categories</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-value">12</div>
+                <div class="stat-label">Unique Genes</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-value">0.82</div>
+                <div class="stat-label">Avg Confidence</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-value">7</div>
+                <div class="stat-label">Visualizations</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-value">100%</div>
+                <div class="stat-label">Analysis Complete</div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

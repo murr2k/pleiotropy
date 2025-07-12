@@ -1,0 +1,18 @@
+{
+  "timestamp": "2025-07-12T08:02:26.571908",
+  "operation": "trial_created",
+  "data": {
+    "trial_id": 2,
+    "trial_name": "E. coli K-12 Pleiotropic Analysis",
+    "genes": [
+      "crp",
+      "fis",
+      "rpoS",
+      "hns",
+      "ihfA"
+    ],
+    "traits": 6,
+    "confidence_threshold": 0.7
+  },
+  "memory_key": "swarm-pleiotropy-analysis-1752302124/database-manager/trial_created"
+}

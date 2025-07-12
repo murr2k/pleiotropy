@@ -1,0 +1,40 @@
+{
+  "start_time": 1752309411.752087,
+  "tests": {
+    "known_gene_validation": {
+      "metrics": {
+        "known_genes_detected": [],
+        "novel_genes_detected": [],
+        "missed_known_genes": [
+          "crp",
+          "fis",
+          "rpoS",
+          "hns",
+          "ihfA"
+        ]
+      },
+      "detection_rate": 0.0,
+      "total_known_genes": 5,
+      "detected_known": 0,
+      "novel_detections": 0,
+      "success": false
+    },
+    "biological_accuracy": {
+      "trait_accuracy": {},
+      "confidence_correlation": 0,
+      "biological_plausibility": 0
+    },
+    "statistical_significance": {
+      "codon_usage_test": {
+        "chi_squared": 836.3384188626909,
+        "p_value": 8.676287123820878e-159,
+        "significant": "True"
+      },
+      "trait_correlation": {},
+      "significance_tests": {}
+    }
+  },
+  "end_time": 1752309411.757347,
+  "duration": 0.005259990692138672,
+  "overall_success": false
+}

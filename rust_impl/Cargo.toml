@@ -33,6 +33,7 @@ env_logger = "0.10"
 
 # Testing
 rand = "0.8"
+neurodna = { version = "0.0.2", default-features = false }
 
 [dev-dependencies]
 criterion = "0.5"

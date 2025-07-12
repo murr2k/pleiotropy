@@ -1,0 +1,176 @@
+{
+  "start_time": 1752309411.757608,
+  "tests": {
+    "threshold_analysis": {
+      "results_by_threshold": [
+        {
+          "threshold": 0.5,
+          "genes_detected": 0,
+          "average_confidence": NaN,
+          "results": {
+            "error": "error: unexpected argument '--confidence-threshold' found\n\nUsage: pleiotropy_core --input <INPUT> --traits <TRAITS> --output <OUTPUT> --min-traits <MIN_TRAITS>\n\nFor more information, try '--help'.\n",
+            "execution_time": 0.002056598663330078,
+            "sequences_processed": 0,
+            "pleiotropic_genes": []
+          }
+        },
+        {
+          "threshold": 0.6,
+          "genes_detected": 0,
+          "average_confidence": NaN,
+          "results": {
+            "error": "error: unexpected argument '--confidence-threshold' found\n\nUsage: pleiotropy_core --input <INPUT> --traits <TRAITS> --output <OUTPUT> --min-traits <MIN_TRAITS>\n\nFor more information, try '--help'.\n",
+            "execution_time": 0.0018773078918457031,
+            "sequences_processed": 0,
+            "pleiotropic_genes": []
+          }
+        },
+        {
+          "threshold": 0.7,
+          "genes_detected": 0,
+          "average_confidence": NaN,
+          "results": {
+            "error": "error: unexpected argument '--confidence-threshold' found\n\nUsage: pleiotropy_core --input <INPUT> --traits <TRAITS> --output <OUTPUT> --min-traits <MIN_TRAITS>\n\nFor more information, try '--help'.\n",
+            "execution_time": 0.0017600059509277344,
+            "sequences_processed": 0,
+            "pleiotropic_genes": []
+          }
+        },
+        {
+          "threshold": 0.75,
+          "genes_detected": 0,
+          "average_confidence": NaN,
+          "results": {
+            "error": "error: unexpected argument '--confidence-threshold' found\n\nUsage: pleiotropy_core --input <INPUT> --traits <TRAITS> --output <OUTPUT> --min-traits <MIN_TRAITS>\n\nFor more information, try '--help'.\n",
+            "execution_time": 0.001573801040649414,
+            "sequences_processed": 0,
+            "pleiotropic_genes": []
+          }
+        },
+        {
+          "threshold": 0.8,
+          "genes_detected": 0,
+          "average_confidence": NaN,
+          "results": {
+            "error": "error: unexpected argument '--confidence-threshold' found\n\nUsage: pleiotropy_core --input <INPUT> --traits <TRAITS> --output <OUTPUT> --min-traits <MIN_TRAITS>\n\nFor more information, try '--help'.\n",
+            "execution_time": 0.001436471939086914,
+            "sequences_processed": 0,
+            "pleiotropic_genes": []
+          }
+        },
+        {
+          "threshold": 0.85,
+          "genes_detected": 0,
+          "average_confidence": NaN,
+          "results": {
+            "error": "error: unexpected argument '--confidence-threshold' found\n\nUsage: pleiotropy_core --input <INPUT> --traits <TRAITS> --output <OUTPUT> --min-traits <MIN_TRAITS>\n\nFor more information, try '--help'.\n",
+            "execution_time": 0.0014348030090332031,
+            "sequences_processed": 0,
+            "pleiotropic_genes": []
+          }
+        },
+        {
+          "threshold": 0.9,
+          "genes_detected": 0,
+          "average_confidence": NaN,
+          "results": {
+            "error": "error: unexpected argument '--confidence-threshold' found\n\nUsage: pleiotropy_core --input <INPUT> --traits <TRAITS> --output <OUTPUT> --min-traits <MIN_TRAITS>\n\nFor more information, try '--help'.\n",
+            "execution_time": 0.001470327377319336,
+            "sequences_processed": 0,
+            "pleiotropic_genes": []
+          }
+        },
+        {
+          "threshold": 0.95,
+          "genes_detected": 0,
+          "average_confidence": NaN,
+          "results": {
+            "error": "error: unexpected argument '--confidence-threshold' found\n\nUsage: pleiotropy_core --input <INPUT> --traits <TRAITS> --output <OUTPUT> --min-traits <MIN_TRAITS>\n\nFor more information, try '--help'.\n",
+            "execution_time": 0.0016300678253173828,
+            "sequences_processed": 0,
+            "pleiotropic_genes": []
+          }
+        }
+      ],
+      "optimal_threshold": 0.5
+    },
+    "adaptive_confidence": {
+      "base_run": {
+        "genes_detected": 0,
+        "avg_confidence": NaN
+      },
+      "adaptive_run": {
+        "genes_detected": 0,
+        "avg_confidence": NaN
+      },
+      "improvement": {},
+      "success": false
+    },
+    "edge_cases": {
+      "empty_genome": {
+        "handled": true,
+        "result": {
+          "execution_time": 0.003521442413330078,
+          "sequences_processed": 0,
+          "pleiotropic_genes": [],
+          "analysis_results": {
+            "sequences": 0,
+            "identified_traits": [],
+            "frequency_table": {
+              "codon_frequencies": [],
+              "total_codons": 0,
+              "trait_codon_counts": {}
+            }
+          },
+          "output_directory": "/home/murr2k/projects/agentic/pleiotropy/memory/swarm-pipeline-debug-1752302724/validation/pipeline_run_1752309411"
+        }
+      },
+      "single_gene": {
+        "handled": true,
+        "result": {
+          "execution_time": 0.0029764175415039062,
+          "sequences_processed": 0,
+          "pleiotropic_genes": [],
+          "analysis_results": {
+            "sequences": 0,
+            "identified_traits": [],
+            "frequency_table": {
+              "codon_frequencies": [],
+              "total_codons": 0,
+              "trait_codon_counts": {}
+            }
+          },
+          "output_directory": "/home/murr2k/projects/agentic/pleiotropy/memory/swarm-pipeline-debug-1752302724/validation/pipeline_run_1752309411"
+        }
+      },
+      "no_traits": {},
+      "all_passed": false
+    },
+    "noise_tolerance": {
+      "ambiguous_nucleotides": {
+        "handled": true,
+        "result": {
+          "execution_time": 0.0030014514923095703,
+          "sequences_processed": 0,
+          "pleiotropic_genes": [],
+          "analysis_results": {
+            "sequences": 0,
+            "identified_traits": [],
+            "frequency_table": {
+              "codon_frequencies": [],
+              "total_codons": 0,
+              "trait_codon_counts": {}
+            }
+          },
+          "output_directory": "/home/murr2k/projects/agentic/pleiotropy/memory/swarm-pipeline-debug-1752302724/validation/pipeline_run_1752309411"
+        }
+      },
+      "mixed_case": {},
+      "special_characters": {},
+      "all_passed": false
+    }
+  },
+  "end_time": 1752309411.791082,
+  "duration": 0.033473968505859375,
+  "overall_success": false
+}

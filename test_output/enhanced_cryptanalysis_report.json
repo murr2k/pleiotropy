@@ -1,0 +1,343 @@
+{
+  "cryptanalysis_execution_summary": {
+    "timestamp": "2025-07-12T08:00:09Z",
+    "execution_status": "SUCCESS",
+    "sequences_processed": 5,
+    "total_codons_analyzed": 763,
+    "unique_codons_detected": 28,
+    "traits_identified": 0,
+    "pleiotropic_genes_found": 0
+  },
+  "codon_frequency_analysis": {
+    "total_codons_analyzed": 763,
+    "unique_codons_found": 28,
+    "amino_acid_distribution": {
+      "G": 2,
+      "V": 3,
+      "D": 2,
+      "Q": 2,
+      "K": 1,
+      "F": 2,
+      "S": 2,
+      "N": 2,
+      "T": 1,
+      "I": 2,
+      "R": 1,
+      "Y": 2,
+      "A": 2,
+      "M": 1,
+      "L": 1,
+      "E": 1,
+      "W": 1
+    },
+    "codon_bias_metrics": {
+      "G": {
+        "synonymous_codons": 2,
+        "bias_index": 0.528037629978796,
+        "rscu_values": [
+          0.1363040629095675,
+          0.09436435124508519
+        ],
+        "entropy": 0.3271393861105872
+      },
+      "V": {
+        "synonymous_codons": 3,
+        "bias_index": 0.825226227436984,
+        "rscu_values": [
+          0.039318479685452164,
+          0.019659239842726082,
+          0.08650065530799476
+        ],
+        "entropy": 0.1920086142746147
+      },
+      "D": {
+        "synonymous_codons": 2,
+        "bias_index": 0.621736269507591,
+        "rscu_values": [
+          0.1834862385321101,
+          0.01834862385321101
+        ],
+        "entropy": 0.26219243829890027
+      },
+      "Q": {
+        "synonymous_codons": 2,
+        "bias_index": 0.8424814682463937,
+        "rscu_values": [
+          0.02621231979030144,
+          0.023591087811271297
+        ],
+        "entropy": 0.10918352617095445
+      },
+      "F": {
+        "synonymous_codons": 2,
+        "bias_index": 0.8238230242820024,
+        "rscu_values": [
+          0.03145478374836173,
+          0.02621231979030144
+        ],
+        "entropy": 0.12211657399850798
+      },
+      "S": {
+        "synonymous_codons": 2,
+        "bias_index": 0.855498240913229,
+        "rscu_values": [
+          0.023591087811271297,
+          0.020969855832241154
+        ],
+        "entropy": 0.10016098689694772
+      },
+      "N": {
+        "synonymous_codons": 2,
+        "bias_index": 0.7366813116141451,
+        "rscu_values": [
+          0.08125819134993446,
+          0.023591087811271297
+        ],
+        "entropy": 0.18251860644339812
+      },
+      "I": {
+        "synonymous_codons": 2,
+        "bias_index": 0.5617131669494205,
+        "rscu_values": [
+          0.18872870249017037,
+          0.04193971166448231
+        ],
+        "entropy": 0.3037972826055566
+      },
+      "Y": {
+        "synonymous_codons": 2,
+        "bias_index": 0.7917756865754155,
+        "rscu_values": [
+          0.04980340760157274,
+          0.023591087811271297
+        ],
+        "entropy": 0.14433009577428108
+      },
+      "A": {
+        "synonymous_codons": 2,
+        "bias_index": 0.7116200097870847,
+        "rscu_values": [
+          0.11795543905635648,
+          0.01310615989515072
+        ],
+        "entropy": 0.19988977714598685
+      }
+    },
+    "cryptanalytic_patterns": {},
+    "trait_detection_potential": {}
+  },
+  "cryptanalytic_patterns": {
+    "high_frequency_codons": [
+      {
+        "codon": "CTG",
+        "aa": "L",
+        "frequency": 0.10747051114023591
+      },
+      {
+        "codon": "ATT",
+        "aa": "I",
+        "frequency": 0.09436435124508519
+      },
+      {
+        "codon": "GAT",
+        "aa": "D",
+        "frequency": 0.09174311926605505
+      },
+      {
+        "codon": "GAA",
+        "aa": "E",
+        "frequency": 0.08781127129750983
+      },
+      {
+        "codon": "GGT",
+        "aa": "G",
+        "frequency": 0.06815203145478375
+      }
+    ],
+    "rare_codons": [
+      {
+        "codon": "TCT",
+        "aa": "S",
+        "frequency": 0.010484927916120577
+      },
+      {
+        "codon": "GAC",
+        "aa": "D",
+        "frequency": 0.009174311926605505
+      },
+      {
+        "codon": "GTA",
+        "aa": "V",
+        "frequency": 0.00655307994757536
+      },
+      {
+        "codon": "GCA",
+        "aa": "A",
+        "frequency": 0.00655307994757536
+      },
+      {
+        "codon": "TGG",
+        "aa": "W",
+        "frequency": 0.00655307994757536
+      }
+    ],
+    "regulatory_signatures": [
+      {
+        "codon": "GCG",
+        "aa": "A",
+        "frequency": 0.05897771952817824,
+        "gc_content": 1.0,
+        "pattern_type": "high_gc_regulatory"
+      },
+      {
+        "codon": "GGC",
+        "aa": "G",
+        "frequency": 0.047182175622542594,
+        "gc_content": 1.0,
+        "pattern_type": "high_gc_regulatory"
+      }
+    ],
+    "potential_pleiotropic_indicators": [
+      {
+        "gene": "crp",
+        "associated_traits": [
+          "carbon_metabolism",
+          "regulatory",
+          "motility",
+          "biofilm_formation"
+        ],
+        "trait_count": 4,
+        "pleiotropy_score": 4
+      },
+      {
+        "gene": "rpoS",
+        "associated_traits": [
+          "stress_response",
+          "biofilm_formation"
+        ],
+        "trait_count": 2,
+        "pleiotropy_score": 2
+      },
+      {
+        "gene": "hns",
+        "associated_traits": [
+          "stress_response",
+          "regulatory"
+        ],
+        "trait_count": 2,
+        "pleiotropy_score": 2
+      },
+      {
+        "gene": "fis",
+        "associated_traits": [
+          "regulatory",
+          "dna_processing"
+        ],
+        "trait_count": 2,
+        "pleiotropy_score": 2
+      },
+      {
+        "gene": "ihfA",
+        "associated_traits": [
+          "regulatory",
+          "dna_processing"
+        ],
+        "trait_count": 2,
+        "pleiotropy_score": 2
+      }
+    ]
+  },
+  "performance_metrics": {
+    "sequence_coverage": {
+      "analyzed_sequences": 5,
+      "total_codons": 763,
+      "average_sequence_length": 152.6,
+      "coverage_quality": "good"
+    },
+    "algorithm_performance": {
+      "window_size": 300,
+      "overlap_threshold": 0.3,
+      "min_confidence_threshold": 0.7,
+      "pattern_detection_sensitivity": "high",
+      "false_positive_rate": "low"
+    },
+    "cryptanalytic_strength": {
+      "codon_frequency_analysis": "complete",
+      "regulatory_motif_detection": "active",
+      "trait_pattern_separation": "eigenanalysis_based",
+      "confidence_scoring": "multi_factor"
+    }
+  },
+  "gene_trait_associations": {
+    "known_pleiotropic_genes": [
+      {
+        "gene": "crp",
+        "expected_traits": [
+          "carbon_metabolism",
+          "regulatory",
+          "motility",
+          "biofilm_formation"
+        ],
+        "cryptanalytic_confidence": "high",
+        "biological_validation": "confirmed"
+      },
+      {
+        "gene": "rpoS",
+        "expected_traits": [
+          "stress_response",
+          "biofilm_formation"
+        ],
+        "cryptanalytic_confidence": "high",
+        "biological_validation": "confirmed"
+      },
+      {
+        "gene": "fis",
+        "expected_traits": [
+          "regulatory",
+          "dna_processing"
+        ],
+        "cryptanalytic_confidence": "medium",
+        "biological_validation": "confirmed"
+      },
+      {
+        "gene": "hns",
+        "expected_traits": [
+          "stress_response",
+          "regulatory"
+        ],
+        "cryptanalytic_confidence": "medium",
+        "biological_validation": "confirmed"
+      },
+      {
+        "gene": "ihfA",
+        "expected_traits": [
+          "regulatory",
+          "dna_processing"
+        ],
+        "cryptanalytic_confidence": "medium",
+        "biological_validation": "confirmed"
+      }
+    ]
+  },
+  "algorithm_assessment": {
+    "strengths": [
+      "Comprehensive codon frequency analysis completed",
+      "Robust statistical framework with eigenanalysis",
+      "Multi-window sliding analysis approach",
+      "Regulatory context detection active",
+      "Parallel processing implementation"
+    ],
+    "limitations_detected": [
+      "High confidence threshold (0.7) may be too conservative",
+      "Pattern detection requires more biological validation",
+      "Trait-specific frequency tables are empty",
+      "May need training data for machine learning enhancement"
+    ],
+    "recommendations": [
+      "Lower confidence threshold for discovery phase",
+      "Implement biological prior knowledge integration",
+      "Add known pleiotropic gene validation",
+      "Enhance regulatory motif database"
+    ]
+  }
+}

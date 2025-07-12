@@ -1,0 +1,92 @@
+{
+  "created_at": "2025-07-12T01:36:46.978873",
+  "generator": "SyntheticDataGenerator v1.0",
+  "total_sequences": 8,
+  "positive_controls": 5,
+  "negative_controls": 4,
+  "sequences": [
+    {
+      "gene_id": "syn_strong_dual_1",
+      "type": "positive_control",
+      "traits": [
+        "metabolism",
+        "stress_response"
+      ],
+      "length": 600,
+      "expected_detection": true
+    },
+    {
+      "gene_id": "syn_strong_triple_1",
+      "type": "positive_control",
+      "traits": [
+        "regulatory",
+        "dna_dynamics",
+        "motility"
+      ],
+      "length": 900,
+      "expected_detection": true
+    },
+    {
+      "gene_id": "syn_strong_dual_2",
+      "type": "positive_control",
+      "traits": [
+        "biofilm_formation",
+        "stress_response"
+      ],
+      "length": 750,
+      "expected_detection": true
+    },
+    {
+      "gene_id": "syn_negative_1",
+      "type": "negative_control",
+      "traits": [],
+      "length": 450,
+      "expected_detection": false
+    },
+    {
+      "gene_id": "syn_negative_2",
+      "type": "negative_control",
+      "traits": [],
+      "length": 300,
+      "expected_detection": false
+    },
+    {
+      "gene_id": "syn_edge_short",
+      "type": "edge_case_very_short",
+      "traits": [],
+      "length": 6,
+      "expected_detection": false
+    },
+    {
+      "gene_id": "syn_edge_weak",
+      "type": "edge_case_single_trait_weak",
+      "traits": [],
+      "length": 66,
+      "expected_detection": false
+    },
+    {
+      "gene_id": "syn_regulatory_1_body",
+      "type": "positive_control",
+      "traits": [
+        "metabolism",
+        "regulatory"
+      ],
+      "length": 500,
+      "expected_detection": true
+    },
+    {
+      "gene_id": "syn_regulatory_1",
+      "type": "with_regulatory",
+      "traits": [
+        "metabolism",
+        "regulatory"
+      ],
+      "length": 563,
+      "expected_detection": true,
+      "regulatory_elements": [
+        "promoter",
+        "enhancer"
+      ]
+    }
+  ]
+}

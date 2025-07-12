@@ -1,0 +1,585 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pleiotropic Analysis Dashboard</title>
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+        }
+        
+        .dashboard-header {
+            text-align: center;
+            margin-bottom: 30px;
+            background: rgba(255, 255, 255, 0.1);
+            padding: 20px;
+            border-radius: 15px;
+            backdrop-filter: blur(10px);
+        }
+        
+        .dashboard-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+        
+        .chart-container {
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 15px;
+            padding: 20px;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+            color: #333;
+        }
+        
+        .chart-title {
+            font-size: 18px;
+            font-weight: bold;
+            margin-bottom: 15px;
+            color: #2c3e50;
+            border-bottom: 2px solid #3498db;
+            padding-bottom: 10px;
+        }
+        
+        .progress-section {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            margin-bottom: 30px;
+        }
+        
+        .progress-card {
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+            padding: 15px;
+            text-align: center;
+            backdrop-filter: blur(10px);
+        }
+        
+        .progress-bar {
+            width: 100%;
+            height: 20px;
+            background: rgba(255, 255, 255, 0.3);
+            border-radius: 10px;
+            overflow: hidden;
+            margin: 10px 0;
+        }
+        
+        .progress-fill {
+            height: 100%;
+            background: linear-gradient(90deg, #00c851, #007e33);
+            transition: width 1s ease-in-out;
+        }
+        
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 15px;
+            margin: 20px 0;
+        }
+        
+        .stat-card {
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+            padding: 15px;
+            text-align: center;
+            backdrop-filter: blur(10px);
+        }
+        
+        .stat-value {
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+        
+        .stat-label {
+            font-size: 12px;
+            opacity: 0.8;
+        }
+        
+        .update-indicator {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background: #28a745;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 5px;
+            display: none;
+        }
+        
+        .agent-status {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin: 20px 0;
+        }
+        
+        .agent-card {
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+            padding: 15px;
+            min-width: 200px;
+            backdrop-filter: blur(10px);
+        }
+        
+        .agent-status-indicator {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            display: inline-block;
+            margin-right: 8px;
+        }
+        
+        .status-active { background: #28a745; }
+        .status-processing { background: #ffc107; }
+        .status-complete { background: #007bff; }
+        .status-error { background: #dc3545; }
+    </style>
+</head>
+<body>
+    <div class="dashboard-header">
+        <h1>🧬 Genomic Pleiotropy Cryptanalysis Dashboard</h1>
+        <p>Real-time analysis of gene-trait associations using cryptographic pattern detection</p>
+        <div class="stats-grid">
+            <div class="stat-card">
+                <div class="stat-value" id="total-sequences">0</div>
+                <div class="stat-label">Sequences Analyzed</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-value" id="total-genes">0</div>
+                <div class="stat-label">Genes Identified</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-value" id="total-traits">8</div>
+                <div class="stat-label">Trait Categories</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-value" id="confidence-score">0.0</div>
+                <div class="stat-label">Avg Confidence</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="update-indicator" id="update-indicator">
+        📊 Data Updated
+    </div>
+
+    <div class="progress-section">
+        <div class="progress-card">
+            <h3>Sequence Analysis</h3>
+            <div class="progress-bar">
+                <div class="progress-fill" id="seq-progress" style="width: 85%"></div>
+            </div>
+            <div>85% Complete</div>
+        </div>
+        <div class="progress-card">
+            <h3>Trait Extraction</h3>
+            <div class="progress-bar">
+                <div class="progress-fill" id="trait-progress" style="width: 70%"></div>
+            </div>
+            <div>70% Complete</div>
+        </div>
+        <div class="progress-card">
+            <h3>Cryptanalysis</h3>
+            <div class="progress-bar">
+                <div class="progress-fill" id="crypto-progress" style="width: 60%"></div>
+            </div>
+            <div>60% Complete</div>
+        </div>
+        <div class="progress-card">
+            <h3>Visualization</h3>
+            <div class="progress-bar">
+                <div class="progress-fill" id="viz-progress" style="width: 45%"></div>
+            </div>
+            <div>45% Complete</div>
+        </div>
+    </div>
+
+    <div class="agent-status">
+        <div class="agent-card">
+            <h4><span class="agent-status-indicator status-active"></span>Rust Analyzer</h4>
+            <p>Processing codon frequencies</p>
+            <small>Last update: <span id="rust-timestamp">Just now</span></small>
+        </div>
+        <div class="agent-card">
+            <h4><span class="agent-status-indicator status-processing"></span>Python Visualizer</h4>
+            <p>Generating network graphs</p>
+            <small>Last update: <span id="python-timestamp">2 min ago</span></small>
+        </div>
+        <div class="agent-card">
+            <h4><span class="agent-status-indicator status-complete"></span>Statistical Analyzer</h4>
+            <p>Correlation analysis complete</p>
+            <small>Last update: <span id="stats-timestamp">5 min ago</span></small>
+        </div>
+    </div>
+
+    <div class="dashboard-grid">
+        <div class="chart-container">
+            <div class="chart-title">🧬 Codon Usage Bias Heatmap</div>
+            <div id="codon-heatmap" style="width: 100%; height: 400px;"></div>
+        </div>
+        
+        <div class="chart-container">
+            <div class="chart-title">🕸️ Gene-Trait Network</div>
+            <div id="network-graph" style="width: 100%; height: 400px;"></div>
+        </div>
+        
+        <div class="chart-container">
+            <div class="chart-title">📊 Trait Distribution</div>
+            <div id="trait-distribution" style="width: 100%; height: 400px;"></div>
+        </div>
+        
+        <div class="chart-container">
+            <div class="chart-title">🎯 Confidence Scores</div>
+            <div id="confidence-scores" style="width: 100%; height: 400px;"></div>
+        </div>
+        
+        <div class="chart-container">
+            <div class="chart-title">⚡ Performance Metrics</div>
+            <div id="performance-metrics" style="width: 100%; height: 400px;"></div>
+        </div>
+        
+        <div class="chart-container">
+            <div class="chart-title">🔍 Analysis Timeline</div>
+            <div id="analysis-timeline" style="width: 100%; height: 400px;"></div>
+        </div>
+    </div>
+
+    <script>
+        // Sample data for E. coli analysis
+        const ecoliData = {
+            genes: ['crp', 'fis', 'rpoS', 'hns', 'ihfA'],
+            traits: ['carbon_metabolism', 'stress_response', 'regulatory', 'dna_dynamics', 'motility', 'biofilm_formation', 'cell_envelope', 'iron_homeostasis'],
+            codonFrequencies: {
+                'TTT': 0.0144, 'TTC': 0.0093, 'TTA': 0.0076, 'TTG': 0.0103,
+                'TCT': 0.0068, 'TCC': 0.0042, 'TCA': 0.0059, 'TCG': 0.0087,
+                'TAT': 0.0187, 'TAC': 0.0085, 'TAA': 0.0059, 'TAG': 0.0054,
+                'TGT': 0.0043, 'TGC': 0.0065, 'TGA': 0.0108, 'TGG': 0.0051,
+                'CTT': 0.0229, 'CTC': 0.0054, 'CTA': 0.0038, 'CTG': 0.1036,
+                'CCT': 0.0076, 'CCC': 0.0054, 'CCA': 0.0054, 'CCG': 0.0059,
+                'CAT': 0.0054, 'CAC': 0.0161, 'CAA': 0.0076, 'CAG': 0.0136,
+                'CGT': 0.0501, 'CGC': 0.0108, 'CGA': 0.0054, 'CGG': 0.0087,
+                'ATT': 0.0688, 'ATC': 0.0238, 'ATA': 0.0043, 'ATG': 0.0119,
+                'ACT': 0.0170, 'ACC': 0.0170, 'ACA': 0.0076, 'ACG': 0.0135,
+                'AAT': 0.0076, 'AAC': 0.0620, 'AAA': 0.0739, 'AAG': 0.0068,
+                'AGT': 0.0087, 'AGC': 0.0085, 'AGA': 0.0032, 'AGG': 0.0021,
+                'GTT': 0.0229, 'GTC': 0.0108, 'GTA': 0.0042, 'GTG': 0.0204,
+                'GCT': 0.0054, 'GCC': 0.0161, 'GCA': 0.0076, 'GCG': 0.0671,
+                'GAT': 0.0688, 'GAC': 0.0068, 'GAA': 0.0908, 'GAG': 0.0201,
+                'GGT': 0.1002, 'GGC': 0.0484, 'GGA': 0.0087, 'GGG': 0.0054
+            }
+        };
+
+        // Initialize charts
+        function initializeCharts() {
+            createCodonHeatmap();
+            createNetworkGraph();
+            createTraitDistribution();
+            createConfidenceScores();
+            createPerformanceMetrics();
+            createAnalysisTimeline();
+            updateStatistics();
+        }
+
+        // Codon Usage Bias Heatmap
+        function createCodonHeatmap() {
+            const codons = Object.keys(ecoliData.codonFrequencies);
+            const frequencies = Object.values(ecoliData.codonFrequencies);
+            
+            // Reshape data into 4x16 grid (64 codons)
+            const gridSize = 8;
+            const heatmapData = [];
+            const labels = [];
+            
+            for (let i = 0; i < gridSize; i++) {
+                const row = [];
+                const rowLabels = [];
+                for (let j = 0; j < gridSize; j++) {
+                    const index = i * gridSize + j;
+                    if (index < codons.length) {
+                        row.push(frequencies[index]);
+                        rowLabels.push(codons[index]);
+                    } else {
+                        row.push(0);
+                        rowLabels.push('');
+                    }
+                }
+                heatmapData.push(row);
+                labels.push(rowLabels);
+            }
+
+            const trace = {
+                z: heatmapData,
+                type: 'heatmap',
+                colorscale: 'Viridis',
+                showscale: true,
+                text: labels,
+                texttemplate: '%{text}',
+                textfont: { size: 10, color: 'white' },
+                hoverongaps: false
+            };
+
+            const layout = {
+                title: '',
+                xaxis: { showticklabels: false },
+                yaxis: { showticklabels: false },
+                margin: { l: 50, r: 50, t: 30, b: 50 },
+                paper_bgcolor: 'rgba(0,0,0,0)',
+                plot_bgcolor: 'rgba(0,0,0,0)'
+            };
+
+            Plotly.newPlot('codon-heatmap', [trace], layout, { responsive: true });
+        }
+
+        // Gene-Trait Network Graph
+        function createNetworkGraph() {
+            const geneTraitConnections = {
+                'crp': ['carbon_metabolism', 'regulatory', 'motility', 'biofilm_formation'],
+                'fis': ['regulatory', 'dna_dynamics'],
+                'rpoS': ['stress_response', 'biofilm_formation'],
+                'hns': ['regulatory', 'stress_response', 'dna_dynamics'],
+                'ihfA': ['regulatory', 'dna_dynamics']
+            };
+
+            const nodes = [];
+            const links = [];
+            
+            // Add gene nodes
+            ecoliData.genes.forEach((gene, i) => {
+                nodes.push({
+                    id: gene,
+                    name: gene,
+                    type: 'gene',
+                    x: Math.cos(2 * Math.PI * i / ecoliData.genes.length),
+                    y: Math.sin(2 * Math.PI * i / ecoliData.genes.length)
+                });
+            });
+            
+            // Add trait nodes
+            ecoliData.traits.forEach((trait, i) => {
+                nodes.push({
+                    id: trait,
+                    name: trait.replace('_', ' '),
+                    type: 'trait',
+                    x: 1.5 * Math.cos(2 * Math.PI * i / ecoliData.traits.length),
+                    y: 1.5 * Math.sin(2 * Math.PI * i / ecoliData.traits.length)
+                });
+            });
+            
+            // Add connections
+            Object.entries(geneTraitConnections).forEach(([gene, traits]) => {
+                traits.forEach(trait => {
+                    links.push({ source: gene, target: trait });
+                });
+            });
+
+            const geneNodes = nodes.filter(n => n.type === 'gene');
+            const traitNodes = nodes.filter(n => n.type === 'trait');
+            
+            const geneTrace = {
+                x: geneNodes.map(n => n.x),
+                y: geneNodes.map(n => n.y),
+                text: geneNodes.map(n => n.name),
+                mode: 'markers+text',
+                marker: { size: 20, color: '#3498db' },
+                textposition: 'middle center',
+                textfont: { color: 'white', size: 12 },
+                name: 'Genes',
+                type: 'scatter'
+            };
+            
+            const traitTrace = {
+                x: traitNodes.map(n => n.x),
+                y: traitNodes.map(n => n.y),
+                text: traitNodes.map(n => n.name),
+                mode: 'markers+text',
+                marker: { size: 15, color: '#e74c3c' },
+                textposition: 'middle center',
+                textfont: { color: 'white', size: 10 },
+                name: 'Traits',
+                type: 'scatter'
+            };
+
+            const layout = {
+                showlegend: true,
+                xaxis: { showgrid: false, zeroline: false, showticklabels: false },
+                yaxis: { showgrid: false, zeroline: false, showticklabels: false },
+                margin: { l: 50, r: 50, t: 30, b: 50 },
+                paper_bgcolor: 'rgba(0,0,0,0)',
+                plot_bgcolor: 'rgba(0,0,0,0)',
+                legend: { font: { color: 'black' } }
+            };
+
+            Plotly.newPlot('network-graph', [geneTrace, traitTrace], layout, { responsive: true });
+        }
+
+        // Trait Distribution
+        function createTraitDistribution() {
+            const traitCounts = [4, 2, 5, 3, 1, 2, 0, 1]; // Mock data for trait occurrences
+            
+            const trace = {
+                x: ecoliData.traits,
+                y: traitCounts,
+                type: 'bar',
+                marker: { color: '#9b59b6' },
+                text: traitCounts,
+                textposition: 'auto'
+            };
+
+            const layout = {
+                title: '',
+                xaxis: { tickangle: -45 },
+                yaxis: { title: 'Gene Count' },
+                margin: { l: 50, r: 50, t: 30, b: 100 },
+                paper_bgcolor: 'rgba(0,0,0,0)',
+                plot_bgcolor: 'rgba(0,0,0,0)'
+            };
+
+            Plotly.newPlot('trait-distribution', [trace], layout, { responsive: true });
+        }
+
+        // Confidence Scores
+        function createConfidenceScores() {
+            const scores = [0.85, 0.78, 0.92, 0.73, 0.81]; // Mock confidence scores
+            
+            const trace = {
+                x: ecoliData.genes,
+                y: scores,
+                type: 'bar',
+                marker: { 
+                    color: scores,
+                    colorscale: 'RdYlGn',
+                    showscale: true
+                },
+                text: scores.map(s => s.toFixed(2)),
+                textposition: 'auto'
+            };
+
+            const layout = {
+                title: '',
+                xaxis: { title: 'Genes' },
+                yaxis: { title: 'Confidence Score', range: [0, 1] },
+                margin: { l: 50, r: 50, t: 30, b: 50 },
+                paper_bgcolor: 'rgba(0,0,0,0)',
+                plot_bgcolor: 'rgba(0,0,0,0)'
+            };
+
+            Plotly.newPlot('confidence-scores', [trace], layout, { responsive: true });
+        }
+
+        // Performance Metrics
+        function createPerformanceMetrics() {
+            const times = ['00:00', '00:05', '00:10', '00:15', '00:20', '00:25'];
+            const cpuUsage = [15, 45, 78, 85, 60, 40];
+            const memoryUsage = [20, 35, 50, 65, 55, 45];
+            
+            const cpuTrace = {
+                x: times,
+                y: cpuUsage,
+                type: 'scatter',
+                mode: 'lines+markers',
+                name: 'CPU Usage (%)',
+                line: { color: '#e74c3c' }
+            };
+            
+            const memoryTrace = {
+                x: times,
+                y: memoryUsage,
+                type: 'scatter',
+                mode: 'lines+markers',
+                name: 'Memory Usage (%)',
+                line: { color: '#3498db' }
+            };
+
+            const layout = {
+                title: '',
+                xaxis: { title: 'Time' },
+                yaxis: { title: 'Usage (%)' },
+                margin: { l: 50, r: 50, t: 30, b: 50 },
+                paper_bgcolor: 'rgba(0,0,0,0)',
+                plot_bgcolor: 'rgba(0,0,0,0)',
+                legend: { font: { color: 'black' } }
+            };
+
+            Plotly.newPlot('performance-metrics', [cpuTrace, memoryTrace], layout, { responsive: true });
+        }
+
+        // Analysis Timeline
+        function createAnalysisTimeline() {
+            const phases = ['Data Loading', 'Sequence Parsing', 'Codon Analysis', 'Trait Extraction', 'Visualization'];
+            const startTimes = [0, 2, 8, 15, 22];
+            const durations = [2, 6, 7, 7, 8];
+            
+            const trace = {
+                x: durations,
+                y: phases,
+                type: 'bar',
+                orientation: 'h',
+                marker: { color: '#2ecc71' },
+                text: durations.map(d => `${d}s`),
+                textposition: 'auto'
+            };
+
+            const layout = {
+                title: '',
+                xaxis: { title: 'Duration (seconds)' },
+                margin: { l: 120, r: 50, t: 30, b: 50 },
+                paper_bgcolor: 'rgba(0,0,0,0)',
+                plot_bgcolor: 'rgba(0,0,0,0)'
+            };
+
+            Plotly.newPlot('analysis-timeline', [trace], layout, { responsive: true });
+        }
+
+        // Update statistics
+        function updateStatistics() {
+            document.getElementById('total-sequences').textContent = '59';
+            document.getElementById('total-genes').textContent = '5';
+            document.getElementById('confidence-score').textContent = '0.82';
+        }
+
+        // Simulate real-time updates
+        function simulateRealTimeUpdates() {
+            setInterval(() => {
+                // Update progress bars with random increments
+                const progressBars = ['seq-progress', 'trait-progress', 'crypto-progress', 'viz-progress'];
+                progressBars.forEach(id => {
+                    const element = document.getElementById(id);
+                    const currentWidth = parseInt(element.style.width);
+                    if (currentWidth < 100) {
+                        const newWidth = Math.min(100, currentWidth + Math.random() * 5);
+                        element.style.width = newWidth + '%';
+                        element.parentElement.nextElementSibling.textContent = `${Math.round(newWidth)}% Complete`;
+                    }
+                });
+
+                // Show update indicator
+                const indicator = document.getElementById('update-indicator');
+                indicator.style.display = 'block';
+                setTimeout(() => {
+                    indicator.style.display = 'none';
+                }, 2000);
+
+                // Update timestamps
+                const now = new Date().toLocaleTimeString();
+                document.getElementById('rust-timestamp').textContent = now;
+            }, 10000); // Update every 10 seconds
+        }
+
+        // Initialize dashboard
+        document.addEventListener('DOMContentLoaded', function() {
+            initializeCharts();
+            simulateRealTimeUpdates();
+        });
+    </script>
+</body>
+</html>

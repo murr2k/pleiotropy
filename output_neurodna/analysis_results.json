@@ -1,0 +1,225 @@
+{
+  "sequences": 3,
+  "identified_traits": [
+    {
+      "gene_id": "synthetic_gene_1",
+      "trait_names": [
+        "stress_response",
+        "regulatory",
+        "carbon_metabolism",
+        "motility"
+      ],
+      "contributing_regions": [],
+      "confidence_score": 0.7446720297029703,
+      "codon_patterns": [],
+      "associated_genes": []
+    },
+    {
+      "gene_id": "synthetic_gene_2",
+      "trait_names": [
+        "stress_response",
+        "regulatory",
+        "carbon_metabolism",
+        "motility"
+      ],
+      "contributing_regions": [],
+      "confidence_score": 0.631360294117647,
+      "codon_patterns": [],
+      "associated_genes": []
+    },
+    {
+      "gene_id": "control_gene_3",
+      "trait_names": [
+        "stress_response",
+        "carbon_metabolism",
+        "regulatory",
+        "motility"
+      ],
+      "contributing_regions": [],
+      "confidence_score": 0.5902403846153845,
+      "codon_patterns": [],
+      "associated_genes": []
+    }
+  ],
+  "frequency_table": {
+    "codon_frequencies": [
+      {
+        "codon": "GAT",
+        "amino_acid": "D",
+        "global_frequency": 0.048859934853420196,
+        "trait_specific_frequency": {
+          "motility": 0.0392156862745098,
+          "stress_response": 0.039603960396039604,
+          "carbon_metabolism": 0.039603960396039604,
+          "regulatory": 0.0392156862745098
+        }
+      },
+      {
+        "codon": "TTC",
+        "amino_acid": "F",
+        "global_frequency": 0.06514657980456026,
+        "trait_specific_frequency": {
+          "carbon_metabolism": 0.0,
+          "motility": 0.11764705882352941,
+          "regulatory": 0.11764705882352941,
+          "stress_response": 0.0,
+          "structural": 0.0781758957654723
+        }
+      },
+      {
+        "codon": "ATC",
+        "amino_acid": "I",
+        "global_frequency": 0.0749185667752443,
+        "trait_specific_frequency": {
+          "stress_response": 0.06930693069306931,
+          "regulatory": 0.058823529411764705,
+          "motility": 0.058823529411764705,
+          "carbon_metabolism": 0.06930693069306931,
+          "structural": 0.08990228013029317
+        }
+      },
+      {
+        "codon": "CTG",
+        "amino_acid": "L",
+        "global_frequency": 0.17263843648208468,
+        "trait_specific_frequency": {
+          "structural": 0.2071661237785016,
+          "high_expression": 0.2244299674267101,
+          "carbon_metabolism": 0.25742574257425743,
+          "stress_response": 0.25742574257425743,
+          "motility": 0.09803921568627451,
+          "regulatory": 0.09803921568627451
+        }
+      },
+      {
+        "codon": "CGT",
+        "amino_acid": "R",
+        "global_frequency": 0.14332247557003258,
+        "trait_specific_frequency": {
+          "carbon_metabolism": 0.13861386138613863,
+          "stress_response": 0.13861386138613863,
+          "motility": 0.18627450980392157,
+          "regulatory": 0.18627450980392157,
+          "high_expression": 0.18631921824104236
+        }
+      },
+      {
+        "codon": "GGT",
+        "amino_acid": "G",
+        "global_frequency": 0.06514657980456026,
+        "trait_specific_frequency": {
+          "carbon_metabolism": 0.039603960396039604,
+          "stress_response": 0.039603960396039604,
+          "motility": 0.0784313725490196,
+          "regulatory": 0.0784313725490196,
+          "high_expression": 0.08469055374592835
+        }
+      },
+      {
+        "codon": "GTG",
+        "amino_acid": "V",
+        "global_frequency": 0.06840390879478828,
+        "trait_specific_frequency": {
+          "stress_response": 0.06930693069306931,
+          "structural": 0.08208469055374593,
+          "carbon_metabolism": 0.06930693069306931,
+          "high_expression": 0.08892508143322476,
+          "regulatory": 0.0784313725490196,
+          "motility": 0.0784313725490196
+        }
+      },
+      {
+        "codon": "AAC",
+        "amino_acid": "N",
+        "global_frequency": 0.05211726384364821,
+        "trait_specific_frequency": {
+          "carbon_metabolism": 0.0,
+          "stress_response": 0.0,
+          "regulatory": 0.0784313725490196,
+          "motility": 0.0784313725490196
+        }
+      },
+      {
+        "codon": "AAA",
+        "amino_acid": "K",
+        "global_frequency": 0.04560260586319218,
+        "trait_specific_frequency": {
+          "high_expression": 0.05928338762214984,
+          "stress_response": 0.07920792079207921,
+          "motility": 0.029411764705882353,
+          "carbon_metabolism": 0.07920792079207921,
+          "regulatory": 0.029411764705882353
+        }
+      },
+      {
+        "codon": "GAA",
+        "amino_acid": "E",
+        "global_frequency": 0.2247557003257329,
+        "trait_specific_frequency": {
+          "high_expression": 0.2921824104234528,
+          "carbon_metabolism": 0.27722772277227725,
+          "stress_response": 0.27722772277227725,
+          "motility": 0.21568627450980393,
+          "regulatory": 0.21568627450980393
+        }
+      }
+    ],
+    "total_codons": 307,
+    "trait_codon_counts": {
+      "motility": {
+        "TTC": 12,
+        "TAA": 1,
+        "GGT": 8,
+        "ATG": 1,
+        "GTG": 8,
+        "ATC": 6,
+        "AAA": 3,
+        "GAA": 22,
+        "CTG": 10,
+        "GAT": 4,
+        "AAC": 8,
+        "CGT": 19
+      },
+      "regulatory": {
+        "CTG": 10,
+        "ATC": 6,
+        "ATG": 1,
+        "CGT": 19,
+        "AAA": 3,
+        "GTG": 8,
+        "TTC": 12,
+        "AAC": 8,
+        "GAA": 22,
+        "GGT": 8,
+        "GAT": 4,
+        "TAA": 1
+      },
+      "carbon_metabolism": {
+        "ATG": 1,
+        "GAA": 28,
+        "GAT": 4,
+        "AAA": 8,
+        "TTT": 1,
+        "ATC": 7,
+        "CGT": 14,
+        "CTG": 26,
+        "TAA": 1,
+        "GTG": 7,
+        "GGT": 4
+      },
+      "stress_response": {
+        "CGT": 14,
+        "GAT": 4,
+        "ATG": 1,
+        "AAA": 8,
+        "TAA": 1,
+        "ATC": 7,
+        "CTG": 26,
+        "TTT": 1,
+        "GTG": 7,
+        "GAA": 28,
+        "GGT": 4
+      }
+    }
+  }
+}

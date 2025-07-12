@@ -1,0 +1,58 @@
+[
+  {
+    "name": "metabolism",
+    "description": "Metabolic pathways and energy production",
+    "associated_genes": [
+      "synthetic_gene_1"
+    ],
+    "known_sequences": []
+  },
+  {
+    "name": "stress_response",
+    "description": "Stress adaptation and survival",
+    "associated_genes": [
+      "synthetic_gene_1"
+    ],
+    "known_sequences": []
+  },
+  {
+    "name": "regulatory",
+    "description": "Gene expression regulation",
+    "associated_genes": [
+      "synthetic_gene_2"
+    ],
+    "known_sequences": []
+  },
+  {
+    "name": "dna_dynamics",
+    "description": "DNA topology and organization",
+    "associated_genes": [
+      "synthetic_gene_2"
+    ],
+    "known_sequences": []
+  },
+  {
+    "name": "motility",
+    "description": "Movement and chemotaxis",
+    "associated_genes": [
+      "synthetic_gene_2"
+    ],
+    "known_sequences": []
+  },
+  {
+    "name": "biofilm_formation",
+    "description": "Surface attachment and biofilm development",
+    "associated_genes": [
+      "synthetic_gene_4"
+    ],
+    "known_sequences": []
+  },
+  {
+    "name": "cell_envelope",
+    "description": "Cell wall and membrane structure",
+    "associated_genes": [
+      "synthetic_gene_4"
+    ],
+    "known_sequences": []
+  }
+]

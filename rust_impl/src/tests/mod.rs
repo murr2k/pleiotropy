@@ -1,5 +1,6 @@
 #[cfg(test)]
 mod test_crypto_engine;
+mod test_pipeline_debug;
 
 #[cfg(test)]
 mod test_frequency_analyzer;

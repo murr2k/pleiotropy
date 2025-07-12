@@ -1,0 +1,22 @@
+{
+  "created_at": "2025-07-12T01:40:01.463243",
+  "total_genes": 4,
+  "expected_pleiotropic": 3,
+  "control_genes": 1,
+  "trait_patterns": {
+    "synthetic_gene_1": [
+      "metabolism",
+      "stress_response"
+    ],
+    "synthetic_gene_2": [
+      "regulatory",
+      "dna_dynamics",
+      "motility"
+    ],
+    "synthetic_gene_3": [],
+    "synthetic_gene_4": [
+      "biofilm_formation",
+      "cell_envelope"
+    ]
+  }
+}

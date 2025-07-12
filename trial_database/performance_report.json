@@ -1,0 +1,356 @@
+{
+  "report_generated": "2025-07-12T01:03:53.727059",
+  "trial_summary": {
+    "id": 2,
+    "name": "E. coli K-12 Pleiotropic Analysis",
+    "status": "running",
+    "started": "2025-07-12T08:02:26.559992",
+    "parameters": {
+      "memory_namespace": "swarm-pleiotropy-analysis-1752302124",
+      "input_files": {
+        "genome_sequence": "test_ecoli_sample.fasta",
+        "trait_definitions": "test_traits.json"
+      },
+      "analysis_method": "cryptanalytic_pleiotropy_detection",
+      "target_genes": [
+        "crp",
+        "fis",
+        "rpoS",
+        "hns",
+        "ihfA"
+      ],
+      "trait_categories": [
+        "carbon_metabolism",
+        "stress_response",
+        "regulatory",
+        "dna_processing",
+        "motility",
+        "biofilm_formation"
+      ],
+      "algorithm_settings": {
+        "window_size": 1000,
+        "overlap": 500,
+        "confidence_threshold": 0.7,
+        "frequency_analysis": "chi_squared",
+        "parallel_processing": true,
+        "threads": 5
+      },
+      "expected_results": {
+        "pleiotropic_genes": 5,
+        "trait_associations": ">=15",
+        "confidence_scores": ">=0.7"
+      }
+    }
+  },
+  "agent_performance": [
+    {
+      "name": "genome-analyzer-swarm-001",
+      "type": "genome_analyst",
+      "status": "active",
+      "tasks_completed": 3,
+      "last_heartbeat": "2025-07-12T08:03:19.580247"
+    },
+    {
+      "name": "crypto-specialist-swarm-001",
+      "type": "crypto_specialist",
+      "status": "active",
+      "tasks_completed": 3,
+      "last_heartbeat": "2025-07-12T08:03:17.513039"
+    },
+    {
+      "name": "trait-extractor-swarm-001",
+      "type": "genome_analyst",
+      "status": "active",
+      "tasks_completed": 2,
+      "last_heartbeat": "2025-07-12T08:03:17.533625"
+    },
+    {
+      "name": "visualizer-swarm-001",
+      "type": "visualization_engineer",
+      "status": "idle",
+      "tasks_completed": 2,
+      "last_heartbeat": "2025-07-12T08:03:19.603991"
+    },
+    {
+      "name": "database-manager-swarm-001",
+      "type": "database_architect",
+      "status": "active",
+      "tasks_completed": 3,
+      "last_heartbeat": "2025-07-12T08:03:21.641055"
+    }
+  ],
+  "progress_summary": [
+    {
+      "agent": "database-manager-swarm-001",
+      "task": "trial_2_database-manager-swarm-001_task_3",
+      "status": "in_progress",
+      "percentage": 82,
+      "message": "Maintaining real-time statistics (82% complete)",
+      "timestamp": "2025-07-12T08:03:21.641051"
+    },
+    {
+      "agent": "database-manager-swarm-001",
+      "task": "trial_2_database-manager-swarm-001_task_2",
+      "status": "in_progress",
+      "percentage": 45,
+      "message": "Storing intermediate results (45% complete)",
+      "timestamp": "2025-07-12T08:03:19.625225"
+    },
+    {
+      "agent": "visualizer-swarm-001",
+      "task": "trial_2_visualizer-swarm-001_task_3",
+      "status": "completed",
+      "percentage": 100,
+      "message": "Producing confidence score plots (100% complete)",
+      "timestamp": "2025-07-12T08:03:19.603987"
+    },
+    {
+      "agent": "genome-analyzer-swarm-001",
+      "task": "trial_2_genome-analyzer-swarm-001_task_3",
+      "status": "completed",
+      "percentage": 100,
+      "message": "Identifying ORFs and regulatory regions (100% complete)",
+      "timestamp": "2025-07-12T08:03:19.580242"
+    },
+    {
+      "agent": "visualizer-swarm-001",
+      "task": "trial_2_visualizer-swarm-001_task_2",
+      "status": "in_progress",
+      "percentage": 85,
+      "message": "Creating trait association networks (85% complete)",
+      "timestamp": "2025-07-12T08:03:17.544154"
+    },
+    {
+      "agent": "trait-extractor-swarm-001",
+      "task": "trial_2_trait-extractor-swarm-001_task_3",
+      "status": "in_progress",
+      "percentage": 92,
+      "message": "Validating against known associations (92% complete)",
+      "timestamp": "2025-07-12T08:03:17.533620"
+    },
+    {
+      "agent": "crypto-specialist-swarm-001",
+      "task": "trial_2_crypto-specialist-swarm-001_task_3",
+      "status": "in_progress",
+      "percentage": 93,
+      "message": "Calculating chi-squared statistics (93% complete)",
+      "timestamp": "2025-07-12T08:03:17.513034"
+    },
+    {
+      "agent": "trait-extractor-swarm-001",
+      "task": "trial_2_trait-extractor-swarm-001_task_2",
+      "status": "in_progress",
+      "percentage": 58,
+      "message": "Extracting trait-specific signatures (58% complete)",
+      "timestamp": "2025-07-12T08:03:15.451817"
+    },
+    {
+      "agent": "crypto-specialist-swarm-001",
+      "task": "trial_2_crypto-specialist-swarm-001_task_2",
+      "status": "in_progress",
+      "percentage": 58,
+      "message": "Detecting polyalphabetic patterns (58% complete)",
+      "timestamp": "2025-07-12T08:03:15.430266"
+    },
+    {
+      "agent": "genome-analyzer-swarm-001",
+      "task": "trial_2_genome-analyzer-swarm-001_task_2",
+      "status": "in_progress",
+      "percentage": 64,
+      "message": "Extracting codon frequencies (64% complete)",
+      "timestamp": "2025-07-12T08:03:15.406629"
+    }
+  ],
+  "results_analysis": [
+    {
+      "agent": "genome-analyzer-swarm-001",
+      "confidence": 0.7291966506883767,
+      "metrics": {
+        "task_name": "Parsing FASTA sequences",
+        "execution_time_seconds": 78,
+        "data_points_processed": 916,
+        "accuracy_score": 0.7991086804156183
+      },
+      "timestamp": "2025-07-12T08:03:13.292099"
+    },
+    {
+      "agent": "crypto-specialist-swarm-001",
+      "confidence": 0.9352913252000246,
+      "metrics": {
+        "task_name": "Applying frequency analysis algorithms",
+        "execution_time_seconds": 151,
+        "data_points_processed": 4845,
+        "accuracy_score": 0.7561104673260833
+      },
+      "timestamp": "2025-07-12T08:03:13.336906"
+    },
+    {
+      "agent": "trait-extractor-swarm-001",
+      "confidence": 0.7675799361247106,
+      "metrics": {
+        "task_name": "Mapping genes to trait categories",
+        "execution_time_seconds": 135,
+        "data_points_processed": 3135,
+        "accuracy_score": 0.7974255711394533
+      },
+      "timestamp": "2025-07-12T08:03:13.357572"
+    },
+    {
+      "agent": "database-manager-swarm-001",
+      "confidence": 0.8956331569450948,
+      "metrics": {
+        "task_name": "Recording trial progress",
+        "execution_time_seconds": 51,
+        "data_points_processed": 383,
+        "accuracy_score": 0.8260399054946337
+      },
+      "timestamp": "2025-07-12T08:03:13.388711"
+    },
+    {
+      "agent": "genome-analyzer-swarm-001",
+      "confidence": 0.7015764540414242,
+      "metrics": {
+        "task_name": "Extracting codon frequencies",
+        "execution_time_seconds": 71,
+        "data_points_processed": 4988,
+        "accuracy_score": 0.9332642343270356
+      },
+      "timestamp": "2025-07-12T08:03:15.419075"
+    },
+    {
+      "agent": "crypto-specialist-swarm-001",
+      "confidence": 0.6899067964323615,
+      "metrics": {
+        "task_name": "Detecting polyalphabetic patterns",
+        "execution_time_seconds": 169,
+        "data_points_processed": 1264,
+        "accuracy_score": 0.9355698285725335
+      },
+      "timestamp": "2025-07-12T08:03:15.441235"
+    },
+    {
+      "agent": "trait-extractor-swarm-001",
+      "confidence": 0.6708950156916491,
+      "metrics": {
+        "task_name": "Extracting trait-specific signatures",
+        "execution_time_seconds": 161,
+        "data_points_processed": 2972,
+        "accuracy_score": 0.8784192745949583
+      },
+      "timestamp": "2025-07-12T08:03:15.463066"
+    },
+    {
+      "agent": "crypto-specialist-swarm-001",
+      "confidence": 0.8022107430159489,
+      "metrics": {
+        "task_name": "Calculating chi-squared statistics",
+        "execution_time_seconds": 125,
+        "data_points_processed": 1310,
+        "accuracy_score": 0.9532722248275944
+      },
+      "timestamp": "2025-07-12T08:03:17.523922"
+    },
+    {
+      "agent": "visualizer-swarm-001",
+      "confidence": 0.8445552945370429,
+      "metrics": {
+        "task_name": "Creating trait association networks",
+        "execution_time_seconds": 75,
+        "data_points_processed": 3901,
+        "accuracy_score": 0.9681585640856022
+      },
+      "timestamp": "2025-07-12T08:03:17.555624"
+    },
+    {
+      "agent": "genome-analyzer-swarm-001",
+      "confidence": 0.8622835655393646,
+      "metrics": {
+        "task_name": "Identifying ORFs and regulatory regions",
+        "execution_time_seconds": 155,
+        "data_points_processed": 211,
+        "accuracy_score": 0.8914245713448238
+      },
+      "timestamp": "2025-07-12T08:03:19.593396"
+    },
+    {
+      "agent": "visualizer-swarm-001",
+      "confidence": 0.8808622476436264,
+      "metrics": {
+        "task_name": "Producing confidence score plots",
+        "execution_time_seconds": 179,
+        "data_points_processed": 977,
+        "accuracy_score": 0.9173497547939012
+      },
+      "timestamp": "2025-07-12T08:03:19.615197"
+    },
+    {
+      "agent": "database-manager-swarm-001",
+      "confidence": 0.6950304214373779,
+      "metrics": {
+        "task_name": "Maintaining real-time statistics",
+        "execution_time_seconds": 135,
+        "data_points_processed": 291,
+        "accuracy_score": 0.8514504013350659
+      },
+      "timestamp": "2025-07-12T08:03:21.653972"
+    },
+    {
+      "agent": "database-manager-swarm-001",
+      "confidence": 0.89,
+      "metrics": {
+        "simulation_summary": {
+          "trial_id": 2,
+          "simulation_completed": "2025-07-12T01:03:53.704378",
+          "agents_completed": 5,
+          "total_tasks_completed": 15,
+          "final_statistics": {
+            "trial_id": 2,
+            "trial_name": "E. coli K-12 Pleiotropic Analysis",
+            "trial_status": "running",
+            "agents": {
+              "active": 4,
+              "idle": 1
+            },
+            "progress": {
+              "completed": {
+                "avg_percentage": 100.0,
+                "count": 2
+              },
+              "in_progress": {
+                "avg_percentage": 57.0,
+                "count": 13
+              },
+              "started": {
+                "avg_percentage": 0.0,
+                "count": 15
+              }
+            },
+            "results_recorded": 12,
+            "last_updated": "2025-07-12T08:03:53.706352"
+          }
+        },
+        "pleiotropic_genes_found": [
+          "crp",
+          "fis",
+          "rpoS",
+          "hns",
+          "ihfA"
+        ],
+        "trait_associations_discovered": 23,
+        "cryptographic_patterns_detected": 8,
+        "confidence_distribution": {
+          "high_confidence": 15,
+          "medium_confidence": 6,
+          "low_confidence": 2
+        }
+      },
+      "timestamp": "2025-07-12T08:03:53.707802"
+    }
+  ],
+  "memory_namespace": "swarm-pleiotropy-analysis-1752302124",
+  "database_health": {
+    "total_records": 23,
+    "real_time_updates": true,
+    "data_integrity": "VERIFIED"
+  }
+}

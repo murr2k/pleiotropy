@@ -1,0 +1,636 @@
+{
+  "metadata": {
+    "analysis_timestamp": "2025-07-12T01:01:36.724649",
+    "memory_namespace": "swarm-pleiotropy-analysis-1752302124",
+    "statistical_parameters": {
+      "alpha": 0.05,
+      "bootstrap_iterations": 1000,
+      "multiple_testing_method": "fdr_bh"
+    }
+  },
+  "codon_usage_bias": {
+    "amino_acid_bias": {
+      "A": {
+        "chi2_statistic": 632.7479338842976,
+        "p_value": 1.2623301673865119e-139,
+        "degrees_freedom": 1,
+        "codons": [
+          "GCA",
+          "GCG"
+        ],
+        "observed_frequencies": [
+          0.007640067911714771,
+          0.06706281833616298
+        ],
+        "bias_strength": 0.3977272727272727,
+        "p_adjusted": 4.6285439470838774e-139,
+        "significant_after_correction": true
+      },
+      "D": {
+        "chi2_statistic": 672.7685898245172,
+        "p_value": 2.4975890222778975e-148,
+        "degrees_freedom": 1,
+        "codons": [
+          "GAC",
+          "GAT"
+        ],
+        "observed_frequencies": [
+          0.006791171477079796,
+          0.06876061120543293
+        ],
+        "bias_strength": 0.41011235955056186,
+        "p_adjusted": 1.3736739622528435e-147,
+        "significant_after_correction": true
+      },
+      "F": {
+        "chi2_statistic": 45.91836734693877,
+        "p_value": 1.2328462652263354e-11,
+        "degrees_freedom": 1,
+        "codons": [
+          "TTT",
+          "TTC"
+        ],
+        "observed_frequencies": [
+          0.014431239388794566,
+          0.00933786078098472
+        ],
+        "bias_strength": 0.10714285714285712,
+        "p_adjusted": 1.2328462652263354e-11,
+        "significant_after_correction": true
+      },
+      "G": {
+        "chi2_statistic": 121.50204081632651,
+        "p_value": 2.966959956211648e-28,
+        "degrees_freedom": 1,
+        "codons": [
+          "GGT",
+          "GGC"
+        ],
+        "observed_frequencies": [
+          0.100169779286927,
+          0.04838709677419355
+        ],
+        "bias_strength": 0.1742857142857143,
+        "p_adjusted": 4.079569939791016e-28,
+        "significant_after_correction": true
+      },
+      "I": {
+        "chi2_statistic": 236.42791010857667,
+        "p_value": 2.3637658585167175e-53,
+        "degrees_freedom": 1,
+        "codons": [
+          "ATC",
+          "ATT"
+        ],
+        "observed_frequencies": [
+          0.023769100169779286,
+          0.06876061120543293
+        ],
+        "bias_strength": 0.24311926605504586,
+        "p_adjusted": 4.333570740613983e-53,
+        "significant_after_correction": true
+      },
+      "K": {
+        "chi2_statistic": 691.5235457063714,
+        "p_value": 2.084398735740909e-152,
+        "degrees_freedom": 1,
+        "codons": [
+          "AAA",
+          "AAG"
+        ],
+        "observed_frequencies": [
+          0.07385398981324279,
+          0.006791171477079796
+        ],
+        "bias_strength": 0.41578947368421054,
+        "p_adjusted": 2.292838609315e-151,
+        "significant_after_correction": true
+      },
+      "N": {
+        "chi2_statistic": 609.1612135633552,
+        "p_value": 1.7028919161651618e-134,
+        "degrees_freedom": 1,
+        "codons": [
+          "AAT",
+          "AAC"
+        ],
+        "observed_frequencies": [
+          0.007640067911714771,
+          0.06196943972835314
+        ],
+        "bias_strength": 0.3902439024390244,
+        "p_adjusted": 4.682952769454195e-134,
+        "significant_after_correction": true
+      },
+      "Q": {
+        "chi2_statistic": 78.39999999999998,
+        "p_value": 8.415216715193293e-19,
+        "degrees_freedom": 1,
+        "codons": [
+          "CAA",
+          "CAG"
+        ],
+        "observed_frequencies": [
+          0.007640067911714771,
+          0.013582342954159592
+        ],
+        "bias_strength": 0.13999999999999999,
+        "p_adjusted": 1.0285264874125135e-18,
+        "significant_after_correction": true
+      },
+      "S": {
+        "chi2_statistic": 71.83364839319472,
+        "p_value": 2.5207016399159407e-16,
+        "degrees_freedom": 2,
+        "codons": [
+          "TCC",
+          "TCT",
+          "AGC"
+        ],
+        "observed_frequencies": [
+          0.004244482173174873,
+          0.006791171477079796,
+          0.008488964346349746
+        ],
+        "bias_strength": 0.08933933337636198,
+        "p_adjusted": 2.772771803907535e-16,
+        "significant_after_correction": true
+      },
+      "V": {
+        "chi2_statistic": 272.32142857142856,
+        "p_value": 7.347729059072658e-60,
+        "degrees_freedom": 2,
+        "codons": [
+          "GTT",
+          "GTA",
+          "GTG"
+        ],
+        "observed_frequencies": [
+          0.022920203735144314,
+          0.004244482173174873,
+          0.02037351443123939
+        ],
+        "bias_strength": 0.17394808566907685,
+        "p_adjusted": 1.6165003929959848e-59,
+        "significant_after_correction": true
+      },
+      "Y": {
+        "chi2_statistic": 140.625,
+        "p_value": 1.9433131432790052e-32,
+        "degrees_freedom": 1,
+        "codons": [
+          "TAC",
+          "TAT"
+        ],
+        "observed_frequencies": [
+          0.008488964346349746,
+          0.01867572156196944
+        ],
+        "bias_strength": 0.1875,
+        "p_adjusted": 3.053777796581294e-32,
+        "significant_after_correction": true
+      }
+    },
+    "overall_statistics": {
+      "total_amino_acids_analyzed": 11,
+      "significant_biases_uncorrected": 11,
+      "significant_biases_corrected": 11,
+      "average_bias_strength": 0.24810984226637503
+    },
+    "significant_biases": [
+      {
+        "amino_acid": "A",
+        "p_value": 1.2623301673865119e-139,
+        "bias_strength": 0.3977272727272727
+      },
+      {
+        "amino_acid": "D",
+        "p_value": 2.4975890222778975e-148,
+        "bias_strength": 0.41011235955056186
+      },
+      {
+        "amino_acid": "F",
+        "p_value": 1.2328462652263354e-11,
+        "bias_strength": 0.10714285714285712
+      },
+      {
+        "amino_acid": "G",
+        "p_value": 2.966959956211648e-28,
+        "bias_strength": 0.1742857142857143
+      },
+      {
+        "amino_acid": "I",
+        "p_value": 2.3637658585167175e-53,
+        "bias_strength": 0.24311926605504586
+      },
+      {
+        "amino_acid": "K",
+        "p_value": 2.084398735740909e-152,
+        "bias_strength": 0.41578947368421054
+      },
+      {
+        "amino_acid": "N",
+        "p_value": 1.7028919161651618e-134,
+        "bias_strength": 0.3902439024390244
+      },
+      {
+        "amino_acid": "Q",
+        "p_value": 8.415216715193293e-19,
+        "bias_strength": 0.13999999999999999
+      },
+      {
+        "amino_acid": "S",
+        "p_value": 2.5207016399159407e-16,
+        "bias_strength": 0.08933933337636198
+      },
+      {
+        "amino_acid": "V",
+        "p_value": 7.347729059072658e-60,
+        "bias_strength": 0.17394808566907685
+      },
+      {
+        "amino_acid": "Y",
+        "p_value": 1.9433131432790052e-32,
+        "bias_strength": 0.1875
+      }
+    ]
+  },
+  "trait_correlations": {
+    "correlation_matrix": {
+      "carbon_metabolism": {
+        "carbon_metabolism": 1.0,
+        "stress_response": 0.19934283060224656,
+        "regulatory": 0.07234713976576307,
+        "dna_processing": 0.05316932505533281,
+        "motility": 0.053172608610163895,
+        "biofilm_formation": 0.7579212815507391
+      },
+      "stress_response": {
+        "carbon_metabolism": 0.19934283060224656,
+        "stress_response": 1.0,
+        "regulatory": 0.6767434729152908,
+        "dna_processing": 0.006105122813009581,
+        "motility": 0.20851200871719294,
+        "biofilm_formation": 0.14839245431320683
+      },
+      "regulatory": {
+        "carbon_metabolism": 0.07234713976576307,
+        "stress_response": 0.6767434729152908,
+        "regulatory": 1.0,
+        "dna_processing": -0.2826560489315596,
+        "motility": -0.10256622406688476,
+        "biofilm_formation": 0.1628494665190548
+      },
+      "dna_processing": {
+        "carbon_metabolism": 0.05316932505533281,
+        "stress_response": 0.006105122813009581,
+        "regulatory": -0.2826560489315596,
+        "dna_processing": 1.0,
+        "motility": 0.7465648768921553,
+        "biofilm_formation": 0.05484473990269287
+      },
+      "motility": {
+        "carbon_metabolism": 0.053172608610163895,
+        "stress_response": 0.20851200871719294,
+        "regulatory": -0.10256622406688476,
+        "dna_processing": 0.7465648768921553,
+        "motility": 1.0,
+        "biofilm_formation": 0.6118976062075585
+      },
+      "biofilm_formation": {
+        "carbon_metabolism": 0.7579212815507391,
+        "stress_response": 0.14839245431320683,
+        "regulatory": 0.1628494665190548,
+        "dna_processing": 0.05484473990269287,
+        "motility": 0.6118976062075585,
+        "biofilm_formation": 1.0
+      }
+    },
+    "p_value_matrix": {
+      "carbon_metabolism": {
+        "carbon_metabolism": 1.0,
+        "stress_response": 0.685595153449124,
+        "regulatory": 0.5789267873576293,
+        "dna_processing": 0.14646688973455957,
+        "motility": 0.7929409166199481,
+        "biofilm_formation": 0.001
+      },
+      "stress_response": {
+        "carbon_metabolism": 0.685595153449124,
+        "stress_response": 1.0,
+        "regulatory": 0.001,
+        "dna_processing": 0.24545997376568052,
+        "motility": 0.24672360788274705,
+        "biofilm_formation": 0.4455560149136927
+      },
+      "regulatory": {
+        "carbon_metabolism": 0.5789267873576293,
+        "stress_response": 0.001,
+        "regulatory": 1.0,
+        "dna_processing": 0.3329833121584336,
+        "motility": 0.3337157188281745,
+        "biofilm_formation": 0.39308947463495336
+      },
+      "dna_processing": {
+        "carbon_metabolism": 0.14646688973455957,
+        "stress_response": 0.24545997376568052,
+        "regulatory": 0.3329833121584336,
+        "dna_processing": 1.0,
+        "motility": 0.001,
+        "biofilm_formation": 0.25973902572668783
+      },
+      "motility": {
+        "carbon_metabolism": 0.7929409166199481,
+        "stress_response": 0.24672360788274705,
+        "regulatory": 0.3337157188281745,
+        "dna_processing": 0.001,
+        "motility": 1.0,
+        "biofilm_formation": 0.13716033017599819
+      },
+      "biofilm_formation": {
+        "carbon_metabolism": 0.001,
+        "stress_response": 0.4455560149136927,
+        "regulatory": 0.39308947463495336,
+        "dna_processing": 0.25973902572668783,
+        "motility": 0.13716033017599819,
+        "biofilm_formation": 1.0
+      }
+    },
+    "significant_correlations": [
+      {
+        "trait1": "carbon_metabolism",
+        "trait2": "biofilm_formation",
+        "correlation": 0.7579212815507391,
+        "p_value": 0.001,
+        "abs_correlation": 0.7579212815507391
+      },
+      {
+        "trait1": "dna_processing",
+        "trait2": "motility",
+        "correlation": 0.7465648768921553,
+        "p_value": 0.001,
+        "abs_correlation": 0.7465648768921553
+      },
+      {
+        "trait1": "stress_response",
+        "trait2": "regulatory",
+        "correlation": 0.6767434729152908,
+        "p_value": 0.001,
+        "abs_correlation": 0.6767434729152908
+      }
+    ]
+  },
+  "pca_analysis": {
+    "explained_variance_ratio": [
+      0.32804789437168064,
+      0.18806350223163787,
+      0.163929161621118,
+      0.12984921690579745,
+      0.10193439489773046,
+      0.08817582997203574
+    ],
+    "cumulative_variance_ratio": [
+      0.32804789437168064,
+      0.5161113966033185,
+      0.6800405582244365,
+      0.809889775130234,
+      0.9118241700279645,
+      1.0000000000000002
+    ],
+    "n_components_90_percent": 5,
+    "loadings": [
+      [
+        0.44176006161165104,
+        0.44449042581254716,
+        0.4127372783804634,
+        0.2211803071966426,
+        0.41224077507057966,
+        0.4669700883767035
+      ],
+      [
+        -0.1535174659406643,
+        -0.3446702090457121,
+        -0.4458986410096263,
+        0.6505243678135528,
+        0.09413229867622905,
+        0.47619995151198535
+      ],
+      [
+        -0.010737097743443055,
+        -0.16081220710884708,
+        -0.3833705640918843,
+        -0.5676603892674138,
+        0.6923019511468765,
+        0.15978376093863694
+      ],
+      [
+        0.8180654970553367,
+        -0.5428183105248242,
+        -0.03228641527112974,
+        0.01873154445582935,
+        -0.0767284334885997,
+        -0.16981339291176295
+      ],
+      [
+        -0.32209206812831775,
+        -0.6024928033620024,
+        0.6921204647552578,
+        -0.06615396543157905,
+        0.14486758620751156,
+        0.16989826113551326
+      ]
+    ],
+    "trait_names": [
+      "carbon_metabolism",
+      "stress_response",
+      "regulatory",
+      "dna_processing",
+      "motility",
+      "biofilm_formation"
+    ],
+    "total_variance_explained_90": 0.9118241700279645
+  },
+  "mutual_information": {
+    "mutual_information_matrix": {
+      "gene_0": {
+        "carbon_metabolism": 0.4189173989120707,
+        "stress_response": 0.18257181108184428,
+        "regulatory": 0.013314595971706339,
+        "dna_processing": 0.2536307940963276,
+        "motility": 0.20394239312268636,
+        "biofilm_formation": 0.07315513859686493
+      },
+      "gene_1": {
+        "carbon_metabolism": 0.0894713786829075,
+        "stress_response": 0.05091648434090136,
+        "regulatory": 0.005631814924329379,
+        "dna_processing": 0.04082648863007412,
+        "motility": 0.16238079110661788,
+        "biofilm_formation": 0.0004642784066342885
+      },
+      "gene_2": {
+        "carbon_metabolism": 0.040571389659016875,
+        "stress_response": 0.05077780948546782,
+        "regulatory": 0.07708830241238818,
+        "dna_processing": 0.25239254761530416,
+        "motility": 0.04251771108907901,
+        "biofilm_formation": 0.04261064859584953
+      },
+      "gene_3": {
+        "carbon_metabolism": 0.13375089516655655,
+        "stress_response": 0.060187777349233945,
+        "regulatory": 0.02543824737027254,
+        "dna_processing": 0.060228235057615515,
+        "motility": 0.015181992193138705,
+        "biofilm_formation": 0.019405450320809675
+      },
+      "gene_4": {
+        "carbon_metabolism": 0.06898880428028177,
+        "stress_response": 0.054287621625600704,
+        "regulatory": 0.2463292735252813,
+        "dna_processing": 0.04500345830397283,
+        "motility": 0.0868902383785272,
+        "biofilm_formation": 0.1000390772517848
+      },
+      "gene_5": {
+        "carbon_metabolism": 0.0013180944825659227,
+        "stress_response": 0.10892681970359891,
+        "regulatory": 0.019605864019924823,
+        "dna_processing": 0.3245998272272427,
+        "motility": 0.016094690431018008,
+        "biofilm_formation": 0.05355011145366069
+      },
+      "gene_6": {
+        "carbon_metabolism": 0.008921343765050313,
+        "stress_response": 0.576808161515076,
+        "regulatory": 0.06975468656582261,
+        "dna_processing": 0.09048193240889457,
+        "motility": 0.006943205082825418,
+        "biofilm_formation": 0.13861362552159992
+      },
+      "gene_7": {
+        "carbon_metabolism": 0.023560283825026323,
+        "stress_response": 0.22833148568116304,
+        "regulatory": 0.022958882816083336,
+        "dna_processing": 0.021157042980881585,
+        "motility": 0.003723434185767217,
+        "biofilm_formation": 0.0638785793295464
+      },
+      "gene_8": {
+        "carbon_metabolism": 0.08320441036761805,
+        "stress_response": 0.006796694017915647,
+        "regulatory": 0.14940025935983722,
+        "dna_processing": 0.06038346502936218,
+        "motility": 0.07431576545925969,
+        "biofilm_formation": 0.05811814717875803
+      },
+      "gene_9": {
+        "carbon_metabolism": 0.05120982012749214,
+        "stress_response": 0.08201634571378748,
+        "regulatory": 0.01687030067609555,
+        "dna_processing": 0.020080508620862553,
+        "motility": 0.19789493282961404,
+        "biofilm_formation": 0.2920911709264686
+      }
+    },
+    "high_mi_pairs": [
+      {
+        "gene": "gene_6",
+        "trait": "stress_response",
+        "mutual_information": 0.576808161515076
+      },
+      {
+        "gene": "gene_0",
+        "trait": "carbon_metabolism",
+        "mutual_information": 0.4189173989120707
+      },
+      {
+        "gene": "gene_5",
+        "trait": "dna_processing",
+        "mutual_information": 0.3245998272272427
+      },
+      {
+        "gene": "gene_9",
+        "trait": "biofilm_formation",
+        "mutual_information": 0.2920911709264686
+      },
+      {
+        "gene": "gene_0",
+        "trait": "dna_processing",
+        "mutual_information": 0.2536307940963276
+      },
+      {
+        "gene": "gene_2",
+        "trait": "dna_processing",
+        "mutual_information": 0.25239254761530416
+      },
+      {
+        "gene": "gene_4",
+        "trait": "regulatory",
+        "mutual_information": 0.2463292735252813
+      },
+      {
+        "gene": "gene_7",
+        "trait": "stress_response",
+        "mutual_information": 0.22833148568116304
+      },
+      {
+        "gene": "gene_0",
+        "trait": "motility",
+        "mutual_information": 0.20394239312268636
+      }
+    ],
+    "threshold": 0.2,
+    "n_significant_pairs": 9
+  },
+  "bootstrap_confidence": {
+    "mean": 0.03034804753820034,
+    "bootstrap_mean": 0.0303856642614601,
+    "confidence_interval": [
+      0.020048546264855693,
+      0.04168545734295415
+    ],
+    "confidence_level": 0.95,
+    "bootstrap_iterations": 1000,
+    "bootstrap_std": 0.005537451688613107
+  },
+  "validation": {
+    "known_pleiotropic_genes": [
+      "ihfA",
+      "rpoS",
+      "fis",
+      "hns",
+      "crp"
+    ],
+    "predicted_genes": [],
+    "true_positives": 0,
+    "false_positives": 0,
+    "false_negatives": 5,
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1_score": 0.0,
+    "correctly_identified": [],
+    "missed_genes": [
+      "ihfA",
+      "hns",
+      "crp",
+      "rpoS",
+      "fis"
+    ],
+    "false_predictions": []
+  },
+  "summary": {
+    "total_analyses_performed": 5,
+    "significant_findings": [
+      "Found 11 amino acids with significant codon usage bias",
+      "Identified 3 significant trait correlations",
+      "Found 9 high mutual information gene-trait pairs"
+    ],
+    "key_metrics": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1_score": 0.0,
+      "variance_explained_90": 0.9118241700279645
+    }
+  }
+}

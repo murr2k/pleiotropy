@@ -1,0 +1,32 @@
+{
+  "timestamp": "2025-07-12T08:03:15.495694",
+  "operation": "cycle_update_2",
+  "data": {
+    "cycle": 2,
+    "timestamp": "2025-07-12T01:03:15.495684",
+    "agents_working": 5,
+    "total_progress": 8,
+    "statistics": {
+      "trial_id": 2,
+      "trial_name": "E. coli K-12 Pleiotropic Analysis",
+      "trial_status": "running",
+      "agents": {
+        "active": 4,
+        "idle": 1
+      },
+      "progress": {
+        "in_progress": {
+          "avg_percentage": 44.6,
+          "count": 10
+        },
+        "started": {
+          "avg_percentage": 0.0,
+          "count": 20
+        }
+      },
+      "results_recorded": 7,
+      "last_updated": "2025-07-12T08:03:15.495581"
+    }
+  },
+  "memory_key": "swarm-pleiotropy-analysis-1752302124/database-manager/cycle_update_2"
+}

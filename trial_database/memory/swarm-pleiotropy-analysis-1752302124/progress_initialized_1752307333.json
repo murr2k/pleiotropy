@@ -1,0 +1,9 @@
+{
+  "timestamp": "2025-07-12T08:02:13.525557",
+  "operation": "progress_initialized",
+  "data": {
+    "trial_id": 1,
+    "tracking_entries": 15
+  },
+  "memory_key": "swarm-pleiotropy-analysis-1752302124/database-manager/progress_initialized"
+}

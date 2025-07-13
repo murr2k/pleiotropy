@@ -1,0 +1,56 @@
+[
+  {
+    "name": "antibiotic_resistance",
+    "description": "Intrinsic and acquired antibiotic resistance mechanisms",
+    "associated_genes": ["mexA", "mexB", "oprM", "ampC", "oprD", "gyrA", "parC"],
+    "known_sequences": []
+  },
+  {
+    "name": "biofilm_formation",
+    "description": "Biofilm development and extracellular matrix production",
+    "associated_genes": ["pelA", "pelB", "pslA", "algD", "algU", "wspF", "rhlA"],
+    "known_sequences": []
+  },
+  {
+    "name": "quorum_sensing",
+    "description": "Cell-cell communication and population density sensing",
+    "associated_genes": ["lasR", "lasI", "rhlR", "rhlI", "pqsA", "pqsR", "mvfR"],
+    "known_sequences": []
+  },
+  {
+    "name": "virulence",
+    "description": "Pathogenicity factors and host interaction",
+    "associated_genes": ["exoS", "exoT", "exoU", "exoY", "pilA", "fliC", "toxA"],
+    "known_sequences": []
+  },
+  {
+    "name": "metabolic_versatility",
+    "description": "Diverse metabolic pathways and substrate utilization",
+    "associated_genes": ["aceA", "glcB", "pckA", "crc", "rpoN", "ntrC", "catA"],
+    "known_sequences": []
+  },
+  {
+    "name": "stress_response",
+    "description": "Environmental stress adaptation and survival",
+    "associated_genes": ["rpoS", "algU", "mucA", "oxyR", "soxR", "katA", "sodB"],
+    "known_sequences": []
+  },
+  {
+    "name": "regulatory",
+    "description": "Global regulatory networks and gene control",
+    "associated_genes": ["gacA", "gacS", "rsmA", "vfr", "anr", "dnr", "fleQ"],
+    "known_sequences": []
+  },
+  {
+    "name": "iron_acquisition",
+    "description": "Iron uptake systems and siderophore production",
+    "associated_genes": ["pvdA", "pvdS", "pchA", "fptA", "fpvA", "fur", "hasR"],
+    "known_sequences": []
+  },
+  {
+    "name": "motility",
+    "description": "Flagellar and twitching motility systems",
+    "associated_genes": ["fliC", "fliD", "fleQ", "fleR", "pilA", "pilB", "chpA"],
+    "known_sequences": []
+  }
+]

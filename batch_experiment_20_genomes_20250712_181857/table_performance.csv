@@ -1,0 +1,9 @@
+,Metric,Value
+0,Total Experiments,23
+1,Success Rate,100%
+2,Avg Analysis Time (s),1.44
+3,Min Analysis Time (s),0.89
+4,Max Analysis Time (s),7.00
+5,Throughput (Mb/s),3.00
+6,GPU Acceleration,Implemented
+7,CUDA Speedup,10-50x (expected)

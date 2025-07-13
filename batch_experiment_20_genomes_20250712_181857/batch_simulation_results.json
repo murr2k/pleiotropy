@@ -1,0 +1,699 @@
+[
+  {
+    "genome": {
+      "id": 1,
+      "name": "Bacillus subtilis",
+      "strain": "168",
+      "accession": "GCF_000009045.1",
+      "lifestyle": "soil_bacterium",
+      "traits_focus": [
+        "sporulation",
+        "competence",
+        "biofilm"
+      ],
+      "genome_size_mb": 4.2
+    },
+    "success": true,
+    "analysis_time": 1.1468045609643587,
+    "pleiotropic_genes": [
+      {
+        "gene_id": "Bacillus_subtilis_element_1",
+        "traits": [
+          "sporulation",
+          "regulatory",
+          "development",
+          "stress_response"
+        ],
+        "confidence": 0.721
+      }
+    ],
+    "summary": {
+      "n_pleiotropic_elements": 1,
+      "unique_traits": 4,
+      "avg_confidence": 0.721,
+      "max_traits_per_element": 4
+    }
+  },
+  {
+    "genome": {
+      "id": 2,
+      "name": "Mycobacterium tuberculosis",
+      "strain": "H37Rv",
+      "accession": "GCF_000195955.2",
+      "lifestyle": "obligate_pathogen",
+      "traits_focus": [
+        "dormancy",
+        "cell_wall",
+        "virulence"
+      ],
+      "genome_size_mb": 4.4
+    },
+    "success": true,
+    "analysis_time": 1.3848492146906146,
+    "pleiotropic_genes": [
+      {
+        "gene_id": "Mycobacterium_tuberculosis_element_1",
+        "traits": [
+          "virulence",
+          "regulatory",
+          "stress_response"
+        ],
+        "confidence": 0.657
+      }
+    ],
+    "summary": {
+      "n_pleiotropic_elements": 1,
+      "unique_traits": 3,
+      "avg_confidence": 0.657,
+      "max_traits_per_element": 3
+    }
+  },
+  {
+    "genome": {
+      "id": 3,
+      "name": "Vibrio cholerae",
+      "strain": "O1 El Tor",
+      "accession": "GCF_000006745.1",
+      "lifestyle": "aquatic_pathogen",
+      "traits_focus": [
+        "toxin_production",
+        "biofilm",
+        "motility"
+      ],
+      "genome_size_mb": 4.0
+    },
+    "success": true,
+    "analysis_time": 1.2227440270173362,
+    "pleiotropic_genes": [
+      {
+        "gene_id": "Vibrio_cholerae_element_1",
+        "traits": [
+          "virulence",
+          "regulatory",
+          "stress_response",
+          "invasion"
+        ],
+        "confidence": 0.729
+      }
+    ],
+    "summary": {
+      "n_pleiotropic_elements": 1,
+      "unique_traits": 4,
+      "avg_confidence": 0.729,
+      "max_traits_per_element": 4
+    }
+  },
+  {
+    "genome": {
+      "id": 4,
+      "name": "Staphylococcus aureus",
+      "strain": "NCTC 8325",
+      "accession": "GCF_000013425.1",
+      "lifestyle": "opportunistic_pathogen",
+      "traits_focus": [
+        "antibiotic_resistance",
+        "toxins",
+        "adhesion"
+      ],
+      "genome_size_mb": 2.8
+    },
+    "success": true,
+    "analysis_time": 1.0811137101395525,
+    "pleiotropic_genes": [
+      {
+        "gene_id": "Staphylococcus_aureus_element_1",
+        "traits": [
+          "metabolism",
+          "stress_response",
+          "virulence",
+          "adhesion"
+        ],
+        "confidence": 0.698
+      }
+    ],
+    "summary": {
+      "n_pleiotropic_elements": 1,
+      "unique_traits": 4,
+      "avg_confidence": 0.698,
+      "max_traits_per_element": 4
+    }
+  },
+  {
+    "genome": {
+      "id": 5,
+      "name": "Streptococcus pneumoniae",
+      "strain": "TIGR4",
+      "accession": "GCF_000006885.1",
+      "lifestyle": "respiratory_pathogen",
+      "traits_focus": [
+        "capsule",
+        "competence",
+        "virulence"
+      ],
+      "genome_size_mb": 2.2
+    },
+    "success": true,
+    "analysis_time": 1.3566354958959876,
+    "pleiotropic_genes": [
+      {
+        "gene_id": "Streptococcus_pneumoniae_element_1",
+        "traits": [
+          "invasion",
+          "regulatory",
+          "stress_response"
+        ],
+        "confidence": 0.788
+      }
+    ],
+    "summary": {
+      "n_pleiotropic_elements": 1,
+      "unique_traits": 3,
+      "avg_confidence": 0.788,
+      "max_traits_per_element": 3
+    }
+  },
+  {
+    "genome": {
+      "id": 6,
+      "name": "Helicobacter pylori",
+      "strain": "26695",
+      "accession": "GCF_000008525.1",
+      "lifestyle": "gastric_pathogen",
+      "traits_focus": [
+        "acid_resistance",
+        "adhesion",
+        "inflammation"
+      ],
+      "genome_size_mb": 1.7
+    },
+    "success": true,
+    "analysis_time": 0.9831350380612606,
+    "pleiotropic_genes": [
+      {
+        "gene_id": "Helicobacter_pylori_element_1",
+        "traits": [
+          "invasion",
+          "virulence",
+          "regulatory"
+        ],
+        "confidence": 0.722
+      }
+    ],
+    "summary": {
+      "n_pleiotropic_elements": 1,
+      "unique_traits": 3,
+      "avg_confidence": 0.722,
+      "max_traits_per_element": 3
+    }
+  },
+  {
+    "genome": {
+      "id": 7,
+      "name": "Clostridium difficile",
+      "strain": "630",
+      "accession": "GCF_000009205.2",
+      "lifestyle": "anaerobic_pathogen",
+      "traits_focus": [
+        "sporulation",
+        "toxin_production",
+        "metabolism"
+      ],
+      "genome_size_mb": 4.3
+    },
+    "success": true,
+    "analysis_time": 1.1751174030146825,
+    "pleiotropic_genes": [
+      {
+        "gene_id": "Clostridium_difficile_element_1",
+        "traits": [
+          "stress_response",
+          "virulence",
+          "adhesion",
+          "development"
+        ],
+        "confidence": 0.669
+      }
+    ],
+    "summary": {
+      "n_pleiotropic_elements": 1,
+      "unique_traits": 4,
+      "avg_confidence": 0.669,
+      "max_traits_per_element": 4
+    }
+  },
+  {
+    "genome": {
+      "id": 8,
+      "name": "Listeria monocytogenes",
+      "strain": "EGD-e",
+      "accession": "GCF_000196035.1",
+      "lifestyle": "intracellular_pathogen",
+      "traits_focus": [
+        "intracellular_survival",
+        "motility",
+        "stress"
+      ],
+      "genome_size_mb": 2.9
+    },
+    "success": true,
+    "analysis_time": 0.8884316290556017,
+    "pleiotropic_genes": [
+      {
+        "gene_id": "Listeria_monocytogenes_element_1",
+        "traits": [
+          "virulence",
+          "regulatory",
+          "stress_response",
+          "adhesion"
+        ],
+        "confidence": 0.862
+      }
+    ],
+    "summary": {
+      "n_pleiotropic_elements": 1,
+      "unique_traits": 4,
+      "avg_confidence": 0.862,
+      "max_traits_per_element": 4
+    }
+  },
+  {
+    "genome": {
+      "id": 9,
+      "name": "Rhodobacter sphaeroides",
+      "strain": "2.4.1",
+      "accession": "GCF_000012905.2",
+      "lifestyle": "photosynthetic",
+      "traits_focus": [
+        "photosynthesis",
+        "metabolism",
+        "motility"
+      ],
+      "genome_size_mb": 4.6
+    },
+    "success": true,
+    "analysis_time": 1.151947456036546,
+    "pleiotropic_genes": [
+      {
+        "gene_id": "Rhodobacter_sphaeroides_element_1",
+        "traits": [
+          "stress_response",
+          "circadian_rhythm",
+          "structural",
+          "regulatory"
+        ],
+        "confidence": 0.686
+      }
+    ],
+    "summary": {
+      "n_pleiotropic_elements": 1,
+      "unique_traits": 4,
+      "avg_confidence": 0.686,
+      "max_traits_per_element": 4
+    }
+  },
+  {
+    "genome": {
+      "id": 10,
+      "name": "Caulobacter crescentus",
+      "strain": "CB15",
+      "accession": "GCF_000022005.1",
+      "lifestyle": "aquatic_oligotroph",
+      "traits_focus": [
+        "cell_cycle",
+        "asymmetric_division",
+        "adhesion"
+      ],
+      "genome_size_mb": 4.0
+    },
+    "success": true,
+    "analysis_time": 1.1002223382725802,
+    "pleiotropic_genes": [
+      {
+        "gene_id": "Caulobacter_crescentus_element_1",
+        "traits": [
+          "regulatory",
+          "stress_response"
+        ],
+        "confidence": 0.769
+      }
+    ],
+    "summary": {
+      "n_pleiotropic_elements": 1,
+      "unique_traits": 2,
+      "avg_confidence": 0.769,
+      "max_traits_per_element": 2
+    }
+  },
+  {
+    "genome": {
+      "id": 11,
+      "name": "Borrelia burgdorferi",
+      "strain": "B31",
+      "accession": "GCF_000008685.2",
+      "lifestyle": "vector_borne_pathogen",
+      "traits_focus": [
+        "antigenic_variation",
+        "motility",
+        "host_adaptation"
+      ],
+      "genome_size_mb": 1.5
+    },
+    "success": true,
+    "analysis_time": 1.398531945132981,
+    "pleiotropic_genes": [
+      {
+        "gene_id": "Borrelia_burgdorferi_element_1",
+        "traits": [
+          "adhesion",
+          "regulatory",
+          "stress_response"
+        ],
+        "confidence": 0.73
+      }
+    ],
+    "summary": {
+      "n_pleiotropic_elements": 1,
+      "unique_traits": 3,
+      "avg_confidence": 0.73,
+      "max_traits_per_element": 3
+    }
+  },
+  {
+    "genome": {
+      "id": 12,
+      "name": "Lactobacillus plantarum",
+      "strain": "WCFS1",
+      "accession": "GCF_000203855.3",
+      "lifestyle": "probiotic",
+      "traits_focus": [
+        "acid_tolerance",
+        "adhesion",
+        "metabolism"
+      ],
+      "genome_size_mb": 3.3
+    },
+    "success": true,
+    "analysis_time": 1.2664873297873867,
+    "pleiotropic_genes": [
+      {
+        "gene_id": "Lactobacillus_plantarum_element_1",
+        "traits": [
+          "adhesion",
+          "regulatory",
+          "stress_response",
+          "acid_tolerance"
+        ],
+        "confidence": 0.786
+      }
+    ],
+    "summary": {
+      "n_pleiotropic_elements": 1,
+      "unique_traits": 4,
+      "avg_confidence": 0.786,
+      "max_traits_per_element": 4
+    }
+  },
+  {
+    "genome": {
+      "id": 13,
+      "name": "Neisseria meningitidis",
+      "strain": "MC58",
+      "accession": "GCF_000008805.1",
+      "lifestyle": "meningeal_pathogen",
+      "traits_focus": [
+        "capsule",
+        "adhesion",
+        "immune_evasion"
+      ],
+      "genome_size_mb": 2.3
+    },
+    "success": true,
+    "analysis_time": 1.2788573426112775,
+    "pleiotropic_genes": [
+      {
+        "gene_id": "Neisseria_meningitidis_element_1",
+        "traits": [
+          "adhesion",
+          "regulatory",
+          "stress_response"
+        ],
+        "confidence": 0.777
+      }
+    ],
+    "summary": {
+      "n_pleiotropic_elements": 1,
+      "unique_traits": 3,
+      "avg_confidence": 0.777,
+      "max_traits_per_element": 3
+    }
+  },
+  {
+    "genome": {
+      "id": 14,
+      "name": "Bacteroides fragilis",
+      "strain": "NCTC 9343",
+      "accession": "GCF_000009925.1",
+      "lifestyle": "gut_commensal",
+      "traits_focus": [
+        "polysaccharide_utilization",
+        "anaerobic",
+        "symbiosis"
+      ],
+      "genome_size_mb": 5.2
+    },
+    "success": true,
+    "analysis_time": 1.4582466726962826,
+    "pleiotropic_genes": [
+      {
+        "gene_id": "Bacteroides_fragilis_element_1",
+        "traits": [
+          "regulatory",
+          "stress_response"
+        ],
+        "confidence": 0.811
+      },
+      {
+        "gene_id": "Bacteroides_fragilis_element_2",
+        "traits": [
+          "regulatory",
+          "stress_response"
+        ],
+        "confidence": 0.8
+      }
+    ],
+    "summary": {
+      "n_pleiotropic_elements": 2,
+      "unique_traits": 2,
+      "avg_confidence": 0.8055000000000001,
+      "max_traits_per_element": 2
+    }
+  },
+  {
+    "genome": {
+      "id": 15,
+      "name": "Synechocystis sp.",
+      "strain": "PCC 6803",
+      "accession": "GCF_000009725.1",
+      "lifestyle": "cyanobacterium",
+      "traits_focus": [
+        "photosynthesis",
+        "circadian_rhythm",
+        "stress"
+      ],
+      "genome_size_mb": 3.6
+    },
+    "success": true,
+    "analysis_time": 1.4391096919062556,
+    "pleiotropic_genes": [
+      {
+        "gene_id": "Synechocystis_sp._element_1",
+        "traits": [
+          "structural",
+          "regulatory",
+          "stress_response"
+        ],
+        "confidence": 0.692
+      }
+    ],
+    "summary": {
+      "n_pleiotropic_elements": 1,
+      "unique_traits": 3,
+      "avg_confidence": 0.692,
+      "max_traits_per_element": 3
+    }
+  },
+  {
+    "genome": {
+      "id": 16,
+      "name": "Yersinia pestis",
+      "strain": "CO92",
+      "accession": "GCF_000009065.1",
+      "lifestyle": "plague_pathogen",
+      "traits_focus": [
+        "virulence",
+        "temperature_sensing",
+        "transmission"
+      ],
+      "genome_size_mb": 4.7
+    },
+    "success": true,
+    "analysis_time": 1.0918668386239654,
+    "pleiotropic_genes": [
+      {
+        "gene_id": "Yersinia_pestis_element_1",
+        "traits": [
+          "adhesion",
+          "regulatory",
+          "stress_response",
+          "invasion"
+        ],
+        "confidence": 0.751
+      }
+    ],
+    "summary": {
+      "n_pleiotropic_elements": 1,
+      "unique_traits": 4,
+      "avg_confidence": 0.751,
+      "max_traits_per_element": 4
+    }
+  },
+  {
+    "genome": {
+      "id": 17,
+      "name": "Campylobacter jejuni",
+      "strain": "NCTC 11168",
+      "accession": "GCF_000009085.1",
+      "lifestyle": "foodborne_pathogen",
+      "traits_focus": [
+        "motility",
+        "invasion",
+        "microaerobic"
+      ],
+      "genome_size_mb": 1.6
+    },
+    "success": true,
+    "analysis_time": 1.4723463420267138,
+    "pleiotropic_genes": [
+      {
+        "gene_id": "Campylobacter_jejuni_element_1",
+        "traits": [
+          "invasion",
+          "regulatory",
+          "stress_response"
+        ],
+        "confidence": 0.801
+      }
+    ],
+    "summary": {
+      "n_pleiotropic_elements": 1,
+      "unique_traits": 3,
+      "avg_confidence": 0.801,
+      "max_traits_per_element": 3
+    }
+  },
+  {
+    "genome": {
+      "id": 18,
+      "name": "Corynebacterium glutamicum",
+      "strain": "ATCC 13032",
+      "accession": "GCF_000196335.1",
+      "lifestyle": "industrial",
+      "traits_focus": [
+        "amino_acid_production",
+        "metabolism",
+        "stress"
+      ],
+      "genome_size_mb": 3.3
+    },
+    "success": true,
+    "analysis_time": 1.03419179221725,
+    "pleiotropic_genes": [
+      {
+        "gene_id": "Corynebacterium_glutamicum_element_1",
+        "traits": [
+          "regulatory",
+          "metabolism",
+          "stress_response",
+          "amino_acid_production"
+        ],
+        "confidence": 0.802
+      }
+    ],
+    "summary": {
+      "n_pleiotropic_elements": 1,
+      "unique_traits": 4,
+      "avg_confidence": 0.802,
+      "max_traits_per_element": 4
+    }
+  },
+  {
+    "genome": {
+      "id": 19,
+      "name": "Deinococcus radiodurans",
+      "strain": "R1",
+      "accession": "GCF_000008565.1",
+      "lifestyle": "extremophile",
+      "traits_focus": [
+        "radiation_resistance",
+        "DNA_repair",
+        "oxidative_stress"
+      ],
+      "genome_size_mb": 3.3
+    },
+    "success": true,
+    "analysis_time": 0.9037818552292862,
+    "pleiotropic_genes": [
+      {
+        "gene_id": "Deinococcus_radiodurans_element_1",
+        "traits": [
+          "stress_response",
+          "oxidative_stress",
+          "DNA_repair",
+          "structural"
+        ],
+        "confidence": 0.743
+      }
+    ],
+    "summary": {
+      "n_pleiotropic_elements": 1,
+      "unique_traits": 4,
+      "avg_confidence": 0.743,
+      "max_traits_per_element": 4
+    }
+  },
+  {
+    "genome": {
+      "id": 20,
+      "name": "Legionella pneumophila",
+      "strain": "Philadelphia 1",
+      "accession": "GCF_000008485.1",
+      "lifestyle": "intracellular_pathogen",
+      "traits_focus": [
+        "type_IV_secretion",
+        "intracellular_replication",
+        "biofilm"
+      ],
+      "genome_size_mb": 3.4
+    },
+    "success": true,
+    "analysis_time": 1.2450081087241924,
+    "pleiotropic_genes": [
+      {
+        "gene_id": "Legionella_pneumophila_element_1",
+        "traits": [
+          "invasion",
+          "virulence",
+          "regulatory",
+          "stress_response"
+        ],
+        "confidence": 0.722
+      }
+    ],
+    "summary": {
+      "n_pleiotropic_elements": 1,
+      "unique_traits": 4,
+      "avg_confidence": 0.722,
+      "max_traits_per_element": 4
+    }
+  }
+]

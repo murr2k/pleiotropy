@@ -1,0 +1,184 @@
+{
+  "genomes": [
+    {
+      "id": 1,
+      "name": "Bacillus subtilis",
+      "strain": "168",
+      "accession": "GCF_000009045.1",
+      "lifestyle": "soil_bacterium",
+      "traits_focus": ["sporulation", "competence", "biofilm"],
+      "genome_size_mb": 4.2
+    },
+    {
+      "id": 2,
+      "name": "Mycobacterium tuberculosis",
+      "strain": "H37Rv",
+      "accession": "GCF_000195955.2",
+      "lifestyle": "obligate_pathogen",
+      "traits_focus": ["dormancy", "cell_wall", "virulence"],
+      "genome_size_mb": 4.4
+    },
+    {
+      "id": 3,
+      "name": "Vibrio cholerae",
+      "strain": "O1 El Tor",
+      "accession": "GCF_000006745.1",
+      "lifestyle": "aquatic_pathogen",
+      "traits_focus": ["toxin_production", "biofilm", "motility"],
+      "genome_size_mb": 4.0
+    },
+    {
+      "id": 4,
+      "name": "Staphylococcus aureus",
+      "strain": "NCTC 8325",
+      "accession": "GCF_000013425.1",
+      "lifestyle": "opportunistic_pathogen",
+      "traits_focus": ["antibiotic_resistance", "toxins", "adhesion"],
+      "genome_size_mb": 2.8
+    },
+    {
+      "id": 5,
+      "name": "Streptococcus pneumoniae",
+      "strain": "TIGR4",
+      "accession": "GCF_000006885.1",
+      "lifestyle": "respiratory_pathogen",
+      "traits_focus": ["capsule", "competence", "virulence"],
+      "genome_size_mb": 2.2
+    },
+    {
+      "id": 6,
+      "name": "Helicobacter pylori",
+      "strain": "26695",
+      "accession": "GCF_000008525.1",
+      "lifestyle": "gastric_pathogen",
+      "traits_focus": ["acid_resistance", "adhesion", "inflammation"],
+      "genome_size_mb": 1.7
+    },
+    {
+      "id": 7,
+      "name": "Clostridium difficile",
+      "strain": "630",
+      "accession": "GCF_000009205.2",
+      "lifestyle": "anaerobic_pathogen",
+      "traits_focus": ["sporulation", "toxin_production", "metabolism"],
+      "genome_size_mb": 4.3
+    },
+    {
+      "id": 8,
+      "name": "Listeria monocytogenes",
+      "strain": "EGD-e",
+      "accession": "GCF_000196035.1",
+      "lifestyle": "intracellular_pathogen",
+      "traits_focus": ["intracellular_survival", "motility", "stress"],
+      "genome_size_mb": 2.9
+    },
+    {
+      "id": 9,
+      "name": "Rhodobacter sphaeroides",
+      "strain": "2.4.1",
+      "accession": "GCF_000012905.2",
+      "lifestyle": "photosynthetic",
+      "traits_focus": ["photosynthesis", "metabolism", "motility"],
+      "genome_size_mb": 4.6
+    },
+    {
+      "id": 10,
+      "name": "Caulobacter crescentus",
+      "strain": "CB15",
+      "accession": "GCF_000022005.1",
+      "lifestyle": "aquatic_oligotroph",
+      "traits_focus": ["cell_cycle", "asymmetric_division", "adhesion"],
+      "genome_size_mb": 4.0
+    },
+    {
+      "id": 11,
+      "name": "Borrelia burgdorferi",
+      "strain": "B31",
+      "accession": "GCF_000008685.2",
+      "lifestyle": "vector_borne_pathogen",
+      "traits_focus": ["antigenic_variation", "motility", "host_adaptation"],
+      "genome_size_mb": 1.5
+    },
+    {
+      "id": 12,
+      "name": "Lactobacillus plantarum",
+      "strain": "WCFS1",
+      "accession": "GCF_000203855.3",
+      "lifestyle": "probiotic",
+      "traits_focus": ["acid_tolerance", "adhesion", "metabolism"],
+      "genome_size_mb": 3.3
+    },
+    {
+      "id": 13,
+      "name": "Neisseria meningitidis",
+      "strain": "MC58",
+      "accession": "GCF_000008805.1",
+      "lifestyle": "meningeal_pathogen",
+      "traits_focus": ["capsule", "adhesion", "immune_evasion"],
+      "genome_size_mb": 2.3
+    },
+    {
+      "id": 14,
+      "name": "Bacteroides fragilis",
+      "strain": "NCTC 9343",
+      "accession": "GCF_000009925.1",
+      "lifestyle": "gut_commensal",
+      "traits_focus": ["polysaccharide_utilization", "anaerobic", "symbiosis"],
+      "genome_size_mb": 5.2
+    },
+    {
+      "id": 15,
+      "name": "Synechocystis sp.",
+      "strain": "PCC 6803",
+      "accession": "GCF_000009725.1",
+      "lifestyle": "cyanobacterium",
+      "traits_focus": ["photosynthesis", "circadian_rhythm", "stress"],
+      "genome_size_mb": 3.6
+    },
+    {
+      "id": 16,
+      "name": "Yersinia pestis",
+      "strain": "CO92",
+      "accession": "GCF_000009065.1",
+      "lifestyle": "plague_pathogen",
+      "traits_focus": ["virulence", "temperature_sensing", "transmission"],
+      "genome_size_mb": 4.7
+    },
+    {
+      "id": 17,
+      "name": "Campylobacter jejuni",
+      "strain": "NCTC 11168",
+      "accession": "GCF_000009085.1",
+      "lifestyle": "foodborne_pathogen",
+      "traits_focus": ["motility", "invasion", "microaerobic"],
+      "genome_size_mb": 1.6
+    },
+    {
+      "id": 18,
+      "name": "Corynebacterium glutamicum",
+      "strain": "ATCC 13032",
+      "accession": "GCF_000196335.1",
+      "lifestyle": "industrial",
+      "traits_focus": ["amino_acid_production", "metabolism", "stress"],
+      "genome_size_mb": 3.3
+    },
+    {
+      "id": 19,
+      "name": "Deinococcus radiodurans",
+      "strain": "R1",
+      "accession": "GCF_000008565.1",
+      "lifestyle": "extremophile",
+      "traits_focus": ["radiation_resistance", "DNA_repair", "oxidative_stress"],
+      "genome_size_mb": 3.3
+    },
+    {
+      "id": 20,
+      "name": "Legionella pneumophila",
+      "strain": "Philadelphia 1",
+      "accession": "GCF_000008485.1",
+      "lifestyle": "intracellular_pathogen",
+      "traits_focus": ["type_IV_secretion", "intracellular_replication", "biofilm"],
+      "genome_size_mb": 3.4
+    }
+  ]
+}

@@ -1,0 +1,50 @@
+[
+  {
+    "name": "virulence",
+    "description": "Pathogenicity and host cell invasion",
+    "associated_genes": ["invA", "hilA", "sipA", "sopB", "sseL"],
+    "known_sequences": []
+  },
+  {
+    "name": "stress_response",
+    "description": "Response to host immune system and environmental stress",
+    "associated_genes": ["rpoS", "phoP", "phoQ", "ompR", "envZ"],
+    "known_sequences": []
+  },
+  {
+    "name": "regulatory",
+    "description": "Global gene expression regulation",
+    "associated_genes": ["crp", "fis", "fnr", "fur", "slyA"],
+    "known_sequences": []
+  },
+  {
+    "name": "antibiotic_resistance",
+    "description": "Resistance to antimicrobial compounds",
+    "associated_genes": ["acrA", "acrB", "tolC", "marA", "ramA"],
+    "known_sequences": []
+  },
+  {
+    "name": "metabolism",
+    "description": "Metabolic adaptation in host environment",
+    "associated_genes": ["pckA", "aceA", "aceB", "glpK", "fadB"],
+    "known_sequences": []
+  },
+  {
+    "name": "type_three_secretion",
+    "description": "Type III secretion system for effector delivery",
+    "associated_genes": ["prgH", "prgI", "prgJ", "spaO", "spaP"],
+    "known_sequences": []
+  },
+  {
+    "name": "biofilm_formation",
+    "description": "Biofilm and multicellular behavior",
+    "associated_genes": ["csgA", "csgD", "bcsA", "adrA", "gcpA"],
+    "known_sequences": []
+  },
+  {
+    "name": "iron_acquisition",
+    "description": "Iron uptake and siderophore production",
+    "associated_genes": ["entA", "entB", "fepA", "iroN", "sitA"],
+    "known_sequences": []
+  }
+]

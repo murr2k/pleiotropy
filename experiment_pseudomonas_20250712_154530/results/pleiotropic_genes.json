@@ -1,0 +1,13 @@
+[
+  {
+    "gene_id": "NC_002516.2",
+    "traits": [
+      "carbon_metabolism",
+      "motility",
+      "stress_response",
+      "structural",
+      "regulatory"
+    ],
+    "confidence": 0.7499999999999999
+  }
+]

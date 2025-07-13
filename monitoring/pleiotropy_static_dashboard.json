@@ -1,0 +1,853 @@
+{
+  "annotations": {
+    "list": []
+  },
+  "editable": true,
+  "fiscalYearStartMonth": 0,
+  "graphTooltip": 0,
+  "id": null,
+  "links": [],
+  "liveNow": false,
+  "panels": [
+    {
+      "datasource": {
+        "type": "datasource",
+        "uid": "grafana"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "thresholds"
+          },
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": null
+              }
+            ]
+          }
+        }
+      },
+      "gridPos": {
+        "h": 4,
+        "w": 6,
+        "x": 0,
+        "y": 0
+      },
+      "id": 1,
+      "options": {
+        "colorMode": "value",
+        "graphMode": "none",
+        "justifyMode": "center",
+        "orientation": "auto",
+        "reduceOptions": {
+          "values": false,
+          "calcs": [
+            "lastNotNull"
+          ],
+          "fields": ""
+        },
+        "text": {
+          "valueSize": 50
+        },
+        "textMode": "value"
+      },
+      "pluginVersion": "9.0.0",
+      "targets": [
+        {
+          "refId": "A",
+          "datasource": {
+            "type": "datasource",
+            "uid": "grafana"
+          },
+          "queryType": "snapshot",
+          "snapshot": [
+            {
+              "fields": [
+                {
+                  "name": "value",
+                  "values": [
+                    20
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "title": "Total Experiments",
+      "type": "stat"
+    },
+    {
+      "datasource": {
+        "type": "datasource",
+        "uid": "grafana"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "thresholds"
+          },
+          "mappings": [],
+          "max": 1,
+          "min": 0,
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "red",
+                "value": null
+              },
+              {
+                "color": "yellow",
+                "value": 0.7
+              },
+              {
+                "color": "green",
+                "value": 0.8
+              }
+            ]
+          },
+          "unit": "percentunit"
+        }
+      },
+      "gridPos": {
+        "h": 4,
+        "w": 6,
+        "x": 6,
+        "y": 0
+      },
+      "id": 2,
+      "options": {
+        "colorMode": "value",
+        "graphMode": "none",
+        "justifyMode": "center",
+        "orientation": "auto",
+        "reduceOptions": {
+          "values": false,
+          "calcs": [
+            "lastNotNull"
+          ],
+          "fields": ""
+        },
+        "text": {
+          "valueSize": 50
+        },
+        "textMode": "value"
+      },
+      "pluginVersion": "9.0.0",
+      "targets": [
+        {
+          "refId": "A",
+          "datasource": {
+            "type": "datasource",
+            "uid": "grafana"
+          },
+          "queryType": "snapshot",
+          "snapshot": [
+            {
+              "fields": [
+                {
+                  "name": "value",
+                  "values": [
+                    0.745525
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "title": "Average Confidence",
+      "type": "stat"
+    },
+    {
+      "datasource": {
+        "type": "datasource",
+        "uid": "grafana"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "thresholds"
+          },
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": null
+              },
+              {
+                "color": "yellow",
+                "value": 2
+              },
+              {
+                "color": "red",
+                "value": 5
+              }
+            ]
+          },
+          "unit": "s"
+        }
+      },
+      "gridPos": {
+        "h": 4,
+        "w": 6,
+        "x": 12,
+        "y": 0
+      },
+      "id": 3,
+      "options": {
+        "colorMode": "value",
+        "graphMode": "none",
+        "justifyMode": "center",
+        "orientation": "auto",
+        "reduceOptions": {
+          "values": false,
+          "calcs": [
+            "lastNotNull"
+          ],
+          "fields": ""
+        },
+        "text": {
+          "valueSize": 50
+        },
+        "textMode": "value"
+      },
+      "pluginVersion": "9.0.0",
+      "targets": [
+        {
+          "refId": "A",
+          "datasource": {
+            "type": "datasource",
+            "uid": "grafana"
+          },
+          "queryType": "snapshot",
+          "snapshot": [
+            {
+              "fields": [
+                {
+                  "name": "value",
+                  "values": [
+                    1.2039714396052057
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "title": "Avg Analysis Time",
+      "type": "stat"
+    },
+    {
+      "datasource": {
+        "type": "datasource",
+        "uid": "grafana"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "thresholds"
+          },
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": null
+              }
+            ]
+          }
+        }
+      },
+      "gridPos": {
+        "h": 4,
+        "w": 6,
+        "x": 18,
+        "y": 0
+      },
+      "id": 4,
+      "options": {
+        "colorMode": "value",
+        "graphMode": "none",
+        "justifyMode": "center",
+        "orientation": "auto",
+        "reduceOptions": {
+          "values": false,
+          "calcs": [
+            "lastNotNull"
+          ],
+          "fields": ""
+        },
+        "text": {
+          "valueSize": 50
+        },
+        "textMode": "value"
+      },
+      "pluginVersion": "9.0.0",
+      "targets": [
+        {
+          "refId": "A",
+          "datasource": {
+            "type": "datasource",
+            "uid": "grafana"
+          },
+          "queryType": "snapshot",
+          "snapshot": [
+            {
+              "fields": [
+                {
+                  "name": "value",
+                  "values": [
+                    3.45
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "title": "Avg Traits/Genome",
+      "type": "stat"
+    },
+    {
+      "datasource": {
+        "type": "datasource",
+        "uid": "grafana"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "palette-classic"
+          },
+          "custom": {
+            "hideFrom": {
+              "tooltip": false,
+              "viz": false,
+              "legend": false
+            }
+          },
+          "mappings": []
+        }
+      },
+      "gridPos": {
+        "h": 8,
+        "w": 12,
+        "x": 0,
+        "y": 4
+      },
+      "id": 5,
+      "options": {
+        "legend": {
+          "displayMode": "list",
+          "placement": "right",
+          "showLegend": true
+        },
+        "pieType": "pie",
+        "tooltip": {
+          "mode": "single",
+          "sort": "none"
+        }
+      },
+      "targets": [
+        {
+          "refId": "A",
+          "datasource": {
+            "type": "datasource",
+            "uid": "grafana"
+          },
+          "queryType": "snapshot",
+          "snapshot": [
+            {
+              "fields": [
+                {
+                  "name": "lifestyle",
+                  "values": [
+                    "soil_bacterium",
+                    "obligate_pathogen",
+                    "aquatic_pathogen",
+                    "opportunistic_pathogen",
+                    "respiratory_pathogen",
+                    "gastric_pathogen",
+                    "anaerobic_pathogen",
+                    "intracellular_pathogen",
+                    "photosynthetic",
+                    "aquatic_oligotroph",
+                    "vector_borne_pathogen",
+                    "probiotic",
+                    "meningeal_pathogen",
+                    "gut_commensal",
+                    "cyanobacterium",
+                    "plague_pathogen",
+                    "foodborne_pathogen",
+                    "industrial",
+                    "extremophile"
+                  ]
+                },
+                {
+                  "name": "count",
+                  "values": [
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    2,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "title": "Experiments by Lifestyle",
+      "type": "piechart"
+    },
+    {
+      "datasource": {
+        "type": "datasource",
+        "uid": "grafana"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "palette-classic"
+          },
+          "custom": {
+            "axisCenteredZero": false,
+            "axisColorMode": "text",
+            "axisLabel": "",
+            "axisPlacement": "auto",
+            "fillOpacity": 80,
+            "gradientMode": "none",
+            "hideFrom": {
+              "tooltip": false,
+              "viz": false,
+              "legend": false
+            },
+            "lineWidth": 1,
+            "scaleDistribution": {
+              "type": "linear"
+            }
+          },
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": null
+              }
+            ]
+          },
+          "unit": "short"
+        }
+      },
+      "gridPos": {
+        "h": 8,
+        "w": 12,
+        "x": 12,
+        "y": 4
+      },
+      "id": 6,
+      "options": {
+        "barRadius": 0,
+        "barWidth": 0.97,
+        "fullHighlight": false,
+        "groupWidth": 0.7,
+        "legend": {
+          "calcs": [],
+          "displayMode": "list",
+          "placement": "bottom",
+          "showLegend": false
+        },
+        "orientation": "auto",
+        "showValue": "auto",
+        "stacking": "none",
+        "tooltip": {
+          "mode": "single",
+          "sort": "none"
+        },
+        "xTickLabelRotation": -45,
+        "xTickLabelSpacing": 0
+      },
+      "targets": [
+        {
+          "refId": "A",
+          "datasource": {
+            "type": "datasource",
+            "uid": "grafana"
+          },
+          "queryType": "snapshot",
+          "snapshot": [
+            {
+              "fields": [
+                {
+                  "name": "trait",
+                  "values": [
+                    "stress_response",
+                    "regulatory",
+                    "metabolism",
+                    "virulence",
+                    "motility",
+                    "carbon_metabolism",
+                    "structural"
+                  ]
+                },
+                {
+                  "name": "frequency",
+                  "values": [
+                    23,
+                    21,
+                    8,
+                    5,
+                    4,
+                    1,
+                    1
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "title": "Trait Frequency Distribution",
+      "type": "barchart"
+    },
+    {
+      "datasource": {
+        "type": "datasource",
+        "uid": "grafana"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "custom": {
+            "align": "auto",
+            "cellOptions": {
+              "type": "auto"
+            },
+            "inspect": false
+          },
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": null
+              }
+            ]
+          }
+        },
+        "overrides": [
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "Confidence"
+            },
+            "properties": [
+              {
+                "id": "unit",
+                "value": "percentunit"
+              },
+              {
+                "id": "custom.cellOptions",
+                "value": {
+                  "type": "color-background",
+                  "mode": "gradient"
+                }
+              },
+              {
+                "id": "thresholds",
+                "value": {
+                  "mode": "absolute",
+                  "steps": [
+                    {
+                      "color": "red",
+                      "value": null
+                    },
+                    {
+                      "color": "yellow",
+                      "value": 0.6
+                    },
+                    {
+                      "color": "green",
+                      "value": 0.75
+                    }
+                  ]
+                }
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "Analysis Time"
+            },
+            "properties": [
+              {
+                "id": "unit",
+                "value": "s"
+              },
+              {
+                "id": "decimals",
+                "value": 2
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "Genome Size"
+            },
+            "properties": [
+              {
+                "id": "unit",
+                "value": "decmbytes"
+              },
+              {
+                "id": "decimals",
+                "value": 1
+              }
+            ]
+          }
+        ]
+      },
+      "gridPos": {
+        "h": 10,
+        "w": 24,
+        "x": 0,
+        "y": 12
+      },
+      "id": 7,
+      "options": {
+        "cellHeight": "sm",
+        "footer": {
+          "countRows": false,
+          "fields": "",
+          "reducer": [
+            "sum"
+          ],
+          "show": false
+        },
+        "showHeader": true,
+        "sortBy": [
+          {
+            "desc": true,
+            "displayName": "Confidence"
+          }
+        ]
+      },
+      "pluginVersion": "9.0.0",
+      "targets": [
+        {
+          "refId": "A",
+          "datasource": {
+            "type": "datasource",
+            "uid": "grafana"
+          },
+          "queryType": "snapshot",
+          "snapshot": [
+            {
+              "fields": [
+                {
+                  "name": "Organism",
+                  "values": [
+                    "Bacillus subtilis 168",
+                    "Mycobacterium tuberculosis H37Rv",
+                    "Vibrio cholerae O1 El Tor",
+                    "Staphylococcus aureus NCTC 8325",
+                    "Streptococcus pneumoniae TIGR4",
+                    "Helicobacter pylori 26695",
+                    "Clostridium difficile 630",
+                    "Listeria monocytogenes EGD-e",
+                    "Rhodobacter sphaeroides 2.4.1",
+                    "Caulobacter crescentus CB15",
+                    "Borrelia burgdorferi B31",
+                    "Lactobacillus plantarum WCFS1",
+                    "Neisseria meningitidis MC58",
+                    "Bacteroides fragilis NCTC 9343",
+                    "Synechocystis sp. PCC 6803",
+                    "Yersinia pestis CO92",
+                    "Campylobacter jejuni NCTC 11168",
+                    "Corynebacterium glutamicum ATCC 13032",
+                    "Deinococcus radiodurans R1",
+                    "Legionella pneumophila Philadelphia 1"
+                  ]
+                },
+                {
+                  "name": "Lifestyle",
+                  "values": [
+                    "soil_bacterium",
+                    "obligate_pathogen",
+                    "aquatic_pathogen",
+                    "opportunistic_pathogen",
+                    "respiratory_pathogen",
+                    "gastric_pathogen",
+                    "anaerobic_pathogen",
+                    "intracellular_pathogen",
+                    "photosynthetic",
+                    "aquatic_oligotroph",
+                    "vector_borne_pathogen",
+                    "probiotic",
+                    "meningeal_pathogen",
+                    "gut_commensal",
+                    "cyanobacterium",
+                    "plague_pathogen",
+                    "foodborne_pathogen",
+                    "industrial",
+                    "extremophile",
+                    "intracellular_pathogen"
+                  ]
+                },
+                {
+                  "name": "Confidence",
+                  "values": [
+                    0.721,
+                    0.657,
+                    0.729,
+                    0.698,
+                    0.788,
+                    0.722,
+                    0.669,
+                    0.862,
+                    0.686,
+                    0.769,
+                    0.73,
+                    0.786,
+                    0.777,
+                    0.8055000000000001,
+                    0.692,
+                    0.751,
+                    0.801,
+                    0.802,
+                    0.743,
+                    0.722
+                  ]
+                },
+                {
+                  "name": "Analysis Time",
+                  "values": [
+                    1.1468045609643587,
+                    1.3848492146906146,
+                    1.2227440270173362,
+                    1.0811137101395525,
+                    1.3566354958959876,
+                    0.9831350380612606,
+                    1.1751174030146825,
+                    0.8884316290556017,
+                    1.151947456036546,
+                    1.1002223382725802,
+                    1.398531945132981,
+                    1.2664873297873867,
+                    1.2788573426112775,
+                    1.4582466726962826,
+                    1.4391096919062556,
+                    1.0918668386239654,
+                    1.4723463420267138,
+                    1.03419179221725,
+                    0.9037818552292862,
+                    1.2450081087241924
+                  ]
+                },
+                {
+                  "name": "Traits",
+                  "values": [
+                    4,
+                    3,
+                    4,
+                    4,
+                    3,
+                    3,
+                    4,
+                    4,
+                    4,
+                    2,
+                    3,
+                    4,
+                    3,
+                    2,
+                    3,
+                    4,
+                    3,
+                    4,
+                    4,
+                    4
+                  ]
+                },
+                {
+                  "name": "Genome Size",
+                  "values": [
+                    4.2,
+                    4.4,
+                    4.0,
+                    2.8,
+                    2.2,
+                    1.7,
+                    4.3,
+                    2.9,
+                    4.6,
+                    4.0,
+                    1.5,
+                    3.3,
+                    2.3,
+                    5.2,
+                    3.6,
+                    4.7,
+                    1.6,
+                    3.3,
+                    3.3,
+                    3.4
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "title": "Experimental Results Detail",
+      "type": "table"
+    }
+  ],
+  "refresh": "",
+  "schemaVersion": 38,
+  "style": "dark",
+  "tags": [
+    "pleiotropy",
+    "experiments",
+    "analysis"
+  ],
+  "templating": {
+    "list": []
+  },
+  "time": {
+    "from": "now-6h",
+    "to": "now"
+  },
+  "timepicker": {},
+  "timezone": "",
+  "title": "Pleiotropy Experiments Analysis",
+  "uid": "pleiotropy-static-analysis",
+  "version": 0,
+  "weekStart": ""
+}

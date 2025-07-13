@@ -1,0 +1,196 @@
+{
+  "biological": {
+    "timestamp": "2025-07-12T21:45:51.671831",
+    "checks": [
+      {
+        "test": "known_pleiotropic_genes",
+        "data": {
+          "E. coli": [
+            "crp",
+            "fis",
+            "rpoS",
+            "hns",
+            "fnr"
+          ],
+          "universal_traits": [
+            "stress_response",
+            "regulatory"
+          ]
+        },
+        "status": "defined"
+      },
+      {
+        "test": "trait_biology_validation",
+        "data": {
+          "stress_response": {
+            "expected_prevalence": 0.8,
+            "biological_basis": "Stress response is fundamental to survival"
+          },
+          "regulatory": {
+            "expected_prevalence": 0.7,
+            "biological_basis": "Regulatory genes often have pleiotropic effects"
+          },
+          "virulence": {
+            "expected_in": [
+              "pathogen",
+              "opportunistic_pathogen"
+            ],
+            "biological_basis": "Virulence traits specific to pathogens"
+          }
+        },
+        "status": "defined"
+      },
+      {
+        "test": "genome_correlation_check",
+        "expected": {
+          "expected_range": [
+            0.05,
+            0.3
+          ],
+          "biological_basis": "Larger genomes tend to have more regulatory complexity"
+        },
+        "status": "defined"
+      }
+    ]
+  },
+  "statistical": {
+    "timestamp": "2025-07-12T21:45:51.671839",
+    "claimed_metrics": {
+      "total_experiments": 23,
+      "success_rate": 1.0,
+      "avg_confidence": 0.747,
+      "avg_analysis_time": 1.44,
+      "avg_traits_per_genome": 3.4,
+      "high_confidence_rate": 0.783
+    },
+    "verified_metrics": {
+      "total_experiments": 20,
+      "success_rate": 1.0,
+      "avg_confidence": 0.745525,
+      "avg_analysis_time": 1.2039714396052057,
+      "avg_traits_per_genome": 3.45,
+      "high_confidence_rate": 0.75
+    },
+    "discrepancies": [
+      {
+        "metric": "total_experiments",
+        "claimed": 23,
+        "verified": 20,
+        "difference": 3,
+        "percent_error": 13.043478260869565
+      },
+      {
+        "metric": "avg_analysis_time",
+        "claimed": 1.44,
+        "verified": 1.2039714396052057,
+        "difference": 0.23602856039479425,
+        "percent_error": 16.39087224963849
+      },
+      {
+        "metric": "avg_traits_per_genome",
+        "claimed": 3.4,
+        "verified": 3.45,
+        "difference": 0.050000000000000266,
+        "percent_error": 1.4705882352941255
+      },
+      {
+        "metric": "high_confidence_rate",
+        "claimed": 0.783,
+        "verified": 0.75,
+        "difference": 0.03300000000000003,
+        "percent_error": 4.214559386973184
+      }
+    ]
+  },
+  "integrity": {
+    "timestamp": "2025-07-12T21:45:51.671917",
+    "file_checksums": {
+      "batch_experiment_20_genomes_20250712_181857/batch_simulation_results.json": "1d84b435f748635292b99187bd697329",
+      "batch_experiment_20_genomes_20250712_181857/comprehensive_statistical_report.md": "2804f3028b3c648aa2b7d61569049c41"
+    },
+    "data_consistency": [],
+    "missing_files": [
+      "trial_20250712_023446/analysis_results.json",
+      "experiment_salmonella_20250712_174618/analysis_results.json",
+      "experiment_pseudomonas_20250712_175007/analysis_results.json"
+    ],
+    "corrupted_data": []
+  },
+  "methodology": {
+    "timestamp": "2025-07-12T21:45:51.672025",
+    "algorithm_review": {
+      "primary_method": "NeuroDNA v0.0.2",
+      "fallback_method": "Cryptographic pattern analysis",
+      "gpu_acceleration": "CUDA implementation claimed",
+      "strengths": [
+        "Novel approach combining neural networks with cryptanalysis",
+        "GPU acceleration for performance",
+        "Multiple trait detection methods"
+      ],
+      "concerns": [
+        "Limited validation against known biological data",
+        "Confidence scoring methodology unclear",
+        "Batch experiments marked as \"simulated\""
+      ]
+    },
+    "experimental_design": {
+      "sample_size": {
+        "individual": 3,
+        "batch": 20,
+        "total": 23,
+        "adequacy": "Limited for broad conclusions"
+      },
+      "organism_diversity": {
+        "coverage": "Good - multiple lifestyles represented",
+        "bias": "Possible overrepresentation of pathogens"
+      },
+      "controls": {
+        "negative_controls": "Not evident",
+        "positive_controls": "Not documented",
+        "concern": "Lack of control experiments"
+      }
+    },
+    "limitations": [
+      "Small sample size for individual experiments (n=3)",
+      "Batch experiments marked as \"simulated\" - unclear if real analysis",
+      "No negative controls or scrambled sequences tested",
+      "Validation against known pleiotropic genes not shown",
+      "Statistical significance testing not performed"
+    ],
+    "recommendations": [
+      "Include negative control sequences",
+      "Validate against curated pleiotropic gene databases",
+      "Perform statistical significance testing",
+      "Increase individual experiment sample size",
+      "Document confidence score calculation methodology",
+      "Compare results with established methods"
+    ]
+  },
+  "reproducibility": {
+    "timestamp": "2025-07-12T21:45:51.672031",
+    "tests_performed": [
+      {
+        "name": "Raw data availability",
+        "check": "FASTA files present",
+        "result": "PARTIAL"
+      },
+      {
+        "name": "Algorithm implementation",
+        "check": "Source code available and documented",
+        "result": "PASS"
+      },
+      {
+        "name": "Parameter documentation",
+        "check": "All parameters clearly specified",
+        "result": null
+      },
+      {
+        "name": "Environment specification",
+        "check": "Software versions and dependencies listed",
+        "result": null
+      }
+    ],
+    "reproducibility_score": 0.25,
+    "issues": []
+  }
+}

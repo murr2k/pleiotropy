@@ -5,6 +5,12 @@ pub mod features;
 #[cfg(feature = "cuda")]
 pub mod device;
 #[cfg(feature = "cuda")]
+pub mod prime_factorization;
+#[cfg(feature = "cuda")]
+pub mod composite_factorizer;
+#[cfg(feature = "cuda")]
+pub mod semiprime_cuda;
+#[cfg(feature = "cuda")]
 pub mod kernels;
 #[cfg(feature = "cuda")]
 pub mod memory;

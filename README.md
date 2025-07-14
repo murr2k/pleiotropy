@@ -15,6 +15,8 @@ Pleiotropy - where one gene affects multiple traits - is a fundamental challenge
 
 - **High-Performance Rust Core**: Parallel processing of genomic sequences
 - **NeuroDNA Integration**: Neural network-inspired trait detection (v0.0.2)
+- **CUDA GPU Acceleration**: 10-50x speedup with GPU kernels
+- **Composite Number Factorizer**: GPU-accelerated semiprime factorization (validated on 31-digit numbers)
 - **Cryptanalytic Algorithms**: Frequency analysis, pattern detection, context-aware decryption
 - **Statistical Analysis**: Chi-squared tests, mutual information, PCA
 - **Interactive Visualizations**: Heatmaps, networks, Sankey diagrams

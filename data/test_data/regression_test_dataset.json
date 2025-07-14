@@ -1,0 +1,119 @@
+{
+  "metadata": {
+    "description": "TEST DATASET - SIMULATED DATA FOR REGRESSION TESTING ONLY",
+    "warning": "This is NOT real experimental data. Do not use for scientific conclusions.",
+    "created": "2025-07-13T22:42:57.675149",
+    "purpose": "Regression testing and method validation",
+    "source": "Simulated using simulate_batch_analysis.py",
+    "version": "1.0"
+  },
+  "test_cases": [
+    {
+      "test_id": "TEST_BACILLUS_SUBTILIS",
+      "organism": "Bacillus subtilis 168",
+      "genome_size_mb": 4.2,
+      "lifestyle": "soil_bacterium",
+      "expected_results": {
+        "success": true,
+        "n_pleiotropic_elements": 1,
+        "unique_traits": 4,
+        "avg_confidence": 0.721,
+        "common_traits": []
+      },
+      "pleiotropic_genes": [
+        {
+          "gene_id": "Bacillus_subtilis_element_1",
+          "traits": [
+            "sporulation",
+            "regulatory",
+            "development",
+            "stress_response"
+          ],
+          "confidence": 0.721
+        }
+      ],
+      "analysis_time": 1.1468045609643587,
+      "test_notes": "Simulated soil_bacterium organism for testing"
+    },
+    {
+      "test_id": "TEST_STAPHYLOCOCCUS_AUREUS",
+      "organism": "Staphylococcus aureus NCTC 8325",
+      "genome_size_mb": 2.8,
+      "lifestyle": "opportunistic_pathogen",
+      "expected_results": {
+        "success": true,
+        "n_pleiotropic_elements": 1,
+        "unique_traits": 4,
+        "avg_confidence": 0.698,
+        "common_traits": []
+      },
+      "pleiotropic_genes": [
+        {
+          "gene_id": "Staphylococcus_aureus_element_1",
+          "traits": [
+            "metabolism",
+            "stress_response",
+            "virulence",
+            "adhesion"
+          ],
+          "confidence": 0.698
+        }
+      ],
+      "analysis_time": 1.0811137101395525,
+      "test_notes": "Simulated opportunistic_pathogen organism for testing"
+    },
+    {
+      "test_id": "TEST_SYNECHOCYSTIS_SP.",
+      "organism": "Synechocystis sp. PCC 6803",
+      "genome_size_mb": 3.6,
+      "lifestyle": "cyanobacterium",
+      "expected_results": {
+        "success": true,
+        "n_pleiotropic_elements": 1,
+        "unique_traits": 3,
+        "avg_confidence": 0.692,
+        "common_traits": []
+      },
+      "pleiotropic_genes": [
+        {
+          "gene_id": "Synechocystis_sp._element_1",
+          "traits": [
+            "structural",
+            "regulatory",
+            "stress_response"
+          ],
+          "confidence": 0.692
+        }
+      ],
+      "analysis_time": 1.4391096919062556,
+      "test_notes": "Simulated cyanobacterium organism for testing"
+    },
+    {
+      "test_id": "TEST_DEINOCOCCUS_RADIODURANS",
+      "organism": "Deinococcus radiodurans R1",
+      "genome_size_mb": 3.3,
+      "lifestyle": "extremophile",
+      "expected_results": {
+        "success": true,
+        "n_pleiotropic_elements": 1,
+        "unique_traits": 4,
+        "avg_confidence": 0.743,
+        "common_traits": []
+      },
+      "pleiotropic_genes": [
+        {
+          "gene_id": "Deinococcus_radiodurans_element_1",
+          "traits": [
+            "stress_response",
+            "oxidative_stress",
+            "DNA_repair",
+            "structural"
+          ],
+          "confidence": 0.743
+        }
+      ],
+      "analysis_time": 0.9037818552292862,
+      "test_notes": "Simulated extremophile organism for testing"
+    }
+  ]
+}

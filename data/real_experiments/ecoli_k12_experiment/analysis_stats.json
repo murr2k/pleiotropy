@@ -1,0 +1,9 @@
+{
+  "total_genes": 4,
+  "synthetic_genes": 3,
+  "ecoli_genes": 1,
+  "average_confidence": 0.6665621985007886,
+  "average_traits_per_gene": 3.25,
+  "most_common_trait": "stress_response",
+  "unique_traits": 5
+}

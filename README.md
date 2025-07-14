@@ -649,6 +649,15 @@ docker system prune -f
 # See backup/restore procedures in Docker Deployment section
 ```
 
+## ⚠️ Important Data Notice
+
+**Critical**: This project contains both REAL experimental data and SIMULATED test data. Always verify data source before use:
+- ✅ **Real Data**: `data/real_experiments/` - Use for scientific analysis
+- ⚠️ **Test Data**: `data/test_data/` - SIMULATED, for regression testing only
+- ❌ **Archived**: `data/simulated_archive/` - Historical simulated data, do not use
+
+See `data/DATA_PROVENANCE.md` for complete data documentation.
+
 ## 📊 Progress Report
 
 ### Recent Experiments (January 12, 2025)
@@ -671,15 +680,17 @@ The project has undergone extensive validation with comprehensive experiments on
    - Confidence: 75.0%
    - Analysis time: 1.0s
 
-#### Batch Experiment (20 Diverse Genomes)
-Analyzed 20 bacterial genomes representing various lifestyles including pathogens, commensals, extremophiles, and industrial strains.
+#### REAL Experimental Results (3 Genomes)
+Based on actual genomic analyses of real bacterial genomes:
 
-**Key Results:**
-- **100% Success Rate**: All 23 experiments completed successfully
-- **74.7% Average Confidence**: High reliability in pleiotropic detection
-- **Universal Traits Identified**: stress_response (100%), regulatory (91.3%)
-- **3.4 Average Traits per Genome**: Consistent trait complexity across diverse bacteria
-- **1.44s Average Analysis Time**: Excellent performance scalability
+**Verified Results:**
+- **3 Real Experiments**: E. coli K-12, S. enterica, P. aeruginosa
+- **100% Success Rate**: All real experiments completed successfully
+- **75.8% Average Confidence**: Consistent detection confidence
+- **3.0 Average Traits per Genome**: Regulatory and stress response common
+- **3.0s Average Analysis Time**: Including 7s initial E. coli run
+
+**Note**: Previous reports included 20 simulated genomes. Statistics above reflect ONLY real experimental data.
 
 **Significant Findings:**
 - Stress response and regulatory traits show universal pleiotropy across all bacteria

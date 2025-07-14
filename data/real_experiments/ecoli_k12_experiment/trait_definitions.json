@@ -1,0 +1,106 @@
+{
+  "traits": [
+    {
+      "name": "carbon_metabolism",
+      "description": "Carbon source utilization and metabolism",
+      "associated_genes": [
+        "crp",
+        "cyaA",
+        "aceE",
+        "aceF"
+      ],
+      "codon_patterns": [
+        "CTG",
+        "GAA",
+        "AAA",
+        "CGT"
+      ],
+      "known_sequences": []
+    },
+    {
+      "name": "stress_response",
+      "description": "Response to environmental stress conditions",
+      "associated_genes": [
+        "rpoS",
+        "hns",
+        "dnaK",
+        "groEL"
+      ],
+      "codon_patterns": [
+        "GAA",
+        "GCT",
+        "ATT",
+        "CTG"
+      ],
+      "known_sequences": []
+    },
+    {
+      "name": "regulatory",
+      "description": "Gene expression regulation and control",
+      "associated_genes": [
+        "crp",
+        "fis",
+        "ihfA",
+        "fnr"
+      ],
+      "codon_patterns": [
+        "CGT",
+        "AAC",
+        "TTC",
+        "GAA"
+      ],
+      "known_sequences": []
+    },
+    {
+      "name": "motility",
+      "description": "Flagellar synthesis and chemotaxis",
+      "associated_genes": [
+        "fliA",
+        "flhDC",
+        "cheA",
+        "cheB"
+      ],
+      "codon_patterns": [
+        "TTC",
+        "GGT",
+        "CAA",
+        "CGT"
+      ],
+      "known_sequences": []
+    },
+    {
+      "name": "dna_processing",
+      "description": "DNA replication, repair, and recombination",
+      "associated_genes": [
+        "recA",
+        "mutS",
+        "dnaE",
+        "polA"
+      ],
+      "codon_patterns": [
+        "AAC",
+        "GCT",
+        "TCT",
+        "ACC"
+      ],
+      "known_sequences": []
+    },
+    {
+      "name": "structural",
+      "description": "Structural proteins and cell components",
+      "associated_genes": [
+        "ompA",
+        "ftsZ",
+        "murA",
+        "lpxA"
+      ],
+      "codon_patterns": [
+        "GCT",
+        "ACC",
+        "AAC",
+        "TCT"
+      ],
+      "known_sequences": []
+    }
+  ]
+}

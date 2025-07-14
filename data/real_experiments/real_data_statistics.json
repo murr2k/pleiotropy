@@ -1,0 +1,78 @@
+{
+  "metadata": {
+    "data_type": "REAL EXPERIMENTS ONLY",
+    "warning": "Statistics based on 3 real genomic analyses only",
+    "generated": "2025-07-13T22:46:23.961259",
+    "note": "Previous reports included 20 simulated genomes"
+  },
+  "statistics": {
+    "n_experiments": 3,
+    "success_rate": 100.0,
+    "avg_confidence": 0.758,
+    "avg_confidence_percent": 75.8,
+    "avg_analysis_time": 3.0,
+    "avg_traits_per_genome": 3.0,
+    "high_confidence_rate": 100.0
+  },
+  "trait_analysis": {
+    "frequencies": {
+      "regulatory": 3,
+      "stress_response": 3,
+      "structural": 1,
+      "carbon_metabolism": 1,
+      "motility": 1
+    },
+    "universal_traits": [
+      "regulatory",
+      "stress_response"
+    ],
+    "common_traits": [
+      "regulatory",
+      "stress_response"
+    ]
+  },
+  "experiments": [
+    {
+      "organism": "Escherichia coli K-12",
+      "lifestyle": "commensal",
+      "genome_size_mb": 4.64,
+      "n_elements": 3,
+      "unique_traits": 2,
+      "traits_list": [
+        "regulatory",
+        "stress_response"
+      ],
+      "confidence": 0.75,
+      "analysis_time": 7.0
+    },
+    {
+      "organism": "Salmonella enterica Typhimurium",
+      "lifestyle": "pathogen",
+      "genome_size_mb": 5.01,
+      "n_elements": 6,
+      "unique_traits": 2,
+      "traits_list": [
+        "regulatory",
+        "stress_response"
+      ],
+      "confidence": 0.775,
+      "analysis_time": 1.0
+    },
+    {
+      "organism": "Pseudomonas aeruginosa PAO1",
+      "lifestyle": "opportunistic_pathogen",
+      "genome_size_mb": 6.26,
+      "n_elements": 15,
+      "unique_traits": 5,
+      "traits_list": [
+        "structural",
+        "regulatory",
+        "stress_response",
+        "carbon_metabolism",
+        "motility"
+      ],
+      "confidence": 0.75,
+      "analysis_time": 1.0
+    }
+  ]
+}

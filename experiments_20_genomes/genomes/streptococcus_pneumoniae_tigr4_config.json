@@ -1,0 +1,14 @@
+{
+  "genome_file": "genomes/streptococcus_pneumoniae_tigr4.fasta",
+  "organism": "Streptococcus pneumoniae TIGR4",
+  "strain": "",
+  "accession": "NZ_CP155539",
+  "genome_size": 0,
+  "analysis_parameters": {
+    "window_size": 300,
+    "window_overlap": 50,
+    "min_gene_length": 100,
+    "confidence_threshold": 0.5
+  },
+  "output_directory": "genomes/results"
+}

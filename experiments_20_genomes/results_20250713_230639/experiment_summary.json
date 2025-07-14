@@ -1,0 +1,207 @@
+{
+  "experiment_date": "2025-07-13T23:06:39.216522",
+  "total_genomes": 18,
+  "successful": 0,
+  "failed": 18,
+  "results_directory": "results_20250713_230639",
+  "individual_results": [
+    {
+      "genome": "bacillus_subtilis_168.fasta",
+      "organism": "bacillus_subtilis_168",
+      "start_time": "2025-07-13T23:06:39.151479",
+      "command": "../rust_impl/target/release/genomic_cryptanalysis analyze genomes/bacillus_subtilis_168.fasta genomes/bacillus_subtilis_168_traits.json --output results_20250713_230639/exp_bacillus_subtilis_168_20250713_230639 --window-size 300 --min-traits 2",
+      "output_dir": "results_20250713_230639/exp_bacillus_subtilis_168_20250713_230639",
+      "success": false,
+      "duration": 0.028280973434448242,
+      "stdout": "",
+      "stderr": "error: unexpected argument 'analyze' found\n\nUsage: genomic_cryptanalysis [OPTIONS] --input <INPUT>\n\nFor more information, try '--help'.\n"
+    },
+    {
+      "genome": "borrelia_burgdorferi_b31.fasta",
+      "organism": "borrelia_burgdorferi_b31",
+      "start_time": "2025-07-13T23:06:39.180647",
+      "command": "../rust_impl/target/release/genomic_cryptanalysis analyze genomes/borrelia_burgdorferi_b31.fasta default_traits.json --output results_20250713_230639/exp_borrelia_burgdorferi_b31_20250713_230639 --window-size 300 --min-traits 2",
+      "output_dir": "results_20250713_230639/exp_borrelia_burgdorferi_b31_20250713_230639",
+      "success": false,
+      "duration": 0.0016338825225830078,
+      "stdout": "",
+      "stderr": "error: unexpected argument 'analyze' found\n\nUsage: genomic_cryptanalysis [OPTIONS] --input <INPUT>\n\nFor more information, try '--help'.\n"
+    },
+    {
+      "genome": "campylobacter_jejuni.fasta",
+      "organism": "campylobacter_jejuni",
+      "start_time": "2025-07-13T23:06:39.183167",
+      "command": "../rust_impl/target/release/genomic_cryptanalysis analyze genomes/campylobacter_jejuni.fasta default_traits.json --output results_20250713_230639/exp_campylobacter_jejuni_20250713_230639 --window-size 300 --min-traits 2",
+      "output_dir": "results_20250713_230639/exp_campylobacter_jejuni_20250713_230639",
+      "success": false,
+      "duration": 0.001504659652709961,
+      "stdout": "",
+      "stderr": "error: unexpected argument 'analyze' found\n\nUsage: genomic_cryptanalysis [OPTIONS] --input <INPUT>\n\nFor more information, try '--help'.\n"
+    },
+    {
+      "genome": "caulobacter_crescentus_cb15.fasta",
+      "organism": "caulobacter_crescentus_cb15",
+      "start_time": "2025-07-13T23:06:39.185436",
+      "command": "../rust_impl/target/release/genomic_cryptanalysis analyze genomes/caulobacter_crescentus_cb15.fasta default_traits.json --output results_20250713_230639/exp_caulobacter_crescentus_cb15_20250713_230639 --window-size 300 --min-traits 2",
+      "output_dir": "results_20250713_230639/exp_caulobacter_crescentus_cb15_20250713_230639",
+      "success": false,
+      "duration": 0.0013718605041503906,
+      "stdout": "",
+      "stderr": "error: unexpected argument 'analyze' found\n\nUsage: genomic_cryptanalysis [OPTIONS] --input <INPUT>\n\nFor more information, try '--help'.\n"
+    },
+    {
+      "genome": "clostridium_difficile_630.fasta",
+      "organism": "clostridium_difficile_630",
+      "start_time": "2025-07-13T23:06:39.187342",
+      "command": "../rust_impl/target/release/genomic_cryptanalysis analyze genomes/clostridium_difficile_630.fasta default_traits.json --output results_20250713_230639/exp_clostridium_difficile_630_20250713_230639 --window-size 300 --min-traits 2",
+      "output_dir": "results_20250713_230639/exp_clostridium_difficile_630_20250713_230639",
+      "success": false,
+      "duration": 0.0013873577117919922,
+      "stdout": "",
+      "stderr": "error: unexpected argument 'analyze' found\n\nUsage: genomic_cryptanalysis [OPTIONS] --input <INPUT>\n\nFor more information, try '--help'.\n"
+    },
+    {
+      "genome": "corynebacterium_glutamicum.fasta",
+      "organism": "corynebacterium_glutamicum",
+      "start_time": "2025-07-13T23:06:39.189395",
+      "command": "../rust_impl/target/release/genomic_cryptanalysis analyze genomes/corynebacterium_glutamicum.fasta default_traits.json --output results_20250713_230639/exp_corynebacterium_glutamicum_20250713_230639 --window-size 300 --min-traits 2",
+      "output_dir": "results_20250713_230639/exp_corynebacterium_glutamicum_20250713_230639",
+      "success": false,
+      "duration": 0.0013611316680908203,
+      "stdout": "",
+      "stderr": "error: unexpected argument 'analyze' found\n\nUsage: genomic_cryptanalysis [OPTIONS] --input <INPUT>\n\nFor more information, try '--help'.\n"
+    },
+    {
+      "genome": "enterococcus_faecalis_v583.fasta",
+      "organism": "enterococcus_faecalis_v583",
+      "start_time": "2025-07-13T23:06:39.191299",
+      "command": "../rust_impl/target/release/genomic_cryptanalysis analyze genomes/enterococcus_faecalis_v583.fasta default_traits.json --output results_20250713_230639/exp_enterococcus_faecalis_v583_20250713_230639 --window-size 300 --min-traits 2",
+      "output_dir": "results_20250713_230639/exp_enterococcus_faecalis_v583_20250713_230639",
+      "success": false,
+      "duration": 0.0013556480407714844,
+      "stdout": "",
+      "stderr": "error: unexpected argument 'analyze' found\n\nUsage: genomic_cryptanalysis [OPTIONS] --input <INPUT>\n\nFor more information, try '--help'.\n"
+    },
+    {
+      "genome": "haemophilus_influenzae_rd.fasta",
+      "organism": "haemophilus_influenzae_rd",
+      "start_time": "2025-07-13T23:06:39.193179",
+      "command": "../rust_impl/target/release/genomic_cryptanalysis analyze genomes/haemophilus_influenzae_rd.fasta default_traits.json --output results_20250713_230639/exp_haemophilus_influenzae_rd_20250713_230639 --window-size 300 --min-traits 2",
+      "output_dir": "results_20250713_230639/exp_haemophilus_influenzae_rd_20250713_230639",
+      "success": false,
+      "duration": 0.0013272762298583984,
+      "stdout": "",
+      "stderr": "error: unexpected argument 'analyze' found\n\nUsage: genomic_cryptanalysis [OPTIONS] --input <INPUT>\n\nFor more information, try '--help'.\n"
+    },
+    {
+      "genome": "helicobacter_pylori_26695.fasta",
+      "organism": "helicobacter_pylori_26695",
+      "start_time": "2025-07-13T23:06:39.195049",
+      "command": "../rust_impl/target/release/genomic_cryptanalysis analyze genomes/helicobacter_pylori_26695.fasta genomes/helicobacter_pylori_26695_traits.json --output results_20250713_230639/exp_helicobacter_pylori_26695_20250713_230639 --window-size 300 --min-traits 2",
+      "output_dir": "results_20250713_230639/exp_helicobacter_pylori_26695_20250713_230639",
+      "success": false,
+      "duration": 0.0014672279357910156,
+      "stdout": "",
+      "stderr": "error: unexpected argument 'analyze' found\n\nUsage: genomic_cryptanalysis [OPTIONS] --input <INPUT>\n\nFor more information, try '--help'.\n"
+    },
+    {
+      "genome": "lactobacillus_acidophilus_ncfm.fasta",
+      "organism": "lactobacillus_acidophilus_ncfm",
+      "start_time": "2025-07-13T23:06:39.197285",
+      "command": "../rust_impl/target/release/genomic_cryptanalysis analyze genomes/lactobacillus_acidophilus_ncfm.fasta genomes/lactobacillus_acidophilus_ncfm_traits.json --output results_20250713_230639/exp_lactobacillus_acidophilus_ncfm_20250713_230639 --window-size 300 --min-traits 2",
+      "output_dir": "results_20250713_230639/exp_lactobacillus_acidophilus_ncfm_20250713_230639",
+      "success": false,
+      "duration": 0.0014958381652832031,
+      "stdout": "",
+      "stderr": "error: unexpected argument 'analyze' found\n\nUsage: genomic_cryptanalysis [OPTIONS] --input <INPUT>\n\nFor more information, try '--help'.\n"
+    },
+    {
+      "genome": "legionella_pneumophila.fasta",
+      "organism": "legionella_pneumophila",
+      "start_time": "2025-07-13T23:06:39.199526",
+      "command": "../rust_impl/target/release/genomic_cryptanalysis analyze genomes/legionella_pneumophila.fasta default_traits.json --output results_20250713_230639/exp_legionella_pneumophila_20250713_230639 --window-size 300 --min-traits 2",
+      "output_dir": "results_20250713_230639/exp_legionella_pneumophila_20250713_230639",
+      "success": false,
+      "duration": 0.001735687255859375,
+      "stdout": "",
+      "stderr": "error: unexpected argument 'analyze' found\n\nUsage: genomic_cryptanalysis [OPTIONS] --input <INPUT>\n\nFor more information, try '--help'.\n"
+    },
+    {
+      "genome": "listeria_monocytogenes_egde.fasta",
+      "organism": "listeria_monocytogenes_egde",
+      "start_time": "2025-07-13T23:06:39.202136",
+      "command": "../rust_impl/target/release/genomic_cryptanalysis analyze genomes/listeria_monocytogenes_egde.fasta default_traits.json --output results_20250713_230639/exp_listeria_monocytogenes_egde_20250713_230639 --window-size 300 --min-traits 2",
+      "output_dir": "results_20250713_230639/exp_listeria_monocytogenes_egde_20250713_230639",
+      "success": false,
+      "duration": 0.0015425682067871094,
+      "stdout": "",
+      "stderr": "error: unexpected argument 'analyze' found\n\nUsage: genomic_cryptanalysis [OPTIONS] --input <INPUT>\n\nFor more information, try '--help'.\n"
+    },
+    {
+      "genome": "mycobacterium_tuberculosis_h37rv.fasta",
+      "organism": "mycobacterium_tuberculosis_h37rv",
+      "start_time": "2025-07-13T23:06:39.204277",
+      "command": "../rust_impl/target/release/genomic_cryptanalysis analyze genomes/mycobacterium_tuberculosis_h37rv.fasta genomes/mycobacterium_tuberculosis_h37rv_traits.json --output results_20250713_230639/exp_mycobacterium_tuberculosis_h37rv_20250713_230639 --window-size 300 --min-traits 2",
+      "output_dir": "results_20250713_230639/exp_mycobacterium_tuberculosis_h37rv_20250713_230639",
+      "success": false,
+      "duration": 0.0013759136199951172,
+      "stdout": "",
+      "stderr": "error: unexpected argument 'analyze' found\n\nUsage: genomic_cryptanalysis [OPTIONS] --input <INPUT>\n\nFor more information, try '--help'.\n"
+    },
+    {
+      "genome": "mycoplasma_genitalium_g37.fasta",
+      "organism": "mycoplasma_genitalium_g37",
+      "start_time": "2025-07-13T23:06:39.206343",
+      "command": "../rust_impl/target/release/genomic_cryptanalysis analyze genomes/mycoplasma_genitalium_g37.fasta default_traits.json --output results_20250713_230639/exp_mycoplasma_genitalium_g37_20250713_230639 --window-size 300 --min-traits 2",
+      "output_dir": "results_20250713_230639/exp_mycoplasma_genitalium_g37_20250713_230639",
+      "success": false,
+      "duration": 0.0014462471008300781,
+      "stdout": "",
+      "stderr": "error: unexpected argument 'analyze' found\n\nUsage: genomic_cryptanalysis [OPTIONS] --input <INPUT>\n\nFor more information, try '--help'.\n"
+    },
+    {
+      "genome": "neisseria_gonorrhoeae_fa1090.fasta",
+      "organism": "neisseria_gonorrhoeae_fa1090",
+      "start_time": "2025-07-13T23:06:39.208454",
+      "command": "../rust_impl/target/release/genomic_cryptanalysis analyze genomes/neisseria_gonorrhoeae_fa1090.fasta default_traits.json --output results_20250713_230639/exp_neisseria_gonorrhoeae_fa1090_20250713_230639 --window-size 300 --min-traits 2",
+      "output_dir": "results_20250713_230639/exp_neisseria_gonorrhoeae_fa1090_20250713_230639",
+      "success": false,
+      "duration": 0.0013401508331298828,
+      "stdout": "",
+      "stderr": "error: unexpected argument 'analyze' found\n\nUsage: genomic_cryptanalysis [OPTIONS] --input <INPUT>\n\nFor more information, try '--help'.\n"
+    },
+    {
+      "genome": "streptococcus_pneumoniae_tigr4.fasta",
+      "organism": "streptococcus_pneumoniae_tigr4",
+      "start_time": "2025-07-13T23:06:39.210161",
+      "command": "../rust_impl/target/release/genomic_cryptanalysis analyze genomes/streptococcus_pneumoniae_tigr4.fasta genomes/streptococcus_pneumoniae_tigr4_traits.json --output results_20250713_230639/exp_streptococcus_pneumoniae_tigr4_20250713_230639 --window-size 300 --min-traits 2",
+      "output_dir": "results_20250713_230639/exp_streptococcus_pneumoniae_tigr4_20250713_230639",
+      "success": false,
+      "duration": 0.0014657974243164062,
+      "stdout": "",
+      "stderr": "error: unexpected argument 'analyze' found\n\nUsage: genomic_cryptanalysis [OPTIONS] --input <INPUT>\n\nFor more information, try '--help'.\n"
+    },
+    {
+      "genome": "synechocystis_pcc6803.fasta",
+      "organism": "synechocystis_pcc6803",
+      "start_time": "2025-07-13T23:06:39.212373",
+      "command": "../rust_impl/target/release/genomic_cryptanalysis analyze genomes/synechocystis_pcc6803.fasta default_traits.json --output results_20250713_230639/exp_synechocystis_pcc6803_20250713_230639 --window-size 300 --min-traits 2",
+      "output_dir": "results_20250713_230639/exp_synechocystis_pcc6803_20250713_230639",
+      "success": false,
+      "duration": 0.0015192031860351562,
+      "stdout": "",
+      "stderr": "error: unexpected argument 'analyze' found\n\nUsage: genomic_cryptanalysis [OPTIONS] --input <INPUT>\n\nFor more information, try '--help'.\n"
+    },
+    {
+      "genome": "thermotoga_maritima_msb8.fasta",
+      "organism": "thermotoga_maritima_msb8",
+      "start_time": "2025-07-13T23:06:39.214655",
+      "command": "../rust_impl/target/release/genomic_cryptanalysis analyze genomes/thermotoga_maritima_msb8.fasta default_traits.json --output results_20250713_230639/exp_thermotoga_maritima_msb8_20250713_230639 --window-size 300 --min-traits 2",
+      "output_dir": "results_20250713_230639/exp_thermotoga_maritima_msb8_20250713_230639",
+      "success": false,
+      "duration": 0.0018572807312011719,
+      "stdout": "",
+      "stderr": "error: unexpected argument 'analyze' found\n\nUsage: genomic_cryptanalysis [OPTIONS] --input <INPUT>\n\nFor more information, try '--help'.\n"
+    }
+  ]
+}

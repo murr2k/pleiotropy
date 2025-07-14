@@ -1,0 +1,189 @@
+{
+  "mycobacterium_tuberculosis_h37rv": {
+    "uid": "448814763",
+    "accession": "NC_000962",
+    "version": "NC_000962.3",
+    "organism": "Mycobacterium tuberculosis H37Rv",
+    "strain": "",
+    "size": 0,
+    "download_date": "2025-07-13T22:59:43.048833",
+    "filename": "mycobacterium_tuberculosis_h37rv.fasta",
+    "file_path": "genomes/mycobacterium_tuberculosis_h37rv.fasta"
+  },
+  "lactobacillus_acidophilus_ncfm": {
+    "uid": "2737558268",
+    "accession": "NZ_CP156988",
+    "version": "NZ_CP156988.1",
+    "organism": "Lactobacillus acidophilus",
+    "strain": "",
+    "size": 0,
+    "download_date": "2025-07-13T22:59:46.936205",
+    "filename": "lactobacillus_acidophilus_ncfm.fasta",
+    "file_path": "genomes/lactobacillus_acidophilus_ncfm.fasta"
+  },
+  "streptococcus_pneumoniae_tigr4": {
+    "uid": "2766835106",
+    "accession": "NZ_CP155539",
+    "version": "NZ_CP155539.1",
+    "organism": "Streptococcus pneumoniae TIGR4",
+    "strain": "",
+    "size": 0,
+    "download_date": "2025-07-13T22:59:50.782892",
+    "filename": "streptococcus_pneumoniae_tigr4.fasta",
+    "file_path": "genomes/streptococcus_pneumoniae_tigr4.fasta"
+  },
+  "bacillus_subtilis_168": {
+    "uid": "1840463005",
+    "accession": "NZ_CP053102",
+    "version": "NZ_CP053102.1",
+    "organism": "Bacillus subtilis subsp. subtilis str. 168",
+    "strain": "",
+    "size": 0,
+    "download_date": "2025-07-13T22:59:54.546532",
+    "filename": "bacillus_subtilis_168.fasta",
+    "file_path": "genomes/bacillus_subtilis_168.fasta"
+  },
+  "helicobacter_pylori_26695": {
+    "uid": "409893163",
+    "accession": "CP003904",
+    "version": "CP003904.1",
+    "organism": "Helicobacter pylori 26695",
+    "strain": "",
+    "size": 1667892,
+    "download_date": "2025-07-13T22:59:59.633959",
+    "filename": "helicobacter_pylori_26695.fasta",
+    "file_path": "genomes/helicobacter_pylori_26695.fasta"
+  },
+  "clostridium_difficile_630": {
+    "uid": "1227367144",
+    "accession": "NZ_CP010905",
+    "version": "NZ_CP010905.2",
+    "organism": "Clostridioides difficile 630",
+    "strain": "",
+    "size": 0,
+    "download_date": "2025-07-13T23:00:06.144397",
+    "filename": "clostridium_difficile_630.fasta",
+    "file_path": "genomes/clostridium_difficile_630.fasta"
+  },
+  "caulobacter_crescentus_cb15": {
+    "uid": "19172958",
+    "accession": "AE005673",
+    "version": "AE005673.1",
+    "organism": "Caulobacter vibrioides CB15",
+    "strain": "",
+    "size": 4016947,
+    "download_date": "2025-07-13T23:00:11.080588",
+    "filename": "caulobacter_crescentus_cb15.fasta",
+    "file_path": "genomes/caulobacter_crescentus_cb15.fasta"
+  },
+  "synechocystis_pcc6803": {
+    "uid": "2979274699",
+    "accession": "NZ_CP191168",
+    "version": "NZ_CP191168.1",
+    "organism": "Synechocystis sp. PCC 6803",
+    "strain": "",
+    "size": 0,
+    "download_date": "2025-07-13T23:00:14.781489",
+    "filename": "synechocystis_pcc6803.fasta",
+    "file_path": "genomes/synechocystis_pcc6803.fasta"
+  },
+  "mycoplasma_genitalium_g37": {
+    "uid": "2755743018",
+    "accession": "NZ_CP159789",
+    "version": "NZ_CP159789.1",
+    "organism": "Mycoplasmoides genitalium",
+    "strain": "",
+    "size": 0,
+    "download_date": "2025-07-13T23:00:19.676735",
+    "filename": "mycoplasma_genitalium_g37.fasta",
+    "file_path": "genomes/mycoplasma_genitalium_g37.fasta"
+  },
+  "listeria_monocytogenes_egde": {
+    "uid": "1797947222",
+    "accession": "NZ_CP023861",
+    "version": "NZ_CP023861.1",
+    "organism": "Listeria monocytogenes EGD-e",
+    "strain": "",
+    "size": 0,
+    "download_date": "2025-07-13T23:00:23.333705",
+    "filename": "listeria_monocytogenes_egde.fasta",
+    "file_path": "genomes/listeria_monocytogenes_egde.fasta"
+  },
+  "neisseria_gonorrhoeae_fa1090": {
+    "uid": "59717368",
+    "accession": "AE004969",
+    "version": "AE004969.1",
+    "organism": "Neisseria gonorrhoeae FA 1090",
+    "strain": "",
+    "size": 2153922,
+    "download_date": "2025-07-13T23:00:31.285442",
+    "filename": "neisseria_gonorrhoeae_fa1090.fasta",
+    "file_path": "genomes/neisseria_gonorrhoeae_fa1090.fasta"
+  },
+  "campylobacter_jejuni": {
+    "uid": "15791399",
+    "accession": "NC_002163",
+    "version": "NC_002163.1",
+    "organism": "Campylobacter jejuni subsp. jejuni NCTC 11168 = ATCC 700819",
+    "strain": "",
+    "size": 0,
+    "download_date": "2025-07-13T23:00:35.076646",
+    "filename": "campylobacter_jejuni.fasta",
+    "file_path": "genomes/campylobacter_jejuni.fasta"
+  },
+  "haemophilus_influenzae_rd": {
+    "uid": "2784850246",
+    "accession": "NZ_CP165604",
+    "version": "NZ_CP165604.1",
+    "organism": "Haemophilus influenzae",
+    "strain": "",
+    "size": 0,
+    "download_date": "2025-07-13T23:00:38.618987",
+    "filename": "haemophilus_influenzae_rd.fasta",
+    "file_path": "genomes/haemophilus_influenzae_rd.fasta"
+  },
+  "legionella_pneumophila": {
+    "uid": "1130896911",
+    "accession": "NZ_CP013742",
+    "version": "NZ_CP013742.1",
+    "organism": "Legionella pneumophila",
+    "strain": "",
+    "size": 0,
+    "download_date": "2025-07-13T23:00:42.489333",
+    "filename": "legionella_pneumophila.fasta",
+    "file_path": "genomes/legionella_pneumophila.fasta"
+  },
+  "corynebacterium_glutamicum": {
+    "uid": "2419901082",
+    "accession": "NZ_CP115148",
+    "version": "NZ_CP115148.1",
+    "organism": "Corynebacterium glutamicum",
+    "strain": "",
+    "size": 0,
+    "download_date": "2025-07-13T23:00:46.167971",
+    "filename": "corynebacterium_glutamicum.fasta",
+    "file_path": "genomes/corynebacterium_glutamicum.fasta"
+  },
+  "enterococcus_faecalis_v583": {
+    "uid": "29350190",
+    "accession": "AE016830",
+    "version": "AE016830.1",
+    "organism": "Enterococcus faecalis V583",
+    "strain": "",
+    "size": 3218031,
+    "download_date": "2025-07-13T23:00:50.880727",
+    "filename": "enterococcus_faecalis_v583.fasta",
+    "file_path": "genomes/enterococcus_faecalis_v583.fasta"
+  },
+  "thermotoga_maritima_msb8": {
+    "uid": "814575687",
+    "accession": "NZ_CP011107",
+    "version": "NZ_CP011107.1",
+    "organism": "Thermotoga maritima MSB8",
+    "strain": "",
+    "size": 0,
+    "download_date": "2025-07-13T23:00:54.334566",
+    "filename": "thermotoga_maritima_msb8.fasta",
+    "file_path": "genomes/thermotoga_maritima_msb8.fasta"
+  }
+}

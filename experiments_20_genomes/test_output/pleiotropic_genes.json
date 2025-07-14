@@ -1,0 +1,10 @@
+[
+  {
+    "gene_id": "CP003904.1",
+    "traits": [
+      "regulatory",
+      "stress_response"
+    ],
+    "confidence": 0.75
+  }
+]

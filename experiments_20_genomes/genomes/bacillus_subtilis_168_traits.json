@@ -1,0 +1,68 @@
+[
+  {
+    "name": "central_metabolism",
+    "description": "Core metabolic pathways",
+    "codon_patterns": {
+      "GCG": 1.3,
+      "GAA": 1.35,
+      "CTG": 1.25
+    },
+    "associated_genes": [],
+    "known_sequences": []
+  },
+  {
+    "name": "stress_response",
+    "description": "Environmental stress adaptation",
+    "codon_patterns": {
+      "AAG": 1.32,
+      "GAG": 1.33,
+      "CGC": 1.25
+    },
+    "associated_genes": [],
+    "known_sequences": []
+  },
+  {
+    "name": "protein_synthesis",
+    "description": "Ribosomal and translation machinery",
+    "codon_patterns": {
+      "AAA": 1.28,
+      "GAA": 1.38,
+      "CGA": 1.24
+    },
+    "associated_genes": [],
+    "known_sequences": []
+  },
+  {
+    "name": "sporulation",
+    "description": "Endospore formation",
+    "codon_patterns": {
+      "GAG": 1.4,
+      "CTG": 1.35,
+      "AAG": 1.2
+    },
+    "associated_genes": [],
+    "known_sequences": []
+  },
+  {
+    "name": "competence",
+    "description": "Natural transformation ability",
+    "codon_patterns": {
+      "CGT": 1.32,
+      "GGC": 1.3,
+      "TGG": 1.25
+    },
+    "associated_genes": [],
+    "known_sequences": []
+  },
+  {
+    "name": "motility",
+    "description": "Flagellar movement and chemotaxis",
+    "codon_patterns": {
+      "ATC": 1.35,
+      "GAC": 1.32,
+      "TCC": 1.23
+    },
+    "associated_genes": [],
+    "known_sequences": []
+  }
+]

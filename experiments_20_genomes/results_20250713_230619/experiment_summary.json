@@ -1,0 +1,189 @@
+{
+  "experiment_date": "2025-07-13T23:06:19.620574",
+  "total_genomes": 18,
+  "successful": 0,
+  "failed": 18,
+  "results_directory": "results_20250713_230619",
+  "individual_results": [
+    {
+      "genome": "bacillus_subtilis_168.fasta",
+      "organism": "bacillus_subtilis_168",
+      "start_time": "2025-07-13T23:06:19.600107",
+      "command": "../../rust_impl/target/release/genomic_cryptanalysis analyze genomes/bacillus_subtilis_168.fasta genomes/bacillus_subtilis_168_traits.json --output results_20250713_230619/exp_bacillus_subtilis_168_20250713_230619 --window-size 300 --min-traits 2",
+      "output_dir": "results_20250713_230619/exp_bacillus_subtilis_168_20250713_230619",
+      "success": false,
+      "error": "[Errno 2] No such file or directory: '../../rust_impl/target/release/genomic_cryptanalysis'",
+      "duration": 0.0011703968048095703
+    },
+    {
+      "genome": "borrelia_burgdorferi_b31.fasta",
+      "organism": "borrelia_burgdorferi_b31",
+      "start_time": "2025-07-13T23:06:19.602086",
+      "command": "../../rust_impl/target/release/genomic_cryptanalysis analyze genomes/borrelia_burgdorferi_b31.fasta default_traits.json --output results_20250713_230619/exp_borrelia_burgdorferi_b31_20250713_230619 --window-size 300 --min-traits 2",
+      "output_dir": "results_20250713_230619/exp_borrelia_burgdorferi_b31_20250713_230619",
+      "success": false,
+      "error": "[Errno 2] No such file or directory: '../../rust_impl/target/release/genomic_cryptanalysis'",
+      "duration": 0.0004885196685791016
+    },
+    {
+      "genome": "campylobacter_jejuni.fasta",
+      "organism": "campylobacter_jejuni",
+      "start_time": "2025-07-13T23:06:19.603245",
+      "command": "../../rust_impl/target/release/genomic_cryptanalysis analyze genomes/campylobacter_jejuni.fasta default_traits.json --output results_20250713_230619/exp_campylobacter_jejuni_20250713_230619 --window-size 300 --min-traits 2",
+      "output_dir": "results_20250713_230619/exp_campylobacter_jejuni_20250713_230619",
+      "success": false,
+      "error": "[Errno 2] No such file or directory: '../../rust_impl/target/release/genomic_cryptanalysis'",
+      "duration": 0.0004379749298095703
+    },
+    {
+      "genome": "caulobacter_crescentus_cb15.fasta",
+      "organism": "caulobacter_crescentus_cb15",
+      "start_time": "2025-07-13T23:06:19.604142",
+      "command": "../../rust_impl/target/release/genomic_cryptanalysis analyze genomes/caulobacter_crescentus_cb15.fasta default_traits.json --output results_20250713_230619/exp_caulobacter_crescentus_cb15_20250713_230619 --window-size 300 --min-traits 2",
+      "output_dir": "results_20250713_230619/exp_caulobacter_crescentus_cb15_20250713_230619",
+      "success": false,
+      "error": "[Errno 2] No such file or directory: '../../rust_impl/target/release/genomic_cryptanalysis'",
+      "duration": 0.00039577484130859375
+    },
+    {
+      "genome": "clostridium_difficile_630.fasta",
+      "organism": "clostridium_difficile_630",
+      "start_time": "2025-07-13T23:06:19.605171",
+      "command": "../../rust_impl/target/release/genomic_cryptanalysis analyze genomes/clostridium_difficile_630.fasta default_traits.json --output results_20250713_230619/exp_clostridium_difficile_630_20250713_230619 --window-size 300 --min-traits 2",
+      "output_dir": "results_20250713_230619/exp_clostridium_difficile_630_20250713_230619",
+      "success": false,
+      "error": "[Errno 2] No such file or directory: '../../rust_impl/target/release/genomic_cryptanalysis'",
+      "duration": 0.0004184246063232422
+    },
+    {
+      "genome": "corynebacterium_glutamicum.fasta",
+      "organism": "corynebacterium_glutamicum",
+      "start_time": "2025-07-13T23:06:19.606220",
+      "command": "../../rust_impl/target/release/genomic_cryptanalysis analyze genomes/corynebacterium_glutamicum.fasta default_traits.json --output results_20250713_230619/exp_corynebacterium_glutamicum_20250713_230619 --window-size 300 --min-traits 2",
+      "output_dir": "results_20250713_230619/exp_corynebacterium_glutamicum_20250713_230619",
+      "success": false,
+      "error": "[Errno 2] No such file or directory: '../../rust_impl/target/release/genomic_cryptanalysis'",
+      "duration": 0.00044226646423339844
+    },
+    {
+      "genome": "enterococcus_faecalis_v583.fasta",
+      "organism": "enterococcus_faecalis_v583",
+      "start_time": "2025-07-13T23:06:19.607657",
+      "command": "../../rust_impl/target/release/genomic_cryptanalysis analyze genomes/enterococcus_faecalis_v583.fasta default_traits.json --output results_20250713_230619/exp_enterococcus_faecalis_v583_20250713_230619 --window-size 300 --min-traits 2",
+      "output_dir": "results_20250713_230619/exp_enterococcus_faecalis_v583_20250713_230619",
+      "success": false,
+      "error": "[Errno 2] No such file or directory: '../../rust_impl/target/release/genomic_cryptanalysis'",
+      "duration": 0.000637054443359375
+    },
+    {
+      "genome": "haemophilus_influenzae_rd.fasta",
+      "organism": "haemophilus_influenzae_rd",
+      "start_time": "2025-07-13T23:06:19.609313",
+      "command": "../../rust_impl/target/release/genomic_cryptanalysis analyze genomes/haemophilus_influenzae_rd.fasta default_traits.json --output results_20250713_230619/exp_haemophilus_influenzae_rd_20250713_230619 --window-size 300 --min-traits 2",
+      "output_dir": "results_20250713_230619/exp_haemophilus_influenzae_rd_20250713_230619",
+      "success": false,
+      "error": "[Errno 2] No such file or directory: '../../rust_impl/target/release/genomic_cryptanalysis'",
+      "duration": 0.0005037784576416016
+    },
+    {
+      "genome": "helicobacter_pylori_26695.fasta",
+      "organism": "helicobacter_pylori_26695",
+      "start_time": "2025-07-13T23:06:19.610409",
+      "command": "../../rust_impl/target/release/genomic_cryptanalysis analyze genomes/helicobacter_pylori_26695.fasta genomes/helicobacter_pylori_26695_traits.json --output results_20250713_230619/exp_helicobacter_pylori_26695_20250713_230619 --window-size 300 --min-traits 2",
+      "output_dir": "results_20250713_230619/exp_helicobacter_pylori_26695_20250713_230619",
+      "success": false,
+      "error": "[Errno 2] No such file or directory: '../../rust_impl/target/release/genomic_cryptanalysis'",
+      "duration": 0.00045561790466308594
+    },
+    {
+      "genome": "lactobacillus_acidophilus_ncfm.fasta",
+      "organism": "lactobacillus_acidophilus_ncfm",
+      "start_time": "2025-07-13T23:06:19.611485",
+      "command": "../../rust_impl/target/release/genomic_cryptanalysis analyze genomes/lactobacillus_acidophilus_ncfm.fasta genomes/lactobacillus_acidophilus_ncfm_traits.json --output results_20250713_230619/exp_lactobacillus_acidophilus_ncfm_20250713_230619 --window-size 300 --min-traits 2",
+      "output_dir": "results_20250713_230619/exp_lactobacillus_acidophilus_ncfm_20250713_230619",
+      "success": false,
+      "error": "[Errno 2] No such file or directory: '../../rust_impl/target/release/genomic_cryptanalysis'",
+      "duration": 0.0004336833953857422
+    },
+    {
+      "genome": "legionella_pneumophila.fasta",
+      "organism": "legionella_pneumophila",
+      "start_time": "2025-07-13T23:06:19.612624",
+      "command": "../../rust_impl/target/release/genomic_cryptanalysis analyze genomes/legionella_pneumophila.fasta default_traits.json --output results_20250713_230619/exp_legionella_pneumophila_20250713_230619 --window-size 300 --min-traits 2",
+      "output_dir": "results_20250713_230619/exp_legionella_pneumophila_20250713_230619",
+      "success": false,
+      "error": "[Errno 2] No such file or directory: '../../rust_impl/target/release/genomic_cryptanalysis'",
+      "duration": 0.00042700767517089844
+    },
+    {
+      "genome": "listeria_monocytogenes_egde.fasta",
+      "organism": "listeria_monocytogenes_egde",
+      "start_time": "2025-07-13T23:06:19.613737",
+      "command": "../../rust_impl/target/release/genomic_cryptanalysis analyze genomes/listeria_monocytogenes_egde.fasta default_traits.json --output results_20250713_230619/exp_listeria_monocytogenes_egde_20250713_230619 --window-size 300 --min-traits 2",
+      "output_dir": "results_20250713_230619/exp_listeria_monocytogenes_egde_20250713_230619",
+      "success": false,
+      "error": "[Errno 2] No such file or directory: '../../rust_impl/target/release/genomic_cryptanalysis'",
+      "duration": 0.00045108795166015625
+    },
+    {
+      "genome": "mycobacterium_tuberculosis_h37rv.fasta",
+      "organism": "mycobacterium_tuberculosis_h37rv",
+      "start_time": "2025-07-13T23:06:19.614880",
+      "command": "../../rust_impl/target/release/genomic_cryptanalysis analyze genomes/mycobacterium_tuberculosis_h37rv.fasta genomes/mycobacterium_tuberculosis_h37rv_traits.json --output results_20250713_230619/exp_mycobacterium_tuberculosis_h37rv_20250713_230619 --window-size 300 --min-traits 2",
+      "output_dir": "results_20250713_230619/exp_mycobacterium_tuberculosis_h37rv_20250713_230619",
+      "success": false,
+      "error": "[Errno 2] No such file or directory: '../../rust_impl/target/release/genomic_cryptanalysis'",
+      "duration": 0.0004215240478515625
+    },
+    {
+      "genome": "mycoplasma_genitalium_g37.fasta",
+      "organism": "mycoplasma_genitalium_g37",
+      "start_time": "2025-07-13T23:06:19.616016",
+      "command": "../../rust_impl/target/release/genomic_cryptanalysis analyze genomes/mycoplasma_genitalium_g37.fasta default_traits.json --output results_20250713_230619/exp_mycoplasma_genitalium_g37_20250713_230619 --window-size 300 --min-traits 2",
+      "output_dir": "results_20250713_230619/exp_mycoplasma_genitalium_g37_20250713_230619",
+      "success": false,
+      "error": "[Errno 2] No such file or directory: '../../rust_impl/target/release/genomic_cryptanalysis'",
+      "duration": 0.00043511390686035156
+    },
+    {
+      "genome": "neisseria_gonorrhoeae_fa1090.fasta",
+      "organism": "neisseria_gonorrhoeae_fa1090",
+      "start_time": "2025-07-13T23:06:19.616968",
+      "command": "../../rust_impl/target/release/genomic_cryptanalysis analyze genomes/neisseria_gonorrhoeae_fa1090.fasta default_traits.json --output results_20250713_230619/exp_neisseria_gonorrhoeae_fa1090_20250713_230619 --window-size 300 --min-traits 2",
+      "output_dir": "results_20250713_230619/exp_neisseria_gonorrhoeae_fa1090_20250713_230619",
+      "success": false,
+      "error": "[Errno 2] No such file or directory: '../../rust_impl/target/release/genomic_cryptanalysis'",
+      "duration": 0.0004379749298095703
+    },
+    {
+      "genome": "streptococcus_pneumoniae_tigr4.fasta",
+      "organism": "streptococcus_pneumoniae_tigr4",
+      "start_time": "2025-07-13T23:06:19.617978",
+      "command": "../../rust_impl/target/release/genomic_cryptanalysis analyze genomes/streptococcus_pneumoniae_tigr4.fasta genomes/streptococcus_pneumoniae_tigr4_traits.json --output results_20250713_230619/exp_streptococcus_pneumoniae_tigr4_20250713_230619 --window-size 300 --min-traits 2",
+      "output_dir": "results_20250713_230619/exp_streptococcus_pneumoniae_tigr4_20250713_230619",
+      "success": false,
+      "error": "[Errno 2] No such file or directory: '../../rust_impl/target/release/genomic_cryptanalysis'",
+      "duration": 0.00044345855712890625
+    },
+    {
+      "genome": "synechocystis_pcc6803.fasta",
+      "organism": "synechocystis_pcc6803",
+      "start_time": "2025-07-13T23:06:19.619071",
+      "command": "../../rust_impl/target/release/genomic_cryptanalysis analyze genomes/synechocystis_pcc6803.fasta default_traits.json --output results_20250713_230619/exp_synechocystis_pcc6803_20250713_230619 --window-size 300 --min-traits 2",
+      "output_dir": "results_20250713_230619/exp_synechocystis_pcc6803_20250713_230619",
+      "success": false,
+      "error": "[Errno 2] No such file or directory: '../../rust_impl/target/release/genomic_cryptanalysis'",
+      "duration": 0.0004832744598388672
+    },
+    {
+      "genome": "thermotoga_maritima_msb8.fasta",
+      "organism": "thermotoga_maritima_msb8",
+      "start_time": "2025-07-13T23:06:19.620154",
+      "command": "../../rust_impl/target/release/genomic_cryptanalysis analyze genomes/thermotoga_maritima_msb8.fasta default_traits.json --output results_20250713_230619/exp_thermotoga_maritima_msb8_20250713_230619 --window-size 300 --min-traits 2",
+      "output_dir": "results_20250713_230619/exp_thermotoga_maritima_msb8_20250713_230619",
+      "success": false,
+      "error": "[Errno 2] No such file or directory: '../../rust_impl/target/release/genomic_cryptanalysis'",
+      "duration": 0.0004096031188964844
+    }
+  ]
+}

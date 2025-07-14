@@ -1,0 +1,11 @@
+[
+  {
+    "gene_id": "AE005673.1",
+    "traits": [
+      "stress_response",
+      "carbon_metabolism",
+      "regulatory"
+    ],
+    "confidence": 0.7416666666666668
+  }
+]

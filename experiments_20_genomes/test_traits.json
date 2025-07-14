@@ -1,0 +1,35 @@
+[
+  {
+    "name": "central_metabolism",
+    "description": "Core metabolic pathways",
+    "codon_patterns": {
+      "GCG": 1.3,
+      "GAA": 1.35,
+      "CTG": 1.25
+    },
+    "associated_genes": [],
+    "known_sequences": []
+  },
+  {
+    "name": "stress_response",
+    "description": "Environmental stress adaptation",
+    "codon_patterns": {
+      "AAG": 1.32,
+      "GAG": 1.33,
+      "CGC": 1.25
+    },
+    "associated_genes": [],
+    "known_sequences": []
+  },
+  {
+    "name": "protein_synthesis",
+    "description": "Ribosomal and translation machinery",
+    "codon_patterns": {
+      "AAA": 1.28,
+      "GAA": 1.38,
+      "CGA": 1.24
+    },
+    "associated_genes": [],
+    "known_sequences": []
+  }
+]

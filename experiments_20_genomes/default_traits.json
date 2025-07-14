@@ -1,0 +1,46 @@
+[
+  {
+    "name": "regulatory",
+    "description": "Gene regulation and control",
+    "codon_patterns": {
+      "CTG": 1.2,
+      "GAA": 1.1,
+      "AAA": 1.1,
+      "CGT": 0.8,
+      "AGC": 1.0
+    }
+  },
+  {
+    "name": "stress_response",
+    "description": "Response to environmental stress",
+    "codon_patterns": {
+      "GCG": 1.1,
+      "CCG": 1.2,
+      "AAG": 1.1,
+      "TTA": 0.9,
+      "CTA": 0.9
+    }
+  },
+  {
+    "name": "metabolism",
+    "description": "Metabolic processes",
+    "codon_patterns": {
+      "ATG": 1.0,
+      "GAC": 1.1,
+      "TGC": 1.1,
+      "GGT": 1.0,
+      "ACC": 1.0
+    }
+  },
+  {
+    "name": "virulence",
+    "description": "Pathogenicity factors",
+    "codon_patterns": {
+      "TTG": 1.2,
+      "ATT": 1.1,
+      "CTT": 1.1,
+      "GCA": 0.9,
+      "TCA": 0.9
+    }
+  }
+]

@@ -1,0 +1,10 @@
+[
+  {
+    "gene_id": "NC_000962.3",
+    "traits": [
+      "regulatory",
+      "stress_response"
+    ],
+    "confidence": 0.8249999999999998
+  }
+]

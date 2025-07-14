@@ -1,0 +1,207 @@
+{
+  "experiment_date": "2025-07-13T23:07:03.628419",
+  "total_genomes": 18,
+  "successful": 0,
+  "failed": 18,
+  "results_directory": "results_20250713_230703",
+  "individual_results": [
+    {
+      "genome": "bacillus_subtilis_168.fasta",
+      "organism": "bacillus_subtilis_168",
+      "start_time": "2025-07-13T23:07:03.581249",
+      "command": "../rust_impl/target/release/genomic_cryptanalysis --input genomes/bacillus_subtilis_168.fasta --traits genomes/bacillus_subtilis_168_traits.json --output results_20250713_230703/exp_bacillus_subtilis_168_20250713_230703 --min-traits 2",
+      "output_dir": "results_20250713_230703/exp_bacillus_subtilis_168_20250713_230703",
+      "success": false,
+      "duration": 0.011018991470336914,
+      "stdout": "",
+      "stderr": "[2025-07-14T06:07:03Z INFO  genomic_cryptanalysis] Starting genomic cryptanalysis...\nError: invalid type: map, expected a sequence at line 1 column 0\n"
+    },
+    {
+      "genome": "borrelia_burgdorferi_b31.fasta",
+      "organism": "borrelia_burgdorferi_b31",
+      "start_time": "2025-07-13T23:07:03.592969",
+      "command": "../rust_impl/target/release/genomic_cryptanalysis --input genomes/borrelia_burgdorferi_b31.fasta --traits default_traits.json --output results_20250713_230703/exp_borrelia_burgdorferi_b31_20250713_230703 --min-traits 2",
+      "output_dir": "results_20250713_230703/exp_borrelia_burgdorferi_b31_20250713_230703",
+      "success": false,
+      "duration": 0.0026388168334960938,
+      "stdout": "",
+      "stderr": "[2025-07-14T06:07:03Z INFO  genomic_cryptanalysis] Starting genomic cryptanalysis...\nError: missing field `associated_genes` at line 12 column 3\n"
+    },
+    {
+      "genome": "campylobacter_jejuni.fasta",
+      "organism": "campylobacter_jejuni",
+      "start_time": "2025-07-13T23:07:03.596108",
+      "command": "../rust_impl/target/release/genomic_cryptanalysis --input genomes/campylobacter_jejuni.fasta --traits default_traits.json --output results_20250713_230703/exp_campylobacter_jejuni_20250713_230703 --min-traits 2",
+      "output_dir": "results_20250713_230703/exp_campylobacter_jejuni_20250713_230703",
+      "success": false,
+      "duration": 0.001641988754272461,
+      "stdout": "",
+      "stderr": "[2025-07-14T06:07:03Z INFO  genomic_cryptanalysis] Starting genomic cryptanalysis...\nError: missing field `associated_genes` at line 12 column 3\n"
+    },
+    {
+      "genome": "caulobacter_crescentus_cb15.fasta",
+      "organism": "caulobacter_crescentus_cb15",
+      "start_time": "2025-07-13T23:07:03.598347",
+      "command": "../rust_impl/target/release/genomic_cryptanalysis --input genomes/caulobacter_crescentus_cb15.fasta --traits default_traits.json --output results_20250713_230703/exp_caulobacter_crescentus_cb15_20250713_230703 --min-traits 2",
+      "output_dir": "results_20250713_230703/exp_caulobacter_crescentus_cb15_20250713_230703",
+      "success": false,
+      "duration": 0.0015096664428710938,
+      "stdout": "",
+      "stderr": "[2025-07-14T06:07:03Z INFO  genomic_cryptanalysis] Starting genomic cryptanalysis...\nError: missing field `associated_genes` at line 12 column 3\n"
+    },
+    {
+      "genome": "clostridium_difficile_630.fasta",
+      "organism": "clostridium_difficile_630",
+      "start_time": "2025-07-13T23:07:03.600609",
+      "command": "../rust_impl/target/release/genomic_cryptanalysis --input genomes/clostridium_difficile_630.fasta --traits default_traits.json --output results_20250713_230703/exp_clostridium_difficile_630_20250713_230703 --min-traits 2",
+      "output_dir": "results_20250713_230703/exp_clostridium_difficile_630_20250713_230703",
+      "success": false,
+      "duration": 0.0016651153564453125,
+      "stdout": "",
+      "stderr": "[2025-07-14T06:07:03Z INFO  genomic_cryptanalysis] Starting genomic cryptanalysis...\nError: missing field `associated_genes` at line 12 column 3\n"
+    },
+    {
+      "genome": "corynebacterium_glutamicum.fasta",
+      "organism": "corynebacterium_glutamicum",
+      "start_time": "2025-07-13T23:07:03.602936",
+      "command": "../rust_impl/target/release/genomic_cryptanalysis --input genomes/corynebacterium_glutamicum.fasta --traits default_traits.json --output results_20250713_230703/exp_corynebacterium_glutamicum_20250713_230703 --min-traits 2",
+      "output_dir": "results_20250713_230703/exp_corynebacterium_glutamicum_20250713_230703",
+      "success": false,
+      "duration": 0.0016322135925292969,
+      "stdout": "",
+      "stderr": "[2025-07-14T06:07:03Z INFO  genomic_cryptanalysis] Starting genomic cryptanalysis...\nError: missing field `associated_genes` at line 12 column 3\n"
+    },
+    {
+      "genome": "enterococcus_faecalis_v583.fasta",
+      "organism": "enterococcus_faecalis_v583",
+      "start_time": "2025-07-13T23:07:03.605304",
+      "command": "../rust_impl/target/release/genomic_cryptanalysis --input genomes/enterococcus_faecalis_v583.fasta --traits default_traits.json --output results_20250713_230703/exp_enterococcus_faecalis_v583_20250713_230703 --min-traits 2",
+      "output_dir": "results_20250713_230703/exp_enterococcus_faecalis_v583_20250713_230703",
+      "success": false,
+      "duration": 0.0014617443084716797,
+      "stdout": "",
+      "stderr": "[2025-07-14T06:07:03Z INFO  genomic_cryptanalysis] Starting genomic cryptanalysis...\nError: missing field `associated_genes` at line 12 column 3\n"
+    },
+    {
+      "genome": "haemophilus_influenzae_rd.fasta",
+      "organism": "haemophilus_influenzae_rd",
+      "start_time": "2025-07-13T23:07:03.607260",
+      "command": "../rust_impl/target/release/genomic_cryptanalysis --input genomes/haemophilus_influenzae_rd.fasta --traits default_traits.json --output results_20250713_230703/exp_haemophilus_influenzae_rd_20250713_230703 --min-traits 2",
+      "output_dir": "results_20250713_230703/exp_haemophilus_influenzae_rd_20250713_230703",
+      "success": false,
+      "duration": 0.0013434886932373047,
+      "stdout": "",
+      "stderr": "[2025-07-14T06:07:03Z INFO  genomic_cryptanalysis] Starting genomic cryptanalysis...\nError: missing field `associated_genes` at line 12 column 3\n"
+    },
+    {
+      "genome": "helicobacter_pylori_26695.fasta",
+      "organism": "helicobacter_pylori_26695",
+      "start_time": "2025-07-13T23:07:03.609076",
+      "command": "../rust_impl/target/release/genomic_cryptanalysis --input genomes/helicobacter_pylori_26695.fasta --traits genomes/helicobacter_pylori_26695_traits.json --output results_20250713_230703/exp_helicobacter_pylori_26695_20250713_230703 --min-traits 2",
+      "output_dir": "results_20250713_230703/exp_helicobacter_pylori_26695_20250713_230703",
+      "success": false,
+      "duration": 0.0013163089752197266,
+      "stdout": "",
+      "stderr": "[2025-07-14T06:07:03Z INFO  genomic_cryptanalysis] Starting genomic cryptanalysis...\nError: invalid type: map, expected a sequence at line 1 column 0\n"
+    },
+    {
+      "genome": "lactobacillus_acidophilus_ncfm.fasta",
+      "organism": "lactobacillus_acidophilus_ncfm",
+      "start_time": "2025-07-13T23:07:03.610696",
+      "command": "../rust_impl/target/release/genomic_cryptanalysis --input genomes/lactobacillus_acidophilus_ncfm.fasta --traits genomes/lactobacillus_acidophilus_ncfm_traits.json --output results_20250713_230703/exp_lactobacillus_acidophilus_ncfm_20250713_230703 --min-traits 2",
+      "output_dir": "results_20250713_230703/exp_lactobacillus_acidophilus_ncfm_20250713_230703",
+      "success": false,
+      "duration": 0.0015668869018554688,
+      "stdout": "",
+      "stderr": "[2025-07-14T06:07:03Z INFO  genomic_cryptanalysis] Starting genomic cryptanalysis...\nError: invalid type: map, expected a sequence at line 1 column 0\n"
+    },
+    {
+      "genome": "legionella_pneumophila.fasta",
+      "organism": "legionella_pneumophila",
+      "start_time": "2025-07-13T23:07:03.612940",
+      "command": "../rust_impl/target/release/genomic_cryptanalysis --input genomes/legionella_pneumophila.fasta --traits default_traits.json --output results_20250713_230703/exp_legionella_pneumophila_20250713_230703 --min-traits 2",
+      "output_dir": "results_20250713_230703/exp_legionella_pneumophila_20250713_230703",
+      "success": false,
+      "duration": 0.0014050006866455078,
+      "stdout": "",
+      "stderr": "[2025-07-14T06:07:03Z INFO  genomic_cryptanalysis] Starting genomic cryptanalysis...\nError: missing field `associated_genes` at line 12 column 3\n"
+    },
+    {
+      "genome": "listeria_monocytogenes_egde.fasta",
+      "organism": "listeria_monocytogenes_egde",
+      "start_time": "2025-07-13T23:07:03.615008",
+      "command": "../rust_impl/target/release/genomic_cryptanalysis --input genomes/listeria_monocytogenes_egde.fasta --traits default_traits.json --output results_20250713_230703/exp_listeria_monocytogenes_egde_20250713_230703 --min-traits 2",
+      "output_dir": "results_20250713_230703/exp_listeria_monocytogenes_egde_20250713_230703",
+      "success": false,
+      "duration": 0.0014591217041015625,
+      "stdout": "",
+      "stderr": "[2025-07-14T06:07:03Z INFO  genomic_cryptanalysis] Starting genomic cryptanalysis...\nError: missing field `associated_genes` at line 12 column 3\n"
+    },
+    {
+      "genome": "mycobacterium_tuberculosis_h37rv.fasta",
+      "organism": "mycobacterium_tuberculosis_h37rv",
+      "start_time": "2025-07-13T23:07:03.617220",
+      "command": "../rust_impl/target/release/genomic_cryptanalysis --input genomes/mycobacterium_tuberculosis_h37rv.fasta --traits genomes/mycobacterium_tuberculosis_h37rv_traits.json --output results_20250713_230703/exp_mycobacterium_tuberculosis_h37rv_20250713_230703 --min-traits 2",
+      "output_dir": "results_20250713_230703/exp_mycobacterium_tuberculosis_h37rv_20250713_230703",
+      "success": false,
+      "duration": 0.0015587806701660156,
+      "stdout": "",
+      "stderr": "[2025-07-14T06:07:03Z INFO  genomic_cryptanalysis] Starting genomic cryptanalysis...\nError: invalid type: map, expected a sequence at line 1 column 0\n"
+    },
+    {
+      "genome": "mycoplasma_genitalium_g37.fasta",
+      "organism": "mycoplasma_genitalium_g37",
+      "start_time": "2025-07-13T23:07:03.619434",
+      "command": "../rust_impl/target/release/genomic_cryptanalysis --input genomes/mycoplasma_genitalium_g37.fasta --traits default_traits.json --output results_20250713_230703/exp_mycoplasma_genitalium_g37_20250713_230703 --min-traits 2",
+      "output_dir": "results_20250713_230703/exp_mycoplasma_genitalium_g37_20250713_230703",
+      "success": false,
+      "duration": 0.001493692398071289,
+      "stdout": "",
+      "stderr": "[2025-07-14T06:07:03Z INFO  genomic_cryptanalysis] Starting genomic cryptanalysis...\nError: missing field `associated_genes` at line 12 column 3\n"
+    },
+    {
+      "genome": "neisseria_gonorrhoeae_fa1090.fasta",
+      "organism": "neisseria_gonorrhoeae_fa1090",
+      "start_time": "2025-07-13T23:07:03.621443",
+      "command": "../rust_impl/target/release/genomic_cryptanalysis --input genomes/neisseria_gonorrhoeae_fa1090.fasta --traits default_traits.json --output results_20250713_230703/exp_neisseria_gonorrhoeae_fa1090_20250713_230703 --min-traits 2",
+      "output_dir": "results_20250713_230703/exp_neisseria_gonorrhoeae_fa1090_20250713_230703",
+      "success": false,
+      "duration": 0.0013866424560546875,
+      "stdout": "",
+      "stderr": "[2025-07-14T06:07:03Z INFO  genomic_cryptanalysis] Starting genomic cryptanalysis...\nError: missing field `associated_genes` at line 12 column 3\n"
+    },
+    {
+      "genome": "streptococcus_pneumoniae_tigr4.fasta",
+      "organism": "streptococcus_pneumoniae_tigr4",
+      "start_time": "2025-07-13T23:07:03.623122",
+      "command": "../rust_impl/target/release/genomic_cryptanalysis --input genomes/streptococcus_pneumoniae_tigr4.fasta --traits genomes/streptococcus_pneumoniae_tigr4_traits.json --output results_20250713_230703/exp_streptococcus_pneumoniae_tigr4_20250713_230703 --min-traits 2",
+      "output_dir": "results_20250713_230703/exp_streptococcus_pneumoniae_tigr4_20250713_230703",
+      "success": false,
+      "duration": 0.001383066177368164,
+      "stdout": "",
+      "stderr": "[2025-07-14T06:07:03Z INFO  genomic_cryptanalysis] Starting genomic cryptanalysis...\nError: invalid type: map, expected a sequence at line 1 column 0\n"
+    },
+    {
+      "genome": "synechocystis_pcc6803.fasta",
+      "organism": "synechocystis_pcc6803",
+      "start_time": "2025-07-13T23:07:03.625189",
+      "command": "../rust_impl/target/release/genomic_cryptanalysis --input genomes/synechocystis_pcc6803.fasta --traits default_traits.json --output results_20250713_230703/exp_synechocystis_pcc6803_20250713_230703 --min-traits 2",
+      "output_dir": "results_20250713_230703/exp_synechocystis_pcc6803_20250713_230703",
+      "success": false,
+      "duration": 0.0013561248779296875,
+      "stdout": "",
+      "stderr": "[2025-07-14T06:07:03Z INFO  genomic_cryptanalysis] Starting genomic cryptanalysis...\nError: missing field `associated_genes` at line 12 column 3\n"
+    },
+    {
+      "genome": "thermotoga_maritima_msb8.fasta",
+      "organism": "thermotoga_maritima_msb8",
+      "start_time": "2025-07-13T23:07:03.627116",
+      "command": "../rust_impl/target/release/genomic_cryptanalysis --input genomes/thermotoga_maritima_msb8.fasta --traits default_traits.json --output results_20250713_230703/exp_thermotoga_maritima_msb8_20250713_230703 --min-traits 2",
+      "output_dir": "results_20250713_230703/exp_thermotoga_maritima_msb8_20250713_230703",
+      "success": false,
+      "duration": 0.0012965202331542969,
+      "stdout": "",
+      "stderr": "[2025-07-14T06:07:03Z INFO  genomic_cryptanalysis] Starting genomic cryptanalysis...\nError: missing field `associated_genes` at line 12 column 3\n"
+    }
+  ]
+}

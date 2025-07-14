@@ -1,0 +1,14 @@
+{
+  "genome_file": "genomes/helicobacter_pylori_26695.fasta",
+  "organism": "Helicobacter pylori 26695",
+  "strain": "",
+  "accession": "CP003904",
+  "genome_size": 1667892,
+  "analysis_parameters": {
+    "window_size": 300,
+    "window_overlap": 50,
+    "min_gene_length": 100,
+    "confidence_threshold": 0.5
+  },
+  "output_directory": "genomes/results"
+}

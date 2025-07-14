@@ -1,0 +1,15 @@
+# Genome files (too large)
+genomes/*.fasta
+
+# Intermediate results
+results_*/
+!results_20250713_231039/
+
+# Test outputs
+test_output/
+
+# Temporary files
+*.tmp
+*.log
+__pycache__/
+*.pyc

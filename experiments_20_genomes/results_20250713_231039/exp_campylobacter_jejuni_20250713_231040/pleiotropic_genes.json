@@ -1,0 +1,11 @@
+[
+  {
+    "gene_id": "NC_002163.1",
+    "traits": [
+      "carbon_metabolism",
+      "regulatory",
+      "stress_response"
+    ],
+    "confidence": 0.725
+  }
+]

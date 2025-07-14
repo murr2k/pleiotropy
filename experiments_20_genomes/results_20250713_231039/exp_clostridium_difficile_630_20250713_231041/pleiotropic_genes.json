@@ -1,0 +1,14 @@
+[
+  {
+    "gene_id": "NZ_CP010905.2",
+    "traits": [
+      "structural",
+      "carbon_metabolism",
+      "high_expression",
+      "regulatory",
+      "stress_response",
+      "motility"
+    ],
+    "confidence": 0.6999999999999997
+  }
+]

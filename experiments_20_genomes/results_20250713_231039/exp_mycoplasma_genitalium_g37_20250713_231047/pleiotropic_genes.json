@@ -1,0 +1,11 @@
+[
+  {
+    "gene_id": "NZ_CP159789.1",
+    "traits": [
+      "carbon_metabolism",
+      "regulatory",
+      "stress_response"
+    ],
+    "confidence": 0.7000000000000001
+  }
+]

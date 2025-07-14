@@ -1,0 +1,14 @@
+{
+  "genome_file": "genomes/mycobacterium_tuberculosis_h37rv.fasta",
+  "organism": "Mycobacterium tuberculosis H37Rv",
+  "strain": "",
+  "accession": "NC_000962",
+  "genome_size": 0,
+  "analysis_parameters": {
+    "window_size": 300,
+    "window_overlap": 50,
+    "min_gene_length": 100,
+    "confidence_threshold": 0.5
+  },
+  "output_directory": "genomes/results"
+}

@@ -1,0 +1,189 @@
+{
+  "start_time": "2025-07-13T22:59:41.711381",
+  "last_update": "2025-07-13T23:00:55.690314",
+  "total_genomes": 20,
+  "completed": 17,
+  "failed": 3,
+  "genomes": {
+    "mycobacterium_tuberculosis_h37rv": {
+      "organism": "Mycobacterium tuberculosis",
+      "strain": "H37Rv",
+      "status": "completed",
+      "start_time": "2025-07-13T22:59:41.711697",
+      "end_time": "2025-07-13T22:59:44.675630",
+      "file_size": 4474618,
+      "error": null
+    },
+    "lactobacillus_acidophilus_ncfm": {
+      "organism": "Lactobacillus acidophilus",
+      "strain": "NCFM",
+      "status": "completed",
+      "start_time": "2025-07-13T22:59:45.676908",
+      "end_time": "2025-07-13T22:59:48.429682",
+      "file_size": 2020517,
+      "error": null
+    },
+    "streptococcus_pneumoniae_tigr4": {
+      "organism": "Streptococcus pneumoniae",
+      "strain": "TIGR4",
+      "status": "completed",
+      "start_time": "2025-07-13T22:59:49.431285",
+      "end_time": "2025-07-13T22:59:52.274240",
+      "file_size": 2184682,
+      "error": null
+    },
+    "bacillus_subtilis_168": {
+      "organism": "Bacillus subtilis",
+      "strain": "168",
+      "status": "completed",
+      "start_time": "2025-07-13T22:59:53.276158",
+      "end_time": "2025-07-13T22:59:56.171391",
+      "file_size": 4377825,
+      "error": null
+    },
+    "helicobacter_pylori_26695": {
+      "organism": "Helicobacter pylori",
+      "strain": "26695",
+      "status": "completed",
+      "start_time": "2025-07-13T22:59:57.173007",
+      "end_time": "2025-07-13T23:00:00.953959",
+      "file_size": 1691776,
+      "error": null
+    },
+    "rhizobium_leguminosarum": {
+      "organism": "Rhizobium leguminosarum",
+      "strain": "bv. viciae 3841",
+      "status": "failed",
+      "start_time": "2025-07-13T23:00:01.955532",
+      "end_time": "2025-07-13T23:00:02.314200",
+      "file_size": null,
+      "error": "Download failed"
+    },
+    "vibrio_cholerae": {
+      "organism": "Vibrio cholerae",
+      "strain": "O1 biovar El Tor str. N16961",
+      "status": "failed",
+      "start_time": "2025-07-13T23:00:03.315670",
+      "end_time": "2025-07-13T23:00:03.662889",
+      "file_size": null,
+      "error": "Download failed"
+    },
+    "clostridium_difficile_630": {
+      "organism": "Clostridium difficile",
+      "strain": "630",
+      "status": "completed",
+      "start_time": "2025-07-13T23:00:04.664547",
+      "end_time": "2025-07-13T23:00:07.645210",
+      "file_size": 4335924,
+      "error": null
+    },
+    "caulobacter_crescentus_cb15": {
+      "organism": "Caulobacter crescentus",
+      "strain": "CB15",
+      "status": "completed",
+      "start_time": "2025-07-13T23:00:08.646880",
+      "end_time": "2025-07-13T23:00:12.687059",
+      "file_size": 4074390,
+      "error": null
+    },
+    "synechocystis_pcc6803": {
+      "organism": "Synechocystis",
+      "strain": "PCC 6803",
+      "status": "completed",
+      "start_time": "2025-07-13T23:00:13.690312",
+      "end_time": "2025-07-13T23:00:16.807962",
+      "file_size": 3624591,
+      "error": null
+    },
+    "mycoplasma_genitalium_g37": {
+      "organism": "Mycoplasma genitalium",
+      "strain": "G37",
+      "status": "completed",
+      "start_time": "2025-07-13T23:00:17.811580",
+      "end_time": "2025-07-13T23:00:20.863037",
+      "file_size": 588444,
+      "error": null
+    },
+    "listeria_monocytogenes_egde": {
+      "organism": "Listeria monocytogenes",
+      "strain": "EGD-e",
+      "status": "completed",
+      "start_time": "2025-07-13T23:00:21.864881",
+      "end_time": "2025-07-13T23:00:24.757341",
+      "file_size": 2986661,
+      "error": null
+    },
+    "borrelia_burgdorferi_b31": {
+      "organism": "Borrelia burgdorferi",
+      "strain": "B31",
+      "status": "failed",
+      "start_time": "2025-07-13T23:00:25.758969",
+      "end_time": "2025-07-13T23:00:28.529935",
+      "file_size": null,
+      "error": "Download failed"
+    },
+    "neisseria_gonorrhoeae_fa1090": {
+      "organism": "Neisseria gonorrhoeae",
+      "strain": "FA 1090",
+      "status": "completed",
+      "start_time": "2025-07-13T23:00:29.531496",
+      "end_time": "2025-07-13T23:00:32.682391",
+      "file_size": 2184753,
+      "error": null
+    },
+    "campylobacter_jejuni": {
+      "organism": "Campylobacter jejuni",
+      "strain": "NCTC 11168",
+      "status": "completed",
+      "start_time": "2025-07-13T23:00:33.685377",
+      "end_time": "2025-07-13T23:00:36.437255",
+      "file_size": 1665033,
+      "error": null
+    },
+    "haemophilus_influenzae_rd": {
+      "organism": "Haemophilus influenzae",
+      "strain": "Rd KW20",
+      "status": "completed",
+      "start_time": "2025-07-13T23:00:37.438092",
+      "end_time": "2025-07-13T23:00:40.212877",
+      "file_size": 1856935,
+      "error": null
+    },
+    "legionella_pneumophila": {
+      "organism": "Legionella pneumophila",
+      "strain": "Philadelphia 1",
+      "status": "completed",
+      "start_time": "2025-07-13T23:00:41.214652",
+      "end_time": "2025-07-13T23:00:44.044922",
+      "file_size": 3457946,
+      "error": null
+    },
+    "corynebacterium_glutamicum": {
+      "organism": "Corynebacterium glutamicum",
+      "strain": "ATCC 13032",
+      "status": "completed",
+      "start_time": "2025-07-13T23:00:45.046643",
+      "end_time": "2025-07-13T23:00:47.913319",
+      "file_size": 3329329,
+      "error": null
+    },
+    "enterococcus_faecalis_v583": {
+      "organism": "Enterococcus faecalis",
+      "strain": "V583",
+      "status": "completed",
+      "start_time": "2025-07-13T23:00:48.915032",
+      "end_time": "2025-07-13T23:00:52.376171",
+      "file_size": 3264071,
+      "error": null
+    },
+    "thermotoga_maritima_msb8": {
+      "organism": "Thermotoga maritima",
+      "strain": "MSB8",
+      "status": "completed",
+      "start_time": "2025-07-13T23:00:53.377942",
+      "end_time": "2025-07-13T23:00:55.690296",
+      "file_size": 1896388,
+      "error": null
+    }
+  }
+}

@@ -1,0 +1,10 @@
+[
+  {
+    "gene_id": "NZ_CP165604.1",
+    "traits": [
+      "regulatory",
+      "stress_response"
+    ],
+    "confidence": 0.75
+  }
+]

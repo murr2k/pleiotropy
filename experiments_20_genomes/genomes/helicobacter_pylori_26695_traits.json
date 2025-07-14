@@ -1,0 +1,68 @@
+[
+  {
+    "name": "central_metabolism",
+    "description": "Core metabolic pathways",
+    "codon_patterns": {
+      "GCG": 1.3,
+      "GAA": 1.35,
+      "CTG": 1.25
+    },
+    "associated_genes": [],
+    "known_sequences": []
+  },
+  {
+    "name": "stress_response",
+    "description": "Environmental stress adaptation",
+    "codon_patterns": {
+      "AAG": 1.32,
+      "GAG": 1.33,
+      "CGC": 1.25
+    },
+    "associated_genes": [],
+    "known_sequences": []
+  },
+  {
+    "name": "protein_synthesis",
+    "description": "Ribosomal and translation machinery",
+    "codon_patterns": {
+      "AAA": 1.28,
+      "GAA": 1.38,
+      "CGA": 1.24
+    },
+    "associated_genes": [],
+    "known_sequences": []
+  },
+  {
+    "name": "urease",
+    "description": "Acid neutralization in stomach",
+    "codon_patterns": {
+      "AAA": 1.45,
+      "TTT": 1.35,
+      "AGA": 1.15
+    },
+    "associated_genes": [],
+    "known_sequences": []
+  },
+  {
+    "name": "adhesion",
+    "description": "Gastric epithelial attachment",
+    "codon_patterns": {
+      "CTT": 1.38,
+      "ATT": 1.32,
+      "GTT": 1.22
+    },
+    "associated_genes": [],
+    "known_sequences": []
+  },
+  {
+    "name": "cag_pai",
+    "description": "Type IV secretion and CagA",
+    "codon_patterns": {
+      "GAT": 1.3599999999999999,
+      "CAT": 1.34,
+      "TAT": 1.2
+    },
+    "associated_genes": [],
+    "known_sequences": []
+  }
+]

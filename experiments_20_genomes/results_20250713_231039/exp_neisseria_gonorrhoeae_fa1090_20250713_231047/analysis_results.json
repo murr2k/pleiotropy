@@ -1,0 +1,527 @@
+{
+  "sequences": 1,
+  "identified_traits": [
+    {
+      "gene_id": "AE004969.1",
+      "trait_names": [
+        "stress_response"
+      ],
+      "contributing_regions": [
+        [
+          0,
+          2153922
+        ]
+      ],
+      "confidence_score": 0.65,
+      "codon_patterns": [
+        "PATTERN_0_2153922"
+      ],
+      "associated_genes": []
+    },
+    {
+      "gene_id": "AE004969.1",
+      "trait_names": [
+        "regulatory"
+      ],
+      "contributing_regions": [
+        [
+          0,
+          2153922
+        ]
+      ],
+      "confidence_score": 0.825,
+      "codon_patterns": [
+        "PATTERN_0_2153922"
+      ],
+      "associated_genes": []
+    },
+    {
+      "gene_id": "AE004969.1",
+      "trait_names": [
+        "regulatory",
+        "stress_response"
+      ],
+      "contributing_regions": [
+        [
+          0,
+          2153922
+        ]
+      ],
+      "confidence_score": 0.7375,
+      "codon_patterns": [
+        "PLEIOTROPIC_PATTERN"
+      ],
+      "associated_genes": []
+    }
+  ],
+  "frequency_table": {
+    "codon_frequencies": [
+      {
+        "codon": "CCA",
+        "amino_acid": "P",
+        "global_frequency": 0.013916938496380092,
+        "trait_specific_frequency": {
+          "structural": 0.01670032619565611
+        }
+      },
+      {
+        "codon": "TTC",
+        "amino_acid": "F",
+        "global_frequency": 0.02073334131876642,
+        "trait_specific_frequency": {
+          "structural": 0.0248800095825197
+        }
+      },
+      {
+        "codon": "GCT",
+        "amino_acid": "A",
+        "global_frequency": 0.013787407343441405,
+        "trait_specific_frequency": {}
+      },
+      {
+        "codon": "ATG",
+        "amino_acid": "M",
+        "global_frequency": 0.013747015908654073,
+        "trait_specific_frequency": {
+          "structural": 0.01649641909038489
+        }
+      },
+      {
+        "codon": "ACA",
+        "amino_acid": "T",
+        "global_frequency": 0.012662018401780566,
+        "trait_specific_frequency": {}
+      },
+      {
+        "codon": "TGC",
+        "amino_acid": "C",
+        "global_frequency": 0.022014724767192125,
+        "trait_specific_frequency": {}
+      },
+      {
+        "codon": "AAC",
+        "amino_acid": "N",
+        "global_frequency": 0.018688699033669744,
+        "trait_specific_frequency": {}
+      },
+      {
+        "codon": "GAA",
+        "amino_acid": "E",
+        "global_frequency": 0.019928298239212005,
+        "trait_specific_frequency": {
+          "high_expression": 0.02590678771097561,
+          "regulatory": 0.022917542975093803
+        }
+      },
+      {
+        "codon": "GCG",
+        "amino_acid": "A",
+        "global_frequency": 0.02777120062843501,
+        "trait_specific_frequency": {}
+      },
+      {
+        "codon": "TTA",
+        "amino_acid": "L",
+        "global_frequency": 0.009714836470401436,
+        "trait_specific_frequency": {
+          "structural": 0.011657803764481722
+        }
+      },
+      {
+        "codon": "TTT",
+        "amino_acid": "F",
+        "global_frequency": 0.03261956561101098,
+        "trait_specific_frequency": {
+          "structural": 0.03914347873321317
+        }
+      },
+      {
+        "codon": "ATT",
+        "amino_acid": "I",
+        "global_frequency": 0.017547989202951638,
+        "trait_specific_frequency": {
+          "structural": 0.021057587043541964
+        }
+      },
+      {
+        "codon": "CCT",
+        "amino_acid": "P",
+        "global_frequency": 0.011787334917420409,
+        "trait_specific_frequency": {
+          "structural": 0.01414480190090449
+        }
+      },
+      {
+        "codon": "ACC",
+        "amino_acid": "T",
+        "global_frequency": 0.014808335677893629,
+        "trait_specific_frequency": {}
+      },
+      {
+        "codon": "CAT",
+        "amino_acid": "H",
+        "global_frequency": 0.014361244279040746,
+        "trait_specific_frequency": {
+          "regulatory": 0.016515430920896856
+        }
+      },
+      {
+        "codon": "GCC",
+        "amino_acid": "A",
+        "global_frequency": 0.026162507277422302,
+        "trait_specific_frequency": {}
+      },
+      {
+        "codon": "AGA",
+        "amino_acid": "R",
+        "global_frequency": 0.008847117026521852,
+        "trait_specific_frequency": {
+          "regulatory": 0.01017418458050013
+        }
+      },
+      {
+        "codon": "AGT",
+        "amino_acid": "S",
+        "global_frequency": 0.007301100039834312,
+        "trait_specific_frequency": {}
+      },
+      {
+        "codon": "CAC",
+        "amino_acid": "H",
+        "global_frequency": 0.010454417569438448,
+        "trait_specific_frequency": {
+          "regulatory": 0.012022580204854215
+        }
+      },
+      {
+        "codon": "TGT",
+        "amino_acid": "C",
+        "global_frequency": 0.012954508101964695,
+        "trait_specific_frequency": {}
+      },
+      {
+        "codon": "AAG",
+        "amino_acid": "K",
+        "global_frequency": 0.01493090279035174,
+        "trait_specific_frequency": {
+          "regulatory": 0.0171705382089045
+        }
+      },
+      {
+        "codon": "CGT",
+        "amino_acid": "R",
+        "global_frequency": 0.017120397117444366,
+        "trait_specific_frequency": {
+          "high_expression": 0.022256516252677678,
+          "regulatory": 0.01968845668506102
+        }
+      },
+      {
+        "codon": "GTA",
+        "amino_acid": "V",
+        "global_frequency": 0.009540735458387073,
+        "trait_specific_frequency": {
+          "structural": 0.011448882550064488
+        }
+      },
+      {
+        "codon": "TAG",
+        "amino_acid": "*",
+        "global_frequency": 0.004021036973483719,
+        "trait_specific_frequency": {}
+      },
+      {
+        "codon": "AAA",
+        "amino_acid": "K",
+        "global_frequency": 0.03128943387922125,
+        "trait_specific_frequency": {
+          "regulatory": 0.03598284896110444,
+          "high_expression": 0.040676264042987624
+        }
+      },
+      {
+        "codon": "TAA",
+        "amino_acid": "*",
+        "global_frequency": 0.009741299824227619,
+        "trait_specific_frequency": {}
+      },
+      {
+        "codon": "TAC",
+        "amino_acid": "Y",
+        "global_frequency": 0.009362456022084365,
+        "trait_specific_frequency": {}
+      },
+      {
+        "codon": "TCG",
+        "amino_acid": "S",
+        "global_frequency": 0.018084220319955876,
+        "trait_specific_frequency": {}
+      },
+      {
+        "codon": "CTA",
+        "amino_acid": "L",
+        "global_frequency": 0.004079534913520545,
+        "trait_specific_frequency": {
+          "structural": 0.004895441896224654
+        }
+      },
+      {
+        "codon": "GCA",
+        "amino_acid": "A",
+        "global_frequency": 0.021071793686122338,
+        "trait_specific_frequency": {}
+      },
+      {
+        "codon": "CTG",
+        "amino_acid": "L",
+        "global_frequency": 0.015093861337597183,
+        "trait_specific_frequency": {
+          "structural": 0.01811263360511662,
+          "high_expression": 0.01962201973887634
+        }
+      },
+      {
+        "codon": "ACT",
+        "amino_acid": "T",
+        "global_frequency": 0.007179925735472315,
+        "trait_specific_frequency": {}
+      },
+      {
+        "codon": "CTC",
+        "amino_acid": "L",
+        "global_frequency": 0.006670157972294261,
+        "trait_specific_frequency": {
+          "structural": 0.008004189566753113
+        }
+      },
+      {
+        "codon": "TGG",
+        "amino_acid": "W",
+        "global_frequency": 0.01344199093560491,
+        "trait_specific_frequency": {
+          "structural": 0.01613038912272589
+        }
+      },
+      {
+        "codon": "CGA",
+        "amino_acid": "R",
+        "global_frequency": 0.018376710020140005,
+        "trait_specific_frequency": {
+          "regulatory": 0.021133216523161004
+        }
+      },
+      {
+        "codon": "TCA",
+        "amino_acid": "S",
+        "global_frequency": 0.013721945362924006,
+        "trait_specific_frequency": {}
+      },
+      {
+        "codon": "CCG",
+        "amino_acid": "P",
+        "global_frequency": 0.02741185613963737,
+        "trait_specific_frequency": {
+          "structural": 0.032894227367564845,
+          "high_expression": 0.03563541298152858
+        }
+      },
+      {
+        "codon": "ATA",
+        "amino_acid": "I",
+        "global_frequency": 0.012028290718048286,
+        "trait_specific_frequency": {
+          "structural": 0.014433948861657943
+        }
+      },
+      {
+        "codon": "CCC",
+        "amino_acid": "P",
+        "global_frequency": 0.012664804017972795,
+        "trait_specific_frequency": {
+          "structural": 0.015197764821567353
+        }
+      },
+      {
+        "codon": "ATC",
+        "amino_acid": "I",
+        "global_frequency": 0.015326460289648371,
+        "trait_specific_frequency": {
+          "structural": 0.018391752347578044
+        }
+      },
+      {
+        "codon": "GTC",
+        "amino_acid": "V",
+        "global_frequency": 0.014134216559374016,
+        "trait_specific_frequency": {
+          "structural": 0.016961059871248817
+        }
+      },
+      {
+        "codon": "GGA",
+        "amino_acid": "G",
+        "global_frequency": 0.014255390863736013,
+        "trait_specific_frequency": {}
+      },
+      {
+        "codon": "AAT",
+        "amino_acid": "N",
+        "global_frequency": 0.01775273199308053,
+        "trait_specific_frequency": {}
+      },
+      {
+        "codon": "GAG",
+        "amino_acid": "E",
+        "global_frequency": 0.006977968561535654,
+        "trait_specific_frequency": {
+          "regulatory": 0.008024663845766002
+        }
+      },
+      {
+        "codon": "TGA",
+        "amino_acid": "*",
+        "global_frequency": 0.013525559421371805,
+        "trait_specific_frequency": {}
+      },
+      {
+        "codon": "ACG",
+        "amino_acid": "T",
+        "global_frequency": 0.016804229679626283,
+        "trait_specific_frequency": {
+          "high_expression": 0.02184549858351417
+        }
+      },
+      {
+        "codon": "GAC",
+        "amino_acid": "D",
+        "global_frequency": 0.014078504235529421,
+        "trait_specific_frequency": {
+          "regulatory": 0.01619027987085883
+        }
+      },
+      {
+        "codon": "GTG",
+        "amino_acid": "V",
+        "global_frequency": 0.010256638819790132,
+        "trait_specific_frequency": {
+          "high_expression": 0.013333630465727171,
+          "structural": 0.012307966583748157
+        }
+      },
+      {
+        "codon": "GTT",
+        "amino_acid": "V",
+        "global_frequency": 0.019035508249602352,
+        "trait_specific_frequency": {
+          "structural": 0.02284260989952282
+        }
+      },
+      {
+        "codon": "TAT",
+        "amino_acid": "Y",
+        "global_frequency": 0.011844440049361119,
+        "trait_specific_frequency": {}
+      },
+      {
+        "codon": "TCC",
+        "amino_acid": "S",
+        "global_frequency": 0.014024184719780938,
+        "trait_specific_frequency": {}
+      },
+      {
+        "codon": "CTT",
+        "amino_acid": "L",
+        "global_frequency": 0.015866869830940954,
+        "trait_specific_frequency": {
+          "structural": 0.019040243797129142
+        }
+      },
+      {
+        "codon": "AGG",
+        "amino_acid": "R",
+        "global_frequency": 0.012003220172318217,
+        "trait_specific_frequency": {
+          "regulatory": 0.01380370319816595
+        }
+      },
+      {
+        "codon": "TCT",
+        "amino_acid": "S",
+        "global_frequency": 0.008991969068517802,
+        "trait_specific_frequency": {}
+      },
+      {
+        "codon": "CGC",
+        "amino_acid": "R",
+        "global_frequency": 0.02759988523261288,
+        "trait_specific_frequency": {
+          "regulatory": 0.031739868017504815
+        }
+      },
+      {
+        "codon": "CAG",
+        "amino_acid": "Q",
+        "global_frequency": 0.015901690033343827,
+        "trait_specific_frequency": {}
+      },
+      {
+        "codon": "CAA",
+        "amino_acid": "Q",
+        "global_frequency": 0.02167209397554786,
+        "trait_specific_frequency": {}
+      },
+      {
+        "codon": "GGC",
+        "amino_acid": "G",
+        "global_frequency": 0.02649399560429765,
+        "trait_specific_frequency": {}
+      },
+      {
+        "codon": "GGG",
+        "amino_acid": "G",
+        "global_frequency": 0.012992113920559798,
+        "trait_specific_frequency": {}
+      },
+      {
+        "codon": "TTG",
+        "amino_acid": "L",
+        "global_frequency": 0.02192697785713689,
+        "trait_specific_frequency": {
+          "structural": 0.026312373428564267
+        }
+      },
+      {
+        "codon": "GGT",
+        "amino_acid": "G",
+        "global_frequency": 0.014873797658411028,
+        "trait_specific_frequency": {
+          "high_expression": 0.019335936955934337
+        }
+      },
+      {
+        "codon": "GAT",
+        "amino_acid": "D",
+        "global_frequency": 0.015890547568574907,
+        "trait_specific_frequency": {
+          "regulatory": 0.018274129703861143
+        }
+      },
+      {
+        "codon": "CGG",
+        "amino_acid": "R",
+        "global_frequency": 0.028966229974901597,
+        "trait_specific_frequency": {
+          "regulatory": 0.033311164471136835
+        }
+      },
+      {
+        "codon": "AGC",
+        "amino_acid": "S",
+        "global_frequency": 0.013164822124478046,
+        "trait_specific_frequency": {}
+      }
+    ],
+    "total_codons": 717974,
+    "trait_codon_counts": {}
+  }
+}

@@ -1,5 +1,5 @@
 [package]
-name = "genomic_cryptanalysis"
+name = "genomic_pleiotropy_cryptanalysis"
 version = "0.1.0"
 edition = "2021"
 authors = ["Pleiotropy Research Team"]
@@ -10,6 +10,18 @@ serde = { version = "1.0", features = ["derive"] }
 serde_json = "1.0"
 anyhow = "1.0"
 thiserror = "1.0"
+
+# WASM support
+wasm-bindgen = { version = "0.2", optional = true }
+wasm-bindgen-futures = { version = "0.4", optional = true }
+web-sys = { version = "0.3", optional = true }
+
+# Async runtime (tokio doesn't work in WASM, so we use conditional deps)
+[target.'cfg(not(target_arch = "wasm32"))'.dependencies]
+tokio = { version = "1.0", features = ["rt-multi-thread", "macros"] }
+
+[target.'cfg(target_arch = "wasm32")'.dependencies]
+getrandom = { version = "0.2", features = ["js"] }
 
 # Bioinformatics
 bio = "1.4"
@@ -35,10 +47,20 @@ env_logger = "0.10"
 rand = "0.8"
 neurodna = { version = "0.0.2", default-features = false }
 
+# CLI output
+colored = "2.0"
+
+# For semiprime seeker
+num-bigint = { version = "0.4", features = ["rand"] }
+num-prime = "0.4"
+
+# Time and date
+chrono = "0.4"
+
 # CUDA support
 cudarc = { version = "0.10", optional = true }
-cuda-runtime-sys = { version = "0.3", optional = true }
-cuda-driver-sys = { version = "0.3", optional = true }
+cuda-runtime-sys = { version = "0.3.0-alpha.1", optional = true }
+cuda-driver-sys = { version = "0.3.0-alpha.1", optional = true }
 
 # Additional dependencies for CUDA
 bytemuck = { version = "1.14", optional = true }  # For safe transmutation of data
@@ -61,7 +83,23 @@ default = []
 cuda = ["dep:cudarc", "dep:cuda-runtime-sys", "dep:cuda-driver-sys", "dep:bytemuck", "dep:half", "dep:nvml-wrapper"]
 cuda-debug = ["cuda"]  # Enable CUDA with debug info
 cuda-alt = ["dep:cust", "dep:bytemuck", "dep:half"]  # Alternative CUDA implementation
+wasm = ["dep:wasm-bindgen", "dep:wasm-bindgen-futures", "dep:web-sys"]
 
 [profile.release]
 lto = true
 opt-level = 3
+
+[[bin]]
+name = "benchmark"
+path = "src/bin/benchmark.rs"
+
+[lib]
+crate-type = ["cdylib", "rlib"]
+
+[[bin]]
+name = "validate_factorization"
+path = "src/bin/validate_factorization.rs"
+
+[[bin]]
+name = "semiprime_seeker"
+path = "src/bin/semiprime_seeker.rs"

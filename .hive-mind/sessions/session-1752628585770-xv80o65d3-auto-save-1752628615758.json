@@ -1,0 +1,81 @@
+{
+  "sessionId": "session-1752628585770-xv80o65d3",
+  "checkpointId": "checkpoint-1752628615758-u5vp0vkf7",
+  "checkpointName": "auto-save-1752628615758",
+  "timestamp": "2025-07-16T01:16:55.761Z",
+  "data": {
+    "timestamp": "2025-07-16T01:16:55.758Z",
+    "changeCount": 5,
+    "changesByType": {
+      "swarm_created": [
+        {
+          "type": "swarm_created",
+          "data": {
+            "swarmId": "swarm-1752628585743-wsed2t13o",
+            "swarmName": "hive-1752628585724",
+            "objective": "Investigate creating a fully functional pleiotropy development website at ssh webadmin@savge193.hostpapavps.net. No password necessary, ssh keys have been installed.",
+            "workerCount": 8
+          },
+          "timestamp": "2025-07-16T01:16:25.771Z"
+        }
+      ],
+      "agent_activity": [
+        {
+          "type": "agent_activity",
+          "data": {
+            "agentId": "worker-swarm-1752628585743-wsed2t13o-0",
+            "activity": "spawned",
+            "data": {
+              "type": "researcher",
+              "name": "Researcher Worker 1"
+            }
+          },
+          "timestamp": "2025-07-16T01:16:25.773Z"
+        },
+        {
+          "type": "agent_activity",
+          "data": {
+            "agentId": "worker-swarm-1752628585743-wsed2t13o-1",
+            "activity": "spawned",
+            "data": {
+              "type": "coder",
+              "name": "Coder Worker 2"
+            }
+          },
+          "timestamp": "2025-07-16T01:16:25.773Z"
+        },
+        {
+          "type": "agent_activity",
+          "data": {
+            "agentId": "worker-swarm-1752628585743-wsed2t13o-2",
+            "activity": "spawned",
+            "data": {
+              "type": "analyst",
+              "name": "Analyst Worker 3"
+            }
+          },
+          "timestamp": "2025-07-16T01:16:25.773Z"
+        },
+        {
+          "type": "agent_activity",
+          "data": {
+            "agentId": "worker-swarm-1752628585743-wsed2t13o-3",
+            "activity": "spawned",
+            "data": {
+              "type": "tester",
+              "name": "Tester Worker 4"
+            }
+          },
+          "timestamp": "2025-07-16T01:16:25.773Z"
+        }
+      ]
+    },
+    "statistics": {
+      "tasksProcessed": 0,
+      "tasksCompleted": 0,
+      "memoryUpdates": 0,
+      "agentActivities": 4,
+      "consensusDecisions": 0
+    }
+  }
+}

@@ -1,0 +1,62 @@
+{
+  "target_number": 2539123152460219,
+  "timestamp": "2025-07-14T14:42:30.168258",
+  "factorization": {
+    "prime_factors": [
+      13,
+      19,
+      19,
+      319483,
+      1693501
+    ],
+    "factorization_string": "13 \u00d7 19\u00b2 \u00d7 319483 \u00d7 1693501",
+    "verification": "13 \u00d7 19 \u00d7 19 \u00d7 319483 \u00d7 1693501 = 2539123152460219"
+  },
+  "algorithm_performance": {
+    "trial_division": {
+      "success": true,
+      "time_seconds": 0.0128,
+      "factors_found": [
+        13,
+        19,
+        19,
+        319483
+      ]
+    },
+    "pollard_rho": {
+      "used": false,
+      "reason": "Trial division found all small factors efficiently"
+    },
+    "ecm": {
+      "used": false,
+      "reason": "Not needed for this factorization"
+    }
+  },
+  "analysis": {
+    "number_type": "Composite with 5 prime factors",
+    "largest_prime_factor": 1693501,
+    "smallest_prime_factor": 13,
+    "prime_factorization_form": "2539123152460219 = 13 \u00d7 19\u00b2 \u00d7 319483 \u00d7 1693501",
+    "note": "This is not a semiprime (product of exactly two primes) as might have been expected"
+  },
+  "gpu_optimization": {
+    "status": "Not needed",
+    "reason": "Trial division was sufficient for all factors",
+    "potential_speedup": "100-1000x for larger semiprimes"
+  },
+  "recommendations": {
+    "for_actual_semiprimes": [
+      "Use Pollard's rho for factors up to 10^12",
+      "Use ECM for factors up to 10^20",
+      "GPU acceleration highly beneficial for parallel walks/curves"
+    ],
+    "implementation_complete": true,
+    "algorithms_available": [
+      "Optimized trial division with wheel factorization",
+      "Pollard's rho with Brent's improvement",
+      "Elliptic Curve Method (ECM)",
+      "CUDA GPU kernels for all algorithms",
+      "Hybrid CPU-GPU system"
+    ]
+  }
+}

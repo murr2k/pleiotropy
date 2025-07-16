@@ -1,0 +1,21 @@
+{
+  "target_number": 2539123152460219,
+  "timestamp": "2025-07-14T14:40:40.679535",
+  "methods_tried": [
+    {
+      "method": "trial_division",
+      "time_ms": 2823.7733840942383,
+      "success": false
+    },
+    {
+      "method": "pollards_rho",
+      "time_ms": 0.14925003051757812,
+      "success": false
+    }
+  ],
+  "success": false,
+  "factor1": null,
+  "factor2": null,
+  "total_time_ms": 2823.9617347717285,
+  "algorithm_used": null
+}

@@ -1,0 +1,172 @@
+/* Main Projects Page Styles */
+
+:root {
+    --primary-color: #2c3e50;
+    --secondary-color: #3498db;
+    --success-color: #27ae60;
+    --danger-color: #e74c3c;
+    --warning-color: #f39c12;
+    --light-bg: #ecf0f1;
+    --dark-text: #2c3e50;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    color: var(--dark-text);
+    background-color: #f8f9fa;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.container {
+    flex: 1;
+}
+
+/* Navigation */
+.navbar {
+    box-shadow: 0 2px 4px rgba(0,0,0,.1);
+}
+
+/* Project Tabs */
+.project-tabs {
+    border-bottom: 2px solid #dee2e6;
+    margin-bottom: 0;
+}
+
+.project-tabs .nav-link {
+    color: #6c757d;
+    border: none;
+    border-bottom: 3px solid transparent;
+    padding: 1rem 1.5rem;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.project-tabs .nav-link:hover {
+    color: var(--primary-color);
+    border-bottom-color: #dee2e6;
+}
+
+.project-tabs .nav-link.active {
+    color: var(--primary-color);
+    background-color: transparent;
+    border-bottom-color: var(--secondary-color);
+}
+
+.tab-icon {
+    font-size: 1.2rem;
+    margin-right: 0.5rem;
+}
+
+/* Tab Content */
+.tab-content {
+    background-color: white;
+    border: 1px solid #dee2e6;
+    border-top: none;
+    border-radius: 0 0 0.5rem 0.5rem;
+    padding: 2rem;
+}
+
+.project-content {
+    animation: fadeIn 0.3s ease-in;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Cards */
+.card {
+    border: none;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 16px rgba(0,0,0,0.15);
+}
+
+/* Badges */
+.badge {
+    padding: 0.4rem 0.8rem;
+    margin: 0.2rem;
+    font-weight: 500;
+}
+
+/* Buttons */
+.btn-primary {
+    background-color: var(--secondary-color);
+    border-color: var(--secondary-color);
+    font-weight: 500;
+    padding: 0.75rem 2rem;
+}
+
+.btn-primary:hover {
+    background-color: #2980b9;
+    border-color: #2980b9;
+    transform: translateY(-1px);
+    box-shadow: 0 2px 8px rgba(52, 152, 219, 0.3);
+}
+
+.btn-outline-secondary {
+    font-weight: 500;
+    padding: 0.75rem 2rem;
+}
+
+/* Alert boxes */
+.alert-info {
+    background-color: #e3f2fd;
+    border-color: #bbdefb;
+    color: #0d47a1;
+}
+
+/* Footer */
+footer {
+    background-color: var(--light-bg) !important;
+    border-top: 1px solid #dee2e6;
+    margin-top: auto;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .project-tabs .nav-link {
+        padding: 0.75rem 1rem;
+        font-size: 0.9rem;
+    }
+    
+    .tab-icon {
+        display: block;
+        margin: 0 auto 0.25rem;
+        font-size: 1.5rem;
+    }
+    
+    .tab-content {
+        padding: 1rem;
+    }
+}
+
+/* Project-specific colors */
+#pleiotropy-tab.active {
+    border-bottom-color: #27ae60;
+}
+
+#quantum-tab.active {
+    border-bottom-color: #9b59b6;
+}
+
+#ai-tab.active {
+    border-bottom-color: #e74c3c;
+}
+
+#crypto-tab.active {
+    border-bottom-color: #f39c12;
+}

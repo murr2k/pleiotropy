@@ -4,6 +4,7 @@
 
 use crate::types::*;
 use crate::crypto_engine::CryptoEngine;
+use crate::large_prime_factorization::{LargePrimeFactorizer, FactorizationResult, ProgressCallback};
 use anyhow::Result;
 use std::collections::HashMap;
 use nalgebra::DVector;
@@ -15,6 +16,9 @@ use crate::cuda::{CudaAccelerator, cuda_available, should_use_cuda};
 pub struct ComputeBackend {
     /// CPU implementation
     cpu_engine: CryptoEngine,
+    
+    /// Prime factorizer with CUDA support
+    prime_factorizer: LargePrimeFactorizer,
     
     /// CUDA accelerator (if available)
     #[cfg(feature = "cuda")]
@@ -41,6 +45,7 @@ impl ComputeBackend {
     /// Create a new compute backend with automatic GPU detection
     pub fn new() -> Result<Self> {
         let cpu_engine = CryptoEngine::new();
+        let prime_factorizer = LargePrimeFactorizer::new()?;
         
         #[cfg(feature = "cuda")]
         let cuda_accelerator = if should_use_cuda() {
@@ -61,6 +66,7 @@ impl ComputeBackend {
         
         Ok(Self {
             cpu_engine,
+            prime_factorizer,
             #[cfg(feature = "cuda")]
             cuda_accelerator,
             force_cpu: false,
@@ -71,6 +77,7 @@ impl ComputeBackend {
     /// Force CPU usage for testing or debugging
     pub fn set_force_cpu(&mut self, force: bool) {
         self.force_cpu = force;
+        self.prime_factorizer.set_force_cpu(force);
         if force {
             log::info!("Forcing CPU backend usage");
         }
@@ -478,6 +485,73 @@ impl ComputeBackend {
         let n = self.stats.cuda_calls as f64;
         self.stats.avg_cuda_time_ms = 
             (self.stats.avg_cuda_time_ms * (n - 1.0) + elapsed_ms) / n;
+    }
+    
+    // ===== Prime factorization methods =====
+    
+    /// Factorize a 64-bit integer using GPU acceleration if available
+    pub fn factorize_u64(&mut self, number: u64) -> Result<FactorizationResult> {
+        let start = std::time::Instant::now();
+        let result = self.prime_factorizer.factorize_u64(number)?;
+        
+        if result.used_cuda {
+            self.stats.cuda_calls += 1;
+            self.update_cuda_time(result.elapsed_ms);
+        } else {
+            self.stats.cpu_calls += 1;
+            self.update_cpu_time(result.elapsed_ms);
+        }
+        
+        Ok(result)
+    }
+    
+    /// Factorize a 128-bit integer
+    pub fn factorize_u128(&mut self, number: u128) -> Result<FactorizationResult> {
+        let start = std::time::Instant::now();
+        let result = self.prime_factorizer.factorize_u128(number)?;
+        
+        if result.used_cuda {
+            self.stats.cuda_calls += 1;
+            self.update_cuda_time(result.elapsed_ms);
+        } else {
+            self.stats.cpu_calls += 1;
+            self.update_cpu_time(result.elapsed_ms);
+        }
+        
+        Ok(result)
+    }
+    
+    /// Batch factorization with progress reporting
+    pub fn factorize_batch(&mut self, numbers: &[u64]) -> Result<Vec<FactorizationResult>> {
+        let results = self.prime_factorizer.factorize_batch(numbers)?;
+        
+        // Update statistics
+        for result in &results {
+            if result.used_cuda {
+                self.stats.cuda_calls += 1;
+                self.update_cuda_time(result.elapsed_ms);
+            } else {
+                self.stats.cpu_calls += 1;
+                self.update_cpu_time(result.elapsed_ms);
+            }
+        }
+        
+        Ok(results)
+    }
+    
+    /// Add a progress callback for factorization operations
+    pub fn add_factorization_progress_callback(&mut self, callback: ProgressCallback) {
+        self.prime_factorizer.add_progress_callback(callback);
+    }
+    
+    /// Async factorization for non-blocking operations
+    pub async fn factorize_u64_async(&self, number: u64) -> Result<FactorizationResult> {
+        self.prime_factorizer.factorize_u64_async(number).await
+    }
+    
+    /// Async factorization for 128-bit numbers
+    pub async fn factorize_u128_async(&self, number: u128) -> Result<FactorizationResult> {
+        self.prime_factorizer.factorize_u128_async(number).await
     }
 }
 

@@ -6,7 +6,25 @@ The CUDA Semiprime Seeker is a swarm intelligence system designed to find the la
 
 ## Implementations
 
-### 1. Rust Binary (`semiprime_seeker`)
+### 1. Docker with GPU Support (Recommended)
+
+The easiest way to run the semiprime seeker with full GPU acceleration:
+
+**Prerequisites:**
+- NVIDIA GPU (GTX 1060 or better)
+- NVIDIA Docker support (nvidia-docker2)
+
+**Usage:**
+```bash
+# Start the system with GPU support
+./start_system.sh --gpu -d
+
+# The CUDA factorizer agent will automatically be available
+# Access the dashboard at http://localhost:3000
+# API endpoint: http://localhost:8080/api/factorize
+```
+
+### 2. Rust Binary (`semiprime_seeker`)
 
 A high-performance Rust implementation using native CUDA bindings.
 
@@ -22,7 +40,7 @@ cd rust_impl
 cargo run --bin semiprime_seeker --release --features cuda
 ```
 
-### 2. Python Swarm (`semiprime_seeker_swarm.py`)
+### 3. Python Swarm (`semiprime_seeker_swarm.py`)
 
 A multiprocessing Python implementation that coordinates multiple workers.
 
@@ -37,7 +55,7 @@ A multiprocessing Python implementation that coordinates multiple workers.
 python3 semiprime_seeker_swarm.py
 ```
 
-### 3. Hive Mind System (`hive_mind_semiprime_seeker.py`)
+### 4. Hive Mind System (`hive_mind_semiprime_seeker.py`)
 
 An advanced swarm intelligence implementation with specialized agent roles.
 

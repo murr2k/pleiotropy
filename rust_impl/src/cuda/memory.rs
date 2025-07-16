@@ -25,6 +25,11 @@ impl<T: cudarc::driver::DeviceRepr> CudaBuffer<T> {
         Ok(Self { ptr, size, device })
     }
     
+    /// Allocate zeroed device buffer
+    pub fn zeros(device: &Arc<CudaDevice>, size: usize) -> CudaResult<Self> {
+        Self::new(device.clone(), size)
+    }
+    
     /// Allocate and copy from host
     pub fn from_slice(device: Arc<CudaDevice>, data: &[T]) -> CudaResult<Self> {
         let ptr = device

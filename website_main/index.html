@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Murray Kopit - Research Projects</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="/">Murray Kopit</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="/projects">Projects</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/blog">Blog</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/cv">CV</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/editor">Editor</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container mt-4">
+        <h1 class="mb-4">Research Projects</h1>
+        
+        <!-- Project Tabs -->
+        <ul class="nav nav-tabs project-tabs" id="projectTabs" role="tablist">
+            <li class="nav-item" role="presentation">
+                <button class="nav-link active" id="pleiotropy-tab" data-bs-toggle="tab" data-bs-target="#pleiotropy" type="button" role="tab">
+                    <i class="tab-icon">🧬</i> Pleiotropy Analysis
+                </button>
+            </li>
+            <li class="nav-item" role="presentation">
+                <button class="nav-link" id="quantum-tab" data-bs-toggle="tab" data-bs-target="#quantum" type="button" role="tab">
+                    <i class="tab-icon">⚛️</i> Quantum Computing
+                </button>
+            </li>
+            <li class="nav-item" role="presentation">
+                <button class="nav-link" id="ai-tab" data-bs-toggle="tab" data-bs-target="#ai" type="button" role="tab">
+                    <i class="tab-icon">🤖</i> AI Research
+                </button>
+            </li>
+            <li class="nav-item" role="presentation">
+                <button class="nav-link" id="crypto-tab" data-bs-toggle="tab" data-bs-target="#crypto" type="button" role="tab">
+                    <i class="tab-icon">🔐</i> Cryptography
+                </button>
+            </li>
+        </ul>
+
+        <!-- Tab Content -->
+        <div class="tab-content" id="projectTabContent">
+            <!-- Pleiotropy Tab -->
+            <div class="tab-pane fade show active" id="pleiotropy" role="tabpanel">
+                <div class="project-content">
+                    <h2>Genomic Pleiotropy Cryptanalysis</h2>
+                    <p class="lead">Decrypting nature's multi-trait encoding system using advanced cryptanalytic methods.</p>
+                    
+                    <div class="row mt-4">
+                        <div class="col-md-8">
+                            <h3>Project Overview</h3>
+                            <p>This groundbreaking project treats genomic pleiotropy (single genes affecting multiple traits) as a cryptanalysis problem. By viewing DNA sequences as encrypted messages where genes act as polyalphabetic cipher units, we can decode the complex relationships between genetic information and phenotypic traits.</p>
+                            
+                            <h4>Key Features</h4>
+                            <ul>
+                                <li><strong>High-Performance Analysis:</strong> Rust-based core with CUDA GPU acceleration</li>
+                                <li><strong>NeuroDNA Integration:</strong> Neural network-inspired trait detection algorithms</li>
+                                <li><strong>Real-time Processing:</strong> Analyze genomic sequences with immediate results</li>
+                                <li><strong>Scientific Validation:</strong> 86.1% scientific veracity across 18 bacterial genomes</li>
+                            </ul>
+                            
+                            <div class="mt-4">
+                                <a href="/projects/pleiotropy/" class="btn btn-primary btn-lg">Launch Pleiotropy Analyzer</a>
+                                <a href="#" class="btn btn-outline-secondary btn-lg" onclick="showDocumentation('pleiotropy')">View Documentation</a>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="card bg-light">
+                                <div class="card-body">
+                                    <h5 class="card-title">Performance Metrics</h5>
+                                    <ul class="list-unstyled">
+                                        <li>✓ 100% detection rate</li>
+                                        <li>✓ 73.7% average confidence</li>
+                                        <li>✓ 10-50x GPU speedup</li>
+                                        <li>✓ Real-time analysis</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="card mt-3">
+                                <div class="card-body">
+                                    <h5 class="card-title">Technologies</h5>
+                                    <span class="badge bg-primary">Rust</span>
+                                    <span class="badge bg-success">CUDA</span>
+                                    <span class="badge bg-info">React</span>
+                                    <span class="badge bg-warning">Python</span>
+                                    <span class="badge bg-danger">FastAPI</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Quantum Computing Tab -->
+            <div class="tab-pane fade" id="quantum" role="tabpanel">
+                <div class="project-content">
+                    <h2>Quantum Computing Research</h2>
+                    <p class="lead">Exploring quantum algorithms and their applications in computational biology.</p>
+                    
+                    <div class="alert alert-info">
+                        <strong>Coming Soon!</strong> This project is currently under development.
+                    </div>
+                    
+                    <h3>Planned Features</h3>
+                    <ul>
+                        <li>Quantum algorithm simulations</li>
+                        <li>Hybrid classical-quantum computing models</li>
+                        <li>Applications in drug discovery</li>
+                        <li>Quantum machine learning implementations</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- AI Research Tab -->
+            <div class="tab-pane fade" id="ai" role="tabpanel">
+                <div class="project-content">
+                    <h2>Artificial Intelligence Research</h2>
+                    <p class="lead">Advanced AI systems for scientific discovery and analysis.</p>
+                    
+                    <div class="alert alert-info">
+                        <strong>Coming Soon!</strong> This project is currently under development.
+                    </div>
+                    
+                    <h3>Research Areas</h3>
+                    <ul>
+                        <li>Deep learning for genomic analysis</li>
+                        <li>Swarm intelligence optimization</li>
+                        <li>Explainable AI for scientific applications</li>
+                        <li>Multi-agent systems for distributed computing</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Cryptography Tab -->
+            <div class="tab-pane fade" id="crypto" role="tabpanel">
+                <div class="project-content">
+                    <h2>Cryptography Research</h2>
+                    <p class="lead">Novel cryptographic methods inspired by biological systems.</p>
+                    
+                    <div class="alert alert-info">
+                        <strong>Coming Soon!</strong> This project is currently under development.
+                    </div>
+                    
+                    <h3>Research Topics</h3>
+                    <ul>
+                        <li>Bio-inspired cryptographic algorithms</li>
+                        <li>Post-quantum cryptography</li>
+                        <li>Homomorphic encryption for genomic data</li>
+                        <li>Secure multi-party computation protocols</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="mt-5 py-3 bg-light text-center">
+        <p class="mb-0">© 2025 Murray Kopit. All rights reserved.</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        function showDocumentation(project) {
+            alert('Documentation for ' + project + ' project coming soon!');
+        }
+        
+        // Save selected tab in localStorage
+        document.addEventListener('DOMContentLoaded', function() {
+            const tabs = document.querySelectorAll('#projectTabs button');
+            const savedTab = localStorage.getItem('selectedProjectTab');
+            
+            if (savedTab) {
+                const savedTabEl = document.querySelector(`#${savedTab}-tab`);
+                if (savedTabEl) {
+                    const tab = new bootstrap.Tab(savedTabEl);
+                    tab.show();
+                }
+            }
+            
+            tabs.forEach(tab => {
+                tab.addEventListener('click', function() {
+                    const tabId = this.id.replace('-tab', '');
+                    localStorage.setItem('selectedProjectTab', tabId);
+                });
+            });
+        });
+    </script>
+</body>
+</html>

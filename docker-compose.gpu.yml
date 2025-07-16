@@ -1,0 +1,52 @@
+# Docker Compose GPU override for CUDA support
+# Usage: docker-compose -f docker-compose.yml -f docker-compose.gpu.yml up -d
+
+version: '3.8'
+
+services:
+  # Override rust_analyzer with GPU support
+  rust_analyzer:
+    environment:
+      - CUDA_VISIBLE_DEVICES=0
+      - NVIDIA_VISIBLE_DEVICES=all
+      - NVIDIA_DRIVER_CAPABILITIES=compute,utility
+    runtime: nvidia
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              count: 1
+              capabilities: [gpu]
+
+  # Additional GPU-enabled factorizer service
+  cuda_factorizer:
+    build:
+      context: .
+      dockerfile: trial_database/swarm/Dockerfile.rust_agent
+    container_name: pleiotropy-cuda-factorizer
+    depends_on:
+      - coordinator
+    environment:
+      - REDIS_HOST=redis
+      - REDIS_PORT=6379
+      - RUST_LOG=info
+      - PYTHONUNBUFFERED=1
+      - CUDA_VISIBLE_DEVICES=0
+      - NVIDIA_VISIBLE_DEVICES=all
+      - NVIDIA_DRIVER_CAPABILITIES=compute,utility
+      - AGENT_TYPE=cuda_factorizer
+    volumes:
+      - ./rust_impl:/rust_impl
+      - ./trial_database/swarm:/app
+      - ./reports:/app/reports
+    runtime: nvidia
+    restart: unless-stopped
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              count: 1
+              capabilities: [gpu]
+    command: ["python", "cuda_factorizer_agent.py"]

@@ -1,0 +1,177 @@
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    margin: 0;
+    padding: 20px;
+    background-color: #f8f9fa;
+    color: #333;
+}
+
+h1 {
+    color: #2c3e50;
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 2.5em;
+    font-weight: 300;
+}
+
+h2 {
+    color: #34495e;
+    border-bottom: 2px solid #3498db;
+    padding-bottom: 10px;
+    margin-top: 30px;
+}
+
+.section {
+    background: white;
+    padding: 30px;
+    margin: 20px auto;
+    max-width: 1200px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    font-size: 0.95em;
+}
+
+th, td {
+    padding: 12px 15px;
+    text-align: left;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+th {
+    background-color: #3498db;
+    color: white;
+    font-weight: 500;
+    text-transform: uppercase;
+    font-size: 0.85em;
+    letter-spacing: 0.5px;
+}
+
+tr:nth-child(even) {
+    background-color: #f8f9fa;
+}
+
+tr:hover {
+    background-color: #e3f2fd;
+    transition: background-color 0.2s;
+}
+
+td:first-child {
+    font-weight: 500;
+}
+
+/* Performance metric styling */
+.metric {
+    display: inline-block;
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-family: 'Courier New', monospace;
+    font-size: 0.9em;
+}
+
+.metric.cpu {
+    background-color: #e8f5e9;
+    color: #2e7d32;
+}
+
+.metric.cuda {
+    background-color: #fff3e0;
+    color: #e65100;
+}
+
+.metric.speedup {
+    background-color: #f3e5f5;
+    color: #6a1b9a;
+    font-weight: bold;
+}
+
+/* Chart containers */
+#speedup-chart, #timing-chart {
+    width: 100%;
+    height: 450px;
+    margin: 30px 0;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    background: white;
+    padding: 10px;
+}
+
+/* System info styling */
+.system-info {
+    background-color: #eceff1;
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+.system-info table {
+    margin: 0;
+}
+
+.system-info th {
+    background-color: #607d8b;
+    width: 200px;
+}
+
+/* Status indicators */
+.status {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    margin-right: 5px;
+}
+
+.status.success {
+    background-color: #4caf50;
+}
+
+.status.warning {
+    background-color: #ff9800;
+}
+
+.status.error {
+    background-color: #f44336;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .section {
+        padding: 20px;
+        margin: 10px;
+    }
+    
+    table {
+        font-size: 0.85em;
+    }
+    
+    th, td {
+        padding: 8px 10px;
+    }
+    
+    h1 {
+        font-size: 2em;
+    }
+}
+
+/* Print styles */
+@media print {
+    body {
+        background-color: white;
+    }
+    
+    .section {
+        box-shadow: none;
+        border: 1px solid #ddd;
+        page-break-inside: avoid;
+    }
+    
+    #speedup-chart, #timing-chart {
+        height: 300px;
+    }
+}

@@ -1,0 +1,18 @@
+{
+  "target_number": 2539123152460219,
+  "factor1": 319483,
+  "factor2": 1693501,
+  "method": "fermat",
+  "small_factors": [
+    13,
+    19,
+    19
+  ],
+  "verification": {
+    "product": 541044779983,
+    "factor1_prime": true,
+    "factor2_prime": true,
+    "correct": false
+  },
+  "timestamp": "2025-07-14T14:41:53.677559"
+}

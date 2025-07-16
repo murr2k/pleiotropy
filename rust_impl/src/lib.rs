@@ -6,6 +6,11 @@ pub mod crypto_engine;
 pub mod types;
 pub mod neurodna_trait_detector;
 pub mod compute_backend;
+pub mod large_prime_factorization;
+pub mod prime_factorization;
+pub mod prime_compute_backend;
+pub mod semiprime_factorization;
+pub mod benchmark;
 #[cfg(feature = "cuda")]
 pub mod cuda;
 

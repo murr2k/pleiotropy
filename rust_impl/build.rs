@@ -115,7 +115,7 @@ fn check_cuda_version(cuda_root: &PathBuf) {
             
             // Parse version and check if >= 11.0
             if let Some(version_str) = version_content.split_whitespace().last() {
-                if let Ok(version) = version_str
+                if let Some(version) = version_str
                     .split('.')
                     .next()
                     .and_then(|v| v.parse::<u32>().ok())

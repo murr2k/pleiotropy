@@ -1,0 +1,101 @@
+{
+  "cuda_architecture": {
+    "main_entry_point": "rust_impl/src/compute_backend.rs",
+    "cuda_module": "rust_impl/src/cuda/",
+    "device_management": "rust_impl/src/cuda/device.rs",
+    "kernel_modules": {
+      "codon_counter": "rust_impl/src/cuda/kernels/codon_counter.rs",
+      "frequency_calculator": "rust_impl/src/cuda/kernels/frequency_calculator.rs",
+      "pattern_matcher": "rust_impl/src/cuda/kernels/pattern_matcher.rs",
+      "matrix_processor": "rust_impl/src/cuda/kernels/matrix_processor.rs"
+    },
+    "feature_flag": "cuda",
+    "cuda_library": "cudarc v0.10"
+  },
+  "integration_points": {
+    "1_compute_backend": {
+      "location": "rust_impl/src/compute_backend.rs",
+      "description": "Main entry point for CPU/GPU switching",
+      "methods": [
+        "build_codon_vectors",
+        "decrypt_sequences",
+        "calculate_codon_bias"
+      ],
+      "pattern": "Add new method for prime factorization with GPU acceleration"
+    },
+    "2_cuda_accelerator": {
+      "location": "rust_impl/src/cuda/mod.rs",
+      "description": "CudaAccelerator struct manages all GPU operations",
+      "existing_operations": [
+        "count_codons",
+        "calculate_frequencies",
+        "match_patterns",
+        "eigenanalysis"
+      ],
+      "recommendation": "Add prime_factorization method to CudaAccelerator"
+    },
+    "3_kernel_module": {
+      "location": "rust_impl/src/cuda/kernels/",
+      "description": "Directory for CUDA kernel implementations",
+      "recommendation": "Create prime_factorizer.rs module with CUDA kernels"
+    },
+    "4_performance_monitoring": {
+      "location": "rust_impl/src/cuda/performance.rs",
+      "description": "Performance metrics tracking",
+      "recommendation": "Integrate prime factorization timing into existing metrics"
+    }
+  },
+  "kernel_architecture": {
+    "thread_organization": {
+      "warp_size": 32,
+      "max_threads_per_block": 1024,
+      "typical_block_size": 256,
+      "grid_dimensions": "Dynamic based on input size"
+    },
+    "memory_hierarchy": {
+      "global_memory": "8GB on GTX 2070",
+      "shared_memory": "48KB per SM",
+      "registers": "65536 per SM"
+    },
+    "optimization_patterns": [
+      "Warp-level primitives (__shfl_sync)",
+      "Coalesced memory access",
+      "Bank conflict-free shared memory",
+      "Atomic operations for reductions",
+      "Fast math intrinsics (__fdividef)"
+    ]
+  },
+  "prime_factorization_recommendations": {
+    "kernel_design": {
+      "trial_division": "Parallel trial division with shared memory sieve",
+      "pollard_rho": "Multiple parallel chains with different starting points",
+      "sieve_of_eratosthenes": "Segmented sieve for prime generation",
+      "miller_rabin": "Parallel primality testing"
+    },
+    "integration_strategy": [
+      "Add prime_factorization method to ComputeBackend",
+      "Create PrimeFactorizer kernel in cuda/kernels/",
+      "Use existing memory management infrastructure",
+      "Leverage performance monitoring system",
+      "Implement CPU fallback in compute_backend.rs"
+    ],
+    "benchmark_targets": {
+      "32_bit_numbers": "1 million factorizations/second",
+      "64_bit_numbers": "100K factorizations/second",
+      "128_bit_numbers": "10K factorizations/second",
+      "memory_bandwidth": "Utilize 300+ GB/s for sieve operations"
+    }
+  },
+  "build_configuration": {
+    "feature_flag": "--features cuda",
+    "build_command": "cargo build --release --features cuda",
+    "test_command": "cargo test --features cuda",
+    "benchmark_command": "cargo bench --features cuda"
+  },
+  "testing_infrastructure": {
+    "unit_tests": "rust_impl/src/cuda/tests/",
+    "integration_tests": "rust_impl/tests/cuda_integration_test.rs",
+    "benchmarks": "rust_impl/benches/cuda_benchmarks.rs",
+    "performance_report": "rust_impl/src/cuda/performance_benchmarks.md"
+  }
+}

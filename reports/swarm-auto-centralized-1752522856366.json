@@ -1,0 +1,13 @@
+{
+  "objective": "Add a regression tester to benchmark the CUDA solver. The first test is to measure the duration to determine the prime factors the decimal number 100822548703. The solution is two prime numbers each 6 digits in length. Compare the benchmark to a CPU only solution.",
+  "strategy": "auto",
+  "mode": "centralized",
+  "maxAgents": 5,
+  "timeout": 60,
+  "parallel": false,
+  "monitor": false,
+  "output": "json",
+  "outputDir": "./reports",
+  "timestamp": "2025-07-14T19:54:16.366Z",
+  "id": "swarm-auto-centralized-1752522856366"
+}

@@ -82,24 +82,41 @@ while [[ $# -gt 0 ]]; do
             MODE="docker"
             shift
             ;;
+        --gpu)
+            MODE="docker"
+            GPU_SUPPORT="--gpu"
+            shift
+            ;;
         -d|--detached)
             DETACHED="-d"
             shift
             ;;
         --stop)
             echo "Stopping all services..."
-            docker-compose -f "$PROJECT_ROOT/docker-compose.yml" down
+            if [ -f "$PROJECT_ROOT/docker-compose.gpu.yml" ] && [ -n "$GPU_SUPPORT" ]; then
+                docker-compose -f "$PROJECT_ROOT/docker-compose.yml" -f "$PROJECT_ROOT/docker-compose.gpu.yml" down
+            else
+                docker-compose -f "$PROJECT_ROOT/docker-compose.yml" down
+            fi
             echo "Services stopped."
             exit 0
             ;;
         --status)
             echo "Checking system status..."
-            docker-compose -f "$PROJECT_ROOT/docker-compose.yml" ps
+            if [ -f "$PROJECT_ROOT/docker-compose.gpu.yml" ] && [ -n "$GPU_SUPPORT" ]; then
+                docker-compose -f "$PROJECT_ROOT/docker-compose.yml" -f "$PROJECT_ROOT/docker-compose.gpu.yml" ps
+            else
+                docker-compose -f "$PROJECT_ROOT/docker-compose.yml" ps
+            fi
             check_health || echo "Some services are unhealthy"
             exit 0
             ;;
         --logs)
-            docker-compose -f "$PROJECT_ROOT/docker-compose.yml" logs -f
+            if [ -f "$PROJECT_ROOT/docker-compose.gpu.yml" ] && [ -n "$GPU_SUPPORT" ]; then
+                docker-compose -f "$PROJECT_ROOT/docker-compose.yml" -f "$PROJECT_ROOT/docker-compose.gpu.yml" logs -f
+            else
+                docker-compose -f "$PROJECT_ROOT/docker-compose.yml" logs -f
+            fi
             exit 0
             ;;
         --help)
@@ -108,11 +125,17 @@ while [[ $# -gt 0 ]]; do
             echo "Options:"
             echo "  --local       Run services locally (requires dependencies)"
             echo "  --docker      Run services in Docker containers (default)"
+            echo "  --gpu         Enable GPU/CUDA support (requires NVIDIA Docker)"
             echo "  -d, --detached Run in background"
             echo "  --stop        Stop all services"
             echo "  --status      Check service status"
             echo "  --logs        Show service logs"
             echo "  --help        Show this help message"
+            echo ""
+            echo "Examples:"
+            echo "  $0 --docker -d          # Run with CPU only"
+            echo "  $0 --gpu -d             # Run with CUDA GPU support"
+            echo "  $0 --stop               # Stop all services"
             exit 0
             ;;
         *)
@@ -124,15 +147,35 @@ while [[ $# -gt 0 ]]; do
 done
 
 if [ "$MODE" = "docker" ]; then
-    echo "Starting services in Docker mode..."
-    
-    # Build images if needed
-    echo "Building Docker images..."
-    docker-compose -f "$PROJECT_ROOT/docker-compose.yml" build
-    
-    # Start services
-    echo "Starting services..."
-    docker-compose -f "$PROJECT_ROOT/docker-compose.yml" up $DETACHED
+    if [ -n "$GPU_SUPPORT" ]; then
+        echo "Starting services in Docker mode with GPU support..."
+        
+        # Check for NVIDIA Docker support
+        if ! command -v nvidia-docker &> /dev/null && ! docker info | grep -q nvidia; then
+            echo "WARNING: NVIDIA Docker support not detected."
+            echo "GPU features may not work. Install nvidia-docker2 for full GPU support."
+        else
+            echo "✓ NVIDIA Docker support detected"
+        fi
+        
+        # Build images if needed
+        echo "Building Docker images with CUDA support..."
+        docker-compose -f "$PROJECT_ROOT/docker-compose.yml" -f "$PROJECT_ROOT/docker-compose.gpu.yml" build
+        
+        # Start services with GPU support
+        echo "Starting services with GPU acceleration..."
+        docker-compose -f "$PROJECT_ROOT/docker-compose.yml" -f "$PROJECT_ROOT/docker-compose.gpu.yml" up $DETACHED
+    else
+        echo "Starting services in Docker mode (CPU only)..."
+        
+        # Build images if needed
+        echo "Building Docker images..."
+        docker-compose -f "$PROJECT_ROOT/docker-compose.yml" build
+        
+        # Start services
+        echo "Starting services..."
+        docker-compose -f "$PROJECT_ROOT/docker-compose.yml" up $DETACHED
+    fi
     
     if [ -z "$DETACHED" ]; then
         # Running in foreground, exit handled by docker-compose

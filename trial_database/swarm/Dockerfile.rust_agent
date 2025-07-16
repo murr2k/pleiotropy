@@ -1,26 +1,55 @@
-# Dockerfile for Rust Analyzer Agent
-FROM rust:latest as rust-builder
+# Dockerfile for Rust Analyzer Agent with CUDA Support
+FROM nvidia/cuda:11.8-devel-ubuntu20.04 as cuda-rust-builder
 
-# Build Rust components
-WORKDIR /rust_build
-COPY rust_impl/Cargo.toml ./
-COPY rust_impl/src ./src
-
-# Generate new Cargo.lock and build
-RUN cargo update && cargo build --release
-
-# Python runtime image
-FROM python:3.10-slim
-
-WORKDIR /app
-
-# Install system dependencies
+# Install Rust
 RUN apt-get update && apt-get install -y \
+    curl \
+    build-essential \
+    pkg-config \
     libssl-dev \
     && rm -rf /var/lib/apt/lists/*
 
+RUN curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -y
+ENV PATH="/root/.cargo/bin:${PATH}"
+
+# Build Rust components with CUDA support
+WORKDIR /rust_build
+COPY rust_impl/Cargo.toml ./
+COPY rust_impl/build.rs ./
+COPY rust_impl/src ./src
+
+# Set CUDA environment variables
+ENV CUDA_PATH=/usr/local/cuda
+ENV LD_LIBRARY_PATH=$CUDA_PATH/lib64:$LD_LIBRARY_PATH
+
+# Build with CUDA features
+RUN cargo update && cargo build --release --features cuda
+
+# Build additional binaries
+RUN cargo build --release --bin semiprime_seeker --features cuda
+RUN cargo build --release --bin validate_factorization --features cuda
+
+# Python runtime image with CUDA runtime
+FROM nvidia/cuda:11.8-runtime-ubuntu20.04
+
+WORKDIR /app
+
+# Install Python and system dependencies
+RUN apt-get update && apt-get install -y \
+    python3.10 \
+    python3.10-pip \
+    python3.10-dev \
+    libssl-dev \
+    curl \
+    && rm -rf /var/lib/apt/lists/*
+
+# Create python symlink
+RUN ln -s /usr/bin/python3.10 /usr/bin/python
+
 # Copy Rust binaries from builder
-COPY --from=rust-builder /rust_build/target/release/genomic_cryptanalysis /usr/local/bin/
+COPY --from=cuda-rust-builder /rust_build/target/release/genomic_cryptanalysis /usr/local/bin/
+COPY --from=cuda-rust-builder /rust_build/target/release/semiprime_seeker /usr/local/bin/
+COPY --from=cuda-rust-builder /rust_build/target/release/validate_factorization /usr/local/bin/
 
 # Install Python dependencies
 COPY trial_database/swarm/requirements.txt .

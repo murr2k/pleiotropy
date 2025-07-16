@@ -1,0 +1,134 @@
+{
+  "simulation": true,
+  "timestamp": "2025-07-14T16:30:48.541344",
+  "target_seconds": 600,
+  "tolerance_seconds": 30,
+  "best_result": {
+    "worker": "Scout-0",
+    "digits": 50,
+    "time": 594.7185766254352,
+    "timestamp": "2025-07-14T16:30:47.116119"
+  },
+  "all_results": [
+    {
+      "worker": "Scout-1",
+      "digits": 52,
+      "time": 857.8473409443133,
+      "timestamp": "2025-07-14T16:30:46.600857"
+    },
+    {
+      "worker": "Scout-0",
+      "digits": 48,
+      "time": 374.05057462185295,
+      "timestamp": "2025-07-14T16:30:46.600827"
+    },
+    {
+      "worker": "Scout-2",
+      "digits": 52,
+      "time": 902.4500840224819,
+      "timestamp": "2025-07-14T16:30:46.600852"
+    },
+    {
+      "worker": "Scout-3",
+      "digits": 52,
+      "time": 854.4757814294117,
+      "timestamp": "2025-07-14T16:30:46.600851"
+    },
+    {
+      "worker": "Scout-3",
+      "digits": 52,
+      "time": 1001.4111443747211,
+      "timestamp": "2025-07-14T16:30:46.706891"
+    },
+    {
+      "worker": "Scout-2",
+      "digits": 50,
+      "time": 591.3808789149975,
+      "timestamp": "2025-07-14T16:30:46.707888"
+    },
+    {
+      "worker": "Scout-1",
+      "digits": 48,
+      "time": 327.7151962562433,
+      "timestamp": "2025-07-14T16:30:46.709250"
+    },
+    {
+      "worker": "Scout-0",
+      "digits": 51,
+      "time": 695.4777123256707,
+      "timestamp": "2025-07-14T16:30:46.709293"
+    },
+    {
+      "worker": "Scout-3",
+      "digits": 53,
+      "time": 1088.6079845995855,
+      "timestamp": "2025-07-14T16:30:46.808591"
+    },
+    {
+      "worker": "Scout-2",
+      "digits": 50,
+      "time": 575.9345233056339,
+      "timestamp": "2025-07-14T16:30:46.809820"
+    },
+    {
+      "worker": "Scout-1",
+      "digits": 47,
+      "time": 334.9410790460665,
+      "timestamp": "2025-07-14T16:30:46.812402"
+    },
+    {
+      "worker": "Scout-0",
+      "digits": 50,
+      "time": 524.2684290809088,
+      "timestamp": "2025-07-14T16:30:46.812778"
+    },
+    {
+      "worker": "Scout-3",
+      "digits": 51,
+      "time": 725.6446444946798,
+      "timestamp": "2025-07-14T16:30:46.909589"
+    },
+    {
+      "worker": "Scout-2",
+      "digits": 54,
+      "time": 1549.5619303539138,
+      "timestamp": "2025-07-14T16:30:46.910588"
+    },
+    {
+      "worker": "Scout-0",
+      "digits": 48,
+      "time": 419.06735489883977,
+      "timestamp": "2025-07-14T16:30:46.913799"
+    },
+    {
+      "worker": "Scout-1",
+      "digits": 49,
+      "time": 456.0021402971852,
+      "timestamp": "2025-07-14T16:30:46.913842"
+    },
+    {
+      "worker": "Scout-3",
+      "digits": 52,
+      "time": 843.5982009546013,
+      "timestamp": "2025-07-14T16:30:47.010697"
+    },
+    {
+      "worker": "Scout-2",
+      "digits": 50,
+      "time": 631.1580788799041,
+      "timestamp": "2025-07-14T16:30:47.011476"
+    },
+    {
+      "worker": "Scout-0",
+      "digits": 47,
+      "time": 276.91267854294813,
+      "timestamp": "2025-07-14T16:30:47.014984"
+    },
+    {
+      "worker": "Scout-1",
+      "digits": 49,
+      "time": 544.2827667715443,
+      "timestamp": "2025-07-14T16:30:47.015374"
+    }
+  ]
+}

@@ -25,6 +25,12 @@ Pleiotropy - where one gene affects multiple traits - is a fundamental challenge
 
 ## 🏆 Major Achievements
 
+### Web Deployment Complete
+- **Full web interface** deployed with React frontend
+- **FastAPI backend** running as systemd service
+- **Local deployment** successful on port 8001
+- **Production-ready** configuration with Apache/Nginx support
+
 ### CUDA Factorization Breakthrough
 - **42-digit semiprimes** factored in ~10 minutes on GTX 2070
 - **18-36× speedup** over CPU implementations
@@ -101,8 +107,11 @@ pleiotropy/
 git clone https://github.com/murr2k/pleiotropy.git
 cd pleiotropy
 
-# Start the complete system
+# Start the complete system (CPU only)
 ./start_system.sh --docker -d
+
+# OR start with GPU/CUDA support (recommended for factorization)
+./start_system.sh --gpu -d
 
 # Verify deployment
 ./start_system.sh --status
@@ -217,6 +226,39 @@ curl http://localhost:8080/api/agents/status
 - `prometheus_data`: Metrics storage
 - `grafana_data`: Dashboard configurations
 - `./reports`: Analysis outputs (host-mounted)
+
+## 🌐 Web Deployment
+
+### Local Deployment
+```bash
+# Start the web interface
+./run_local_server.sh
+# Access at http://localhost:8001/projects/pleiotropy/
+
+# Or manually:
+python3 start_web_server.py 8001
+```
+
+### Production Deployment
+```bash
+# Run with sudo in terminal
+sudo ./deploy_with_sudo.sh
+
+# Fix any issues
+sudo ./fix_deployment.sh
+```
+
+### Access URLs
+- **Local**: http://localhost:8001/projects/pleiotropy/
+- **Production**: https://murraykopit.com/projects/pleiotropy/ (after deployment)
+- **API Health**: http://localhost:8080/health
+
+### Deployment Status
+- ✅ React frontend built and configured
+- ✅ FastAPI backend with SQLite database
+- ✅ Systemd service for API persistence
+- ✅ Python web server for local testing
+- ✅ Production scripts ready for Apache/Nginx
 
 **Backup Strategy:**
 ```bash

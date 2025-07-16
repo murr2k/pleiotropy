@@ -1,0 +1,81 @@
+{
+  "sessionId": "session-1752531119452-qj27irbit",
+  "checkpointId": "checkpoint-1752531149451-s7oozz6wb",
+  "checkpointName": "auto-save-1752531149451",
+  "timestamp": "2025-07-14T22:12:29.451Z",
+  "data": {
+    "timestamp": "2025-07-14T22:12:29.451Z",
+    "changeCount": 5,
+    "changesByType": {
+      "swarm_created": [
+        {
+          "type": "swarm_created",
+          "data": {
+            "swarmId": "swarm-1752531119451-rbab7ithl",
+            "swarmName": "hive-1752531119447",
+            "objective": "Build a CUDA composite number factorizer",
+            "workerCount": 8
+          },
+          "timestamp": "2025-07-14T22:11:59.453Z"
+        }
+      ],
+      "agent_activity": [
+        {
+          "type": "agent_activity",
+          "data": {
+            "agentId": "worker-swarm-1752531119451-rbab7ithl-0",
+            "activity": "spawned",
+            "data": {
+              "type": "researcher",
+              "name": "Researcher Worker 1"
+            }
+          },
+          "timestamp": "2025-07-14T22:11:59.454Z"
+        },
+        {
+          "type": "agent_activity",
+          "data": {
+            "agentId": "worker-swarm-1752531119451-rbab7ithl-1",
+            "activity": "spawned",
+            "data": {
+              "type": "coder",
+              "name": "Coder Worker 2"
+            }
+          },
+          "timestamp": "2025-07-14T22:11:59.454Z"
+        },
+        {
+          "type": "agent_activity",
+          "data": {
+            "agentId": "worker-swarm-1752531119451-rbab7ithl-2",
+            "activity": "spawned",
+            "data": {
+              "type": "analyst",
+              "name": "Analyst Worker 3"
+            }
+          },
+          "timestamp": "2025-07-14T22:11:59.454Z"
+        },
+        {
+          "type": "agent_activity",
+          "data": {
+            "agentId": "worker-swarm-1752531119451-rbab7ithl-3",
+            "activity": "spawned",
+            "data": {
+              "type": "tester",
+              "name": "Tester Worker 4"
+            }
+          },
+          "timestamp": "2025-07-14T22:11:59.454Z"
+        }
+      ]
+    },
+    "statistics": {
+      "tasksProcessed": 0,
+      "tasksCompleted": 0,
+      "memoryUpdates": 0,
+      "agentActivities": 4,
+      "consensusDecisions": 0
+    }
+  }
+}

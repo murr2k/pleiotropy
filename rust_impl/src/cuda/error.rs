@@ -28,6 +28,9 @@ pub enum CudaError {
     #[error("CUDA not available on this system")]
     NotAvailable,
     
+    #[error("Feature not implemented: {0}")]
+    NotImplemented(String),
+    
     #[cfg(feature = "cuda")]
     #[error("Cudarc error: {0}")]
     CudarcError(#[from] CudarcError),
